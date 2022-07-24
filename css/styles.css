@@ -24,6 +24,18 @@ body {
   color: var(--main-color);
 }
 .title {
-    color: #000c66;
-    color: var(--main-color);
+  color: #000c66;
+  color: var(--main-color);
+}
+
+.section .link:hover,.section .link:focus {
+  color: white;
+  border: 1px solid green;
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+.section .link:active {
+  color: red;
+  border: 1px solid red;
+  background-color: rgba(200, 0, 0, 0.3);
 }
