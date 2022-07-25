@@ -65,3 +65,15 @@ body {
   font-style: italic;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', serif;
 }
+.list .text-formating::first-letter {
+  font-family: tahoma, sans-serif;
+  font-size: 75px;
+  color: red;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.list .text-formating::selection {
+  color: white;
+  background-color: red;
+}
