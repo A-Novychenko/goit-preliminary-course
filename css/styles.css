@@ -63,7 +63,7 @@ body {
   font-size: 50px;
   font-weight: 700;
   font-style: italic;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', serif;
+  font-family: 'Roboto', sans-serif;
 }
 .list .text-formating::first-letter {
   font-family: tahoma, sans-serif;
