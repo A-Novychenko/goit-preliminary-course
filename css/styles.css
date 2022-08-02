@@ -77,6 +77,7 @@ body {
   color: white;
   background-color: red;
 }
+
 .width-test {
   width: auto;
   margin: 10px;
@@ -87,6 +88,11 @@ body {
   width: 500px;
   border: 1px solid blue;
   margin: 5px;
+}
+.flex,
+.flex-x {
+  display: flex;
+  flex-direction: row;
 }
 .wtt {
   background-color: #fff;
@@ -108,15 +114,51 @@ body {
   border-left-style: solid;
   border-left-color: red;
 }
+
 .wttb {
+  margin: 2px;
   background-color: #001cf5;
   width: 150px;
   height: 150px;
+  border: 2px solid rgb(0, 0, 105);
   border-top-left-radius: 75px;
-  border-top-right-radius: 75px;
-  border-bottom-left-radius: 75px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
   border-bottom-right-radius: 0;
   /* border-radius: 50%; */
+}
+.wttbc {
+  margin: 2px;
+  background-color: #00f535;
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgb(0, 105, 26);
+  border-top-left-radius: 100px;
+  border-top-right-radius: 75px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 100px;
+}
+.wttbbb {
+  margin: 2px;
+  background-color: #00f535;
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgb(0, 105, 26);
+  border-top-left-radius: 100px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 75px;
+  border-bottom-right-radius: 100px;
+}
+.wttccc {
+  margin: 2px;
+  background-color: #001cf5;
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgb(0, 0, 105);
+  border-top-left-radius: 0;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 75px;
 }
 
 .img-test {
