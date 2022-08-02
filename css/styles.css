@@ -63,7 +63,7 @@ body {
   font-size: 50px;
   font-weight: 700;
   font-style: italic;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .list .text-formating::first-letter {
   font-family: tahoma, sans-serif;
@@ -76,4 +76,53 @@ body {
 .list .text-formating::selection {
   color: white;
   background-color: red;
+}
+.width-test {
+  width: auto;
+  margin: 10px;
+}
+.width-test-text {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 500px;
+  border: 1px solid blue;
+  margin: 5px;
+}
+.wtt {
+  background-color: #fff;
+  border-radius: 15px;
+
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #00ff15;
+
+  border-right-width: 5px;
+  border-right-style: dotted;
+  border-right-color: #000;
+
+  border-bottom-width: 10px;
+  border-bottom-style: dashed;
+  border-bottom-color: yellow;
+
+  border-left-width: 20px;
+  border-left-style: solid;
+  border-left-color: red;
+}
+.wttb {
+  background-color: #001cf5;
+  width: 150px;
+  height: 150px;
+  border-top-left-radius: 75px;
+  border-top-right-radius: 75px;
+  border-bottom-left-radius: 75px;
+  border-bottom-right-radius: 0;
+  /* border-radius: 50%; */
+}
+
+.img-test {
+  display: block;
+  box-sizing: border-box;
+  /* width: 501px; */
+  padding: 10px 15px 10px 20px;
+  border: 2px solid;
 }
