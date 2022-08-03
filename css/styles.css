@@ -170,3 +170,25 @@ body {
 }
 
 /* свойства display */
+.m-t {
+  border: 1px solid black;
+  text-decoration: none;
+  color: #000;
+  background-color: #fff;
+  margin-right: 10px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.m-t1 {
+  border: 1px solid black;
+  text-decoration: none;
+  color: #000;
+  background-color: #fff;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.block {
+  width: 300px;
+  margin: 0 auto;
+}
