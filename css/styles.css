@@ -16,7 +16,7 @@ body {
 .container {
   width: 1200px;
   margin: 0 auto;
-  border: 1px dashed black;
+  /* border: 1px dashed black; */
 
 }
 
@@ -76,13 +76,15 @@ body {
   color: red;
 
 }
+
 h2 {
   box-sizing: border-box;
   text-align: center;
   color: #ffffff;
   background-color: red;
- 
+
 }
+
 .section-list {
   display: flex;
   flex-wrap: wrap;
@@ -109,7 +111,68 @@ h2 {
 }
 
 /* footer */
+.page-footer{
+  background-color: #fff;
+}
 
 .footer-container {
-  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.list-contacts-footer {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 400px;
+  justify-content: center;
+}
+
+.adress {
+  margin-left: 50px;
+  color: red;
+  font-weight: 700;
+
+}
+
+.list-contacts-footer .link-contacts {
+  padding: 0 70px;
+
+}
+
+.container-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.form input {
+  margin: 3px 0;
+}
+
+.form input[type="text"] {
+  margin-top: 0;
+}
+
+.form button {
+  font-family: 'Courier New', Courier, monospace;
+}
+.form-position {
+  display: flex;
+  flex-direction: row;
+
+}
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+.form-button {
+  margin: auto 20px;
 }
