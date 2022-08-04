@@ -67,3 +67,49 @@ body {
   font-size: 20px;
   color: red;
 }
+
+/* main */
+.title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900px;
+  color: red;
+
+}
+h2 {
+  box-sizing: border-box;
+  text-align: center;
+  color: #ffffff;
+  background-color: red;
+ 
+}
+.section-list {
+  display: flex;
+  flex-wrap: wrap;
+
+
+  font-size: 18px;
+  color: red;
+}
+
+.section-item {
+  box-sizing: border-box;
+  list-style: none;
+  width: 50%;
+  padding: 5px;
+}
+
+.section-title {
+  color: red;
+  background-color: yellow;
+}
+
+.section-text {
+  text-indent: 1%;
+}
+
+/* footer */
+
+.footer-container {
+  
+}
