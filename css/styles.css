@@ -114,7 +114,7 @@ h2 {
 /* link-inline */
 .link-pos {
   /* display: flex; */
-justify-content: center;
+  justify-content: center;
 }
 
 .link-inline {
@@ -129,11 +129,11 @@ justify-content: center;
   text-align: center;
   background-color: red;
   width: 80px;
- 
+
 }
 
 /* footer */
-.page-footer{
+.page-footer {
   background-color: #fff;
 }
 
@@ -186,15 +186,18 @@ justify-content: center;
 .form button {
   font-family: 'Courier New', Courier, monospace;
 }
+
 .form-position {
   display: flex;
   flex-direction: row;
 
 }
+
 .form-input {
   display: flex;
   flex-direction: column;
 }
+
 .form-button {
   margin: auto 20px;
 }
