@@ -201,3 +201,26 @@ h2 {
 .form-button {
   margin: auto 20px;
 }
+
+.capitalise {
+  text-transform: capitalize;
+}
+
+.white-space {
+  white-space: normal;
+  /* white-space: nowrap; */
+  /* white-space: pre; */
+  /* white-space: pre-wrap; */
+}
+
+.shadow {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  font-size: 200px;
+  text-shadow: 5px 5px 1px orange, 10px 10px 8px white;
+  font-style: initial;
+
+}
