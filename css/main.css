@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-image: url(../images/sun-bg.png);
+    background-image: url("../images/sun-bg.png");
     background-repeat: repeat;
     background-size: 5px 5px;
 }
@@ -42,7 +42,7 @@ img {
     border-bottom: 1px solid #ffff00;
 
     background-color: #ff0;
-    background-image: url(../images/red-yellow-bg.jpg);
+    background-image: url("../images/red-yellow-bg.jpg");
 }
 
 .page-header a:not(.logo) {
@@ -121,4 +121,15 @@ img {
 
 .section-item {
     flex-basis: calc((100% - 25px) / 2);
+}
+
+
+
+.bg-position {
+    height: 200px;
+    background-color: #fff;
+    background-image: url("../images/sun-bg.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
