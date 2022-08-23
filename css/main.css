@@ -126,10 +126,97 @@ img {
 
 
 .bg-position {
-    height: 200px;
+    height: 500px;
     background-color: #fff;
     background-image: url("../images/sun-bg.png");
-    background-size: 100px 100px;
+    background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
+}
+
+.b-a {
+    background-color: #fff;
+}
+
+.b-a-i::before,
+.b-a-i::after {
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+}
+
+.b-a-i::before {
+    background-image: url("../images/sun-bg.png");
+}
+
+.b-a-i:hover {
+    color: #f00;
+}
+
+.b-a-i:hover::after {
+    margin-left: 10px;
+    content: "test";
+    background-image: url("../images/sun-bg.png");
+}
+
+.object {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 500px;
+    background-color: #f7fff7cb;
+}
+
+.object>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+}
+
+.gradient {
+    width: 100%;
+    height: 700px;
+    background-color: #fff;
+    background-image: linear-gradient(330deg, red, yellow);
+}
+
+.gradient-2 {
+    width: 100%;
+    height: 700px;
+    background-color: #fff;
+    background-image:
+        linear-gradient(to top right,
+            red 10%,
+            orange 25%,
+            yellow 40%,
+            green 55%,
+            #00e1ff 70%,
+            blue 85%,
+            violet);
+}
+
+.gradient-3 {
+    width: 100%;
+    height: 700px;
+    background-color: #fff;
+    background-image:
+        linear-gradient(to top left,
+            red 10%,
+            orange 10%,
+            orange 25%,
+            yellow 25%,
+            yellow 40%,
+            green 40%,
+            green 55%,
+            #00e1ff 55%,
+            #00e1ff 70%,
+            blue 70%,
+            blue 85%,
+            violet 85%);
 }
