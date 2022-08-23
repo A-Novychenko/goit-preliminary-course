@@ -201,6 +201,21 @@ img {
             violet);
 }
 
+.gradient-2a {
+    width: 100%;
+    height: 700px;
+    background-color: #fff;
+    background-image:
+        repeating-linear-gradient(to right,
+            red 10px,
+            orange 25px,
+            yellow 40px,
+            green 55px,
+            #00e1ff 70px,
+            blue 85px,
+            violet 100px);
+}
+
 .gradient-3 {
     width: 100%;
     height: 700px;
@@ -219,4 +234,110 @@ img {
             blue 70%,
             blue 85%,
             violet 85%);
+}
+
+.gradient-rad {
+    width: 100%;
+    height: 700px;
+    background-color: #fff;
+    background-image:
+        radial-gradient(ellipse at center,
+            red 10%,
+            orange 25%,
+            yellow 40%,
+            green 55%,
+            #00e1ff 70%,
+            blue 85%,
+            violet);
+}
+
+.gradient-rad-2 {
+    width: 100%;
+    height: 700px;
+    background-color: #fff;
+    background-image:
+        radial-gradient(circle at center,
+            red 10%,
+            orange 10%,
+            orange 25%,
+            yellow 25%,
+            yellow 40%,
+            green 40%,
+            green 55%,
+            #00e1ff 55%,
+            #00e1ff 70%,
+            blue 70%,
+            blue 85%,
+            violet 85%);
+}
+
+.grad {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    background-image: repeating-linear-gradient(30deg,
+            yellow,
+            yellow 20px,
+            red 20px,
+            red 40px
+            /* Визначає розмір градієнта */
+        );
+}
+
+
+.shadow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.post {
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 4px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    background-color: #fff;
+
+    /* box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.3); */
+}
+
+.p0 {
+    /* box-shadow: <x-offset> <y-offset> <blur> <spread> <color> */
+    box-shadow: 10px 10px 10px 2px gray;
+}
+
+.p1 {
+    /* box-shadow: <x-offset> <y-offset> <blur> <spread> <color> */
+    box-shadow:  0 10px 10px -5px green;
+}
+.p2 {
+    /* box-shadow: <x-offset> <y-offset> <blur> <spread> <color> */
+    box-shadow: -10px 0 10px -5px red;
+}
+.p3 {
+    /* box-shadow: <x-offset> <y-offset> <blur> <spread> <color> */
+    box-shadow: inset 10px 10px 20px 2px blue, inset -10px -10px 20px 2px blue;
+}
+.p01 {
+    
+}
+.p31 {
+    box-shadow: 0 2.8px 2.2px red,
+        0 6.7px 5.3px blue,
+        0 12.5px 10px green,
+        0 22.3px 17.9px purple,
+        0 41.8px 33.4px orange,
+        0 100px 80px teal;
+}
+.post-title {
+    margin-top: 0;
+}
+
+.post-text {
+    margin-bottom: 0;
 }
