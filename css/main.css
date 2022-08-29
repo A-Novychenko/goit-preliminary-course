@@ -313,19 +313,21 @@ img {
 
 .p1 {
     /* box-shadow: <x-offset> <y-offset> <blur> <spread> <color> */
-    box-shadow:  0 10px 10px -5px green;
+    box-shadow: 0 10px 10px -5px green;
 }
+
 .p2 {
     /* box-shadow: <x-offset> <y-offset> <blur> <spread> <color> */
     box-shadow: -10px 0 10px -5px red;
 }
+
 .p3 {
     /* box-shadow: <x-offset> <y-offset> <blur> <spread> <color> */
     box-shadow: inset 10px 10px 20px 2px blue, inset -10px -10px 20px 2px blue;
 }
-.p01 {
-    
-}
+
+.p01 {}
+
 .p31 {
     box-shadow: 0 2.8px 2.2px red,
         0 6.7px 5.3px blue,
@@ -334,10 +336,20 @@ img {
         0 41.8px 33.4px orange,
         0 100px 80px teal;
 }
+
 .post-title {
     margin-top: 0;
 }
 
 .post-text {
     margin-bottom: 0;
+}
+
+.svg-test {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9fd;
 }
