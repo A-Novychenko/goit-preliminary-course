@@ -105,138 +105,164 @@ img {
     margin-right: 30px;
 }
 
-
-
-
-.thumb {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    position: relative;
+.page-footer {
     background-color: #ffff00;
-
 }
 
-.box {
-    width: 250px;
-    height: 250px;
-    padding: 10px;
-    /* overflow: auto; */
-    border-radius: 20px;
-    overflow: hidden;
-
-
+.container-footer {
+    display: flex;
+    justify-content: space-around;
 }
 
-.box:nth-child(1) {
-    padding: 0;
-    background-color: aqua;
-    z-index: 3;
-    /* overflow: hidden; */
-
-    /* object-fit: cover; */
+.adress {
+    display: flex;
 }
 
-.box:nth-child(1) img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+/* footer   !!!!!!!!!! */
 
-}
 
-.box:nth-child(2) {
-    background-color: brown;
-    position: absolute;
-    top: 10px;
-    left: 475px;
-    margin: 10px;
-    z-index: 1;
-}
-
-.box:nth-child(3) {
-    background-color: teal;
-    z-index: 2;
-}
-
-h1 {
-    text-align: center;
-    font-size: 24px;
-}
-
-.ppp {
-    padding-top: 100px;
-}
-
-.boxx {
+.anime-2 {
     position: relative;
-    width: 300px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #bdbdbd;
+    width: 100px;
+    height: 100px;
+    border-color: #000000;
+    border-radius: 50%;
+    background-color: #f00;
+    /* }
+
+.anime-2:hover { */
+    animation: colorboll 2s linear .1s infinite alternate none;
+
+}
+
+.anime-2:hover {
+    animation-play-state: paused;
+}
+
+@keyframes colorBall {
+    0% {
+        transform: translatex(0px);
+    }
+
+    15% {
+        transform: translatex(150px);
+    }
+
+    33% {
+        transform: translatex(330px);
+    }
+
+    66% {
+        transform: translatex(660px);
+    }
+
+    90% {
+        transform: translatex(900px);
+    }
+
+    100% {
+        transform: translatex(1000px);
+    }
+}
+
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f9f9fd;
+}
+
+.scene {
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.bpox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: 4px;
+    color: white;
+    font-size: 20px;
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
         0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
-    overflow: hidden;
+    /*   transition: transform 0.5s ease-in-out; */
 }
 
-.boxx:hover .overlay {
-    transform: translatex(0);
+.bpox.rotate-x {
+    /*   transform: rotateX(60deg); */
+    animation: rotateX 1500ms infinite alternate ease-in-out 1000ms;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #3f51b5;
-
-    transform: translatex(-100%);
-    transition: transform 250ms ease;
+.bpox.rotate-y {
+    /*   transform: rotateY(60deg); */
+    animation: rotateY 1500ms infinite alternate ease-in-out 1000ms;
 }
 
-.overlay>p {
-    color: #fff;
-    padding: 10px;
-    margin: 0;
-    font-size: 18px;
+.bpox.rotate-x {
+    background-color: tomato;
 }
 
-.overlay code {
-    display: inline-block;
-    padding: 2px 4px;
-    border-radius: 2px;
-    background-color: #fff;
-    color: #2a2a2a;
+.bpox.rotate-y {
+    background-color: blue;
 }
 
-
-.bot {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    background-color: #ff0;
-    margin-right: auto;
-    margin-left: auto;
-    overflow: hidden;
-
+.scene:not(:last-child) {
+    margin-right: 20px;
 }
 
-.bot:hover .overlayx {
-    transform: translateY(0);
-    transition: transform 250ms ease;;
+.container1 {
+    display: flex;
 }
-.overlayx > p {
-    padding: 30px;
+
+.scene {
+    perspective: 800px;
 }
-.overlayx {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: aqua;
-    width: 100%;
-    height: 100%;
-    transform: translateY(100%);
+
+@keyframes rotateX {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateX(60deg);
+    }
+}
+
+@keyframes rotateY {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(60deg);
+    }
+}
+
+.brt {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: #fd0;
+    transform: rotate(0turn);
+    transition: transform 2000ms linear;
+    transform-origin: top left;
+}
+
+.brt:hover {
+    transform: rotate(0.5turn);
 }
