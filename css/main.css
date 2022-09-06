@@ -7,6 +7,8 @@ body {
     /* background-image: url("../images/sun-bg.png"); */
     background-repeat: repeat;
     background-size: 5px 5px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 
 }
 
@@ -43,9 +45,12 @@ img {
     padding-right: 15px;
 }
 
+
+/* =====HEADER===== */
 .page-header {
     position: sticky;
     top: 0;
+    margin-top: -80px;
     z-index: 3;
     border-bottom: 1px solid #ffff00;
 
@@ -105,164 +110,103 @@ img {
     margin-right: 30px;
 }
 
+/* =====/HEADER===== */
+
+/* =====FOOTER===== */
 .page-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background-color: #ffff00;
+    z-index: 100;
 }
 
 .container-footer {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+
+}
+
+.footer-container {
+    display: flex;
+    column-gap: 30px;
 }
 
 .adress {
     display: flex;
 }
 
-/* footer   !!!!!!!!!! */
-
-
-.anime-2 {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border-color: #000000;
-    border-radius: 50%;
-    background-color: #f00;
-    /* }
-
-.anime-2:hover { */
-    animation: colorboll 2s linear .1s infinite alternate none;
-
+.footer-form {
+    margin-left: auto;
 }
 
-.anime-2:hover {
-    animation-play-state: paused;
-}
+/* =====/FOOTER===== */
 
-@keyframes colorBall {
-    0% {
-        transform: translatex(0px);
-    }
+/* /////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+///////////////////////////////// */
 
-    15% {
-        transform: translatex(150px);
-    }
-
-    33% {
-        transform: translatex(330px);
-    }
-
-    66% {
-        transform: translatex(660px);
-    }
-
-    90% {
-        transform: translatex(900px);
-    }
-
-    100% {
-        transform: translatex(1000px);
-    }
-}
-
-
-
-body {
-    font-family: "Open Sans", sans-serif;
-    margin: 0;
-    min-height: 100vh;
+/* =====FORM===== */
+.form-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+}
+
+.form-main-title {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+background-color: rgba(255, 255, 0, 0.5);
+
     text-align: center;
-    background-color: #f9f9fd;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #00f;
+
 }
 
-.scene {
-    height: 200px;
-    width: 200px;
-    border: 2px solid black;
-    border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-}
+.form-main-title::before {
+    content: " ";
 
-.bpox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    border-radius: 4px;
-    color: white;
-    font-size: 20px;
-    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    display: block;
 
-    /*   transition: transform 0.5s ease-in-out; */
-}
-
-.bpox.rotate-x {
-    /*   transform: rotateX(60deg); */
-    animation: rotateX 1500ms infinite alternate ease-in-out 1000ms;
-}
-
-.bpox.rotate-y {
-    /*   transform: rotateY(60deg); */
-    animation: rotateY 1500ms infinite alternate ease-in-out 1000ms;
-}
-
-.bpox.rotate-x {
-    background-color: tomato;
-}
-
-.bpox.rotate-y {
-    background-color: blue;
-}
-
-.scene:not(:last-child) {
-    margin-right: 20px;
-}
-
-.container1 {
-    display: flex;
-}
-
-.scene {
-    perspective: 800px;
-}
-
-@keyframes rotateX {
-    0% {
-        transform: rotateX(0deg);
-    }
-
-    100% {
-        transform: rotateX(60deg);
-    }
-}
-
-@keyframes rotateY {
-    0% {
-        transform: rotateY(0deg);
-    }
-
-    100% {
-        transform: rotateY(60deg);
-    }
-}
-
-.brt {
-    margin: 100px;
     width: 100px;
-    height: 100px;
-    background-color: #fd0;
-    transform: rotate(0turn);
-    transition: transform 2000ms linear;
-    transform-origin: top left;
+    height: 4px;
+
+
+    border-radius: 2px;
+    background-color: #00f;
+}
+.form-main-title::after {
+    content: " ";
+
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    display: block;
+
+    width: 100px;
+    height: 4px;
+
+
+    border-radius: 2px;
+    background-color: #00f;
 }
 
-.brt:hover {
-    transform: rotate(0.5turn);
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+.feedback {
+    width: 500px;
+    resize: none;
 }

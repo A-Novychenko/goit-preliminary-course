@@ -44,29 +44,61 @@
   </header>
   <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////-->
   <main>
+    <section class="form-page">
+      <div class="container form-container">
+        <h1 class="form-main-title">Form</h1>
+        <form class="form-field" action="" name="form-test" autocomplete="on">
+          <label for="f-tel">Telephone</label>
+          <input type="tel" name="ftel" id="f-tel" autofocus placeholder="000-000-00-00">
+          <label for=""><input type="radio" name="sss" value="1" checked>Da</label>
+          <label for=""><input type="radio" name="sss" value="0">Net</label>
+          <label for="">№<input type="number" min="1" max="4" step="0.5"></label>
+          <label>
+            Interest rate:
+            <input type="range" name="interest_rate" value="100" min="0" max="100" step="10" />
+          </label>
+          <p>Selected value: <span class="js-selected-value">100</span></p>
+          <button type="submit">submit</button>
+          <button type="menu">menu</button>
+          <button type="reset">reset</button>
+        </form>
+        <form>
+          <label>
+            Date
+            <input type="date" min="1920-01-01" max="2025-01-01" />
+          </label>
 
-    <section class="page-content">
-      <div class="container">
-        <div class="anime-2"></div>
-      </div>
+          <label>
+            Time
+            <input type="time" />
+          </label>
 
-      <div class="container1">
-        <div class="scene">
-          <div class="bpox rotate-x">rotateX(60deg)</div>
-        </div>
-        <div class="scene">
-          <div class="bpox rotate-x">rotateX(60deg)</div>
-        </div>
-        <div class="scene">
-          <div class="bpox rotate-y">rotateY(60deg)</div>
-        </div>
+          <label>
+            Date and time
+            <input type="datetime-local" min="1920-01-01T00:00" max="2025-01-01T00:00" />
+          </label>
 
-        <div class="scene">
-          <div class="bpox rotate-y">rotateY(60deg)</div>
-        </div>
+          <button type="submit">Submit</button>
+        </form>
+        <form>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="example@mail.com">
+          </label>
+          <label>
+            Feedback
+            <textarea class="feedback" name="feedback" rows="10" placeholder="Type your message here..."></textarea>
+          </label>
+          <button type="submit">Submit</button>
+        </form>
+        <label for="size">Size</label>
+        <select id="size" name="size">
+          <option value="xs">Extra Small</option>
+          <option value="s">Small</option>
+          <option value="m" selected>Medium</option>
+          <option value="l">Large</option>
+        </select>
       </div>
-      </div>
-<div class="brt"></div>
     </section>
 
   </main>
@@ -79,7 +111,7 @@
           <li><a class="link-contacts" href="tel:+380639993570">063-999-35-70</a></li>
         </ul>
       </address>
-      <form class="form" action="">
+      <form class="footer-form" action="">
         <div class="form-position">
           <div class="form-input">
             <input type="mail" placeholder="e-mail">
@@ -92,6 +124,11 @@
       </form>
     </div>
   </footer>
+  <script>
+    const rangeInput = document.querySelector('input[type="range"]')
+    const output = document.querySelector('.js-selected-value');
+    rangeInput.addEventListener('input', e => output.textContent = e.target.value)
+  </script>
 </body>
 
 </html>
