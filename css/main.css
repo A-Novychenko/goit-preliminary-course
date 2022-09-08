@@ -161,8 +161,8 @@ img {
     position: relative;
     padding-top: 50px;
     padding-bottom: 50px;
-    
-background-color: rgba(255, 255, 0, 0.5);
+
+    background-color: rgba(255, 255, 0, 0.5);
 
     text-align: center;
     text-transform: uppercase;
@@ -186,6 +186,7 @@ background-color: rgba(255, 255, 0, 0.5);
     border-radius: 2px;
     background-color: #00f;
 }
+
 .form-main-title::after {
     content: " ";
 
@@ -206,7 +207,124 @@ background-color: rgba(255, 255, 0, 0.5);
     display: flex;
     flex-direction: column;
 }
+
 .feedback {
     width: 500px;
     resize: none;
+}
+
+.input-disabled:disabled {
+    background-color: #f00;
+}
+
+.input-disabled:enabled {
+    background-color: aqua;
+}
+
+.form:focus-within {
+    border-color: #2196f3;
+}
+
+.form-label:focus-within {
+    color: #2196f3;
+}
+
+.form-input:not(:placeholder-shown):required:valid {
+    border-color: #4caf50;
+}
+
+.form-input:not(:placeholder-shown):required:invalid {
+    border-color: #f44336;
+}
+
+/* Example styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #2a2a2a;
+}
+
+.form {
+    width: 100%;
+    padding: 24px;
+    border-radius: 4px;
+    border: 2px dashed #2a2a2a;
+}
+
+.form-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+
+
+
+
+
+
+.form-new-fieldset {
+    position: relative;
+}
+
+.form-new-fieldset-label {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    transition: transform 250ms linear;
+}
+
+.form-new-fieldset-input:focus+.form-new-fieldset-label {
+    color: #f00;
+    transform: translateY(-30px);
+}
+
+.form-new-fieldset-input:not(:placeholder-shown)+.form-new-fieldset-label {
+
+    transform: translateY(-30px);
+}
+
+.rrr {
+    position: relative;
+}
+
+.lll {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    transition: transform 250ms linear;
+}
+
+.www:focus+.lll,
+.www:not(:placeholder-shown)+.lll {
+    color: #ff0;
+    transform: translateY(-30px);
+}
+
+.sss {
+    position: relative;
+}
+
+.zzz {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    transition: transform 250ms linear;
+}
+
+.qqq:focus-within .zzz {
+    color: #4caf50;
+    transform: translateY(-30px);
+}
+
+.aaa:not(:placeholder-shown)+.zzz {
+    color: #4caf50;
+    transform: translateY(-30px);
 }

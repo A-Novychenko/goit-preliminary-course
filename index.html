@@ -24,7 +24,7 @@
           <a class="logo" href="./index.html"><img src="./images/ico.png" alt="logo" width="50" /></a>
           <ul class="list header-nav-item">
             <li class="header-list-item">
-              <a class="list-link" href="">Page1</a>
+              <a class="list-link" href="./form.html">Form-NEW</a>
             </li>
             <li class="header-list-item">
               <a class="list-link" href="">Page2</a>
@@ -50,8 +50,7 @@
         <form class="form-field" action="" name="form-test" autocomplete="on">
           <label for="f-tel">Telephone</label>
           <input type="tel" name="ftel" id="f-tel" autofocus placeholder="000-000-00-00">
-          <label for=""><input type="radio" name="sss" value="1" checked>Da</label>
-          <label for=""><input type="radio" name="sss" value="0">Net</label>
+
           <label for="">№<input type="number" min="1" max="4" step="0.5"></label>
           <label>
             Interest rate:
@@ -98,6 +97,38 @@
           <option value="m" selected>Medium</option>
           <option value="l">Large</option>
         </select>
+        <form>
+
+          <label for=""><input type="radio" name="sss" value="1" che7cked required>Da</label>
+          <label for=""><input type="radio" name="sss" value="0" required>Net</label>
+          <button type="submit">submit</button>
+
+        </form>
+        <form>
+          <fieldset>
+            <label>
+              <!-- Username
+              <input class="input-disabled" type="text" name="text" required pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                title="Username must be two words separated by space." dis3abled /> -->
+                <input type="range">
+            </label>
+            <button type="submit">submit</button>
+          </fieldset>
+        </form>
+        <form class="form">
+          <label class="form-label" for="idtest"></label>
+            <span class="label-text">Username</span>
+            <input type="text" class="form-input" name="username" required minlength="3" placeholder=" " id="idtest">
+         
+        
+          <label class="form-label">
+            <span class="label-text">Email</span>
+            <input type="email" class="form-input" name="mail" required placeholder=" ">
+          </label>
+        
+          <button type="submit">Submit</button>
+        </form>
+
       </div>
     </section>
 
