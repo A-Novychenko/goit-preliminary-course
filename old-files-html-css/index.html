@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./images/ico.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <title>RedyelloW</title>
+  <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+  <link rel="stylesheet" href="./css/main.css" />
+
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="container">
+      <div class="header-container">
+        <nav class="header-nav">
+          <a class="logo" href="./index.html"><img src="./images/ico.png" alt="logo" width="50" /></a>
+          <ul class="list header-nav-item">
+            <li class="header-list-item">
+              <a class="list-link" href="./form.html">Form-NEW</a>
+            </li>
+            <li class="header-list-item">
+              <a class="list-link" href="">Page2</a>
+            </li>
+            <li class="header-list-item">
+              <a class="list-link" href="">Page3</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="header-list-contacts">
+          <li class="header-contact"><a class="header-link-contacts"
+              href="mailto:A.Novychenko@outlook.com">A.Novychenko@outlook.com</a></li>
+          <li class="header-contact"><a class="header-link-contacts" href="tel:+380639993570">063-999-35-70</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <main>
+    <section class="form-page">
+      <div class="container form-container">
+        <h1 class="form-main-title">Form</h1>
+        <form class="form-field" action="" name="form-test" autocomplete="on">
+          <label for="f-tel">Telephone</label>
+          <input type="tel" name="ftel" id="f-tel" autofocus placeholder="000-000-00-00">
+
+          <label for="">№<input type="number" min="1" max="4" step="0.5"></label>
+          <label>
+            Interest rate:
+            <input type="range" name="interest_rate" value="100" min="0" max="100" step="10" />
+          </label>
+          <p>Selected value: <span class="js-selected-value">100</span></p>
+          <button type="submit">submit</button>
+          <button type="menu">menu</button>
+          <button type="reset">reset</button>
+        </form>
+        <form>
+          <label>
+            Date
+            <input type="date" min="1920-01-01" max="2025-01-01" />
+          </label>
+
+          <label>
+            Time
+            <input type="time" />
+          </label>
+
+          <label>
+            Date and time
+            <input type="datetime-local" min="1920-01-01T00:00" max="2025-01-01T00:00" />
+          </label>
+
+          <button type="submit">Submit</button>
+        </form>
+        <form>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="example@mail.com">
+          </label>
+          <label>
+            Feedback
+            <textarea class="feedback" name="feedback" rows="10" placeholder="Type your message here..."></textarea>
+          </label>
+          <button type="submit">Submit</button>
+        </form>
+        <label for="size">Size</label>
+        <select id="size" name="size">
+          <option value="xs">Extra Small</option>
+          <option value="s">Small</option>
+          <option value="m" selected>Medium</option>
+          <option value="l">Large</option>
+        </select>
+        <form>
+
+          <label for=""><input type="radio" name="sss" value="1" che7cked required>Da</label>
+          <label for=""><input type="radio" name="sss" value="0" required>Net</label>
+          <button type="submit">submit</button>
+
+        </form>
+        <form>
+          <fieldset>
+            <label>
+              <!-- Username
+              <input class="input-disabled" type="text" name="text" required pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                title="Username must be two words separated by space." dis3abled /> -->
+                <input type="range">
+            </label>
+            <button type="submit">submit</button>
+          </fieldset>
+        </form>
+        <form class="form">
+          <label class="form-label" for="idtest"></label>
+            <span class="label-text">Username</span>
+            <input type="text" class="form-input" name="username" required minlength="3" placeholder=" " id="idtest">
+         
+        
+          <label class="form-label">
+            <span class="label-text">Email</span>
+            <input type="email" class="form-input" name="mail" required placeholder=" ">
+          </label>
+        
+          <button type="submit">Submit</button>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+  <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <footer class="page-footer">
+    <div class="container container-footer">
+      <address class="footer-container adress">Ukraine <br>Kyiv pr.Nauky, 11
+        <ul class="list-contacts list-contacts-footer">
+          <li><a class="link-contacts" href="mailto:A.Novychenko@outlook.com">A.Novychenko@outlook.com</a></li>
+          <li><a class="link-contacts" href="tel:+380639993570">063-999-35-70</a></li>
+        </ul>
+      </address>
+      <form class="footer-form" action="">
+        <div class="form-position">
+          <div class="form-input">
+            <input type="mail" placeholder="e-mail">
+            <input type="text" placeholder="Massage">
+          </div>
+          <div class="form-button">
+            <button type="submit">submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </footer>
+  <script>
+    const rangeInput = document.querySelector('input[type="range"]')
+    const output = document.querySelector('.js-selected-value');
+    rangeInput.addEventListener('input', e => output.textContent = e.target.value)
+  </script>
+</body>
+
+</html>
