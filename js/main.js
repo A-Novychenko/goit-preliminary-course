@@ -1,3 +1,106 @@
+//                   ПЕРЕМЕННЫЕ, ВВОД/ВЫВОД                   //
+
+// let x;
+
+// x = 500;
+// console.log(x);
+// x = typeof x;
+
+// console.log(x);
+// console.log(typeof x);
+
+// const a = x + 'wwww';
+// console.log(a);
+// // alert(a);
+// let date = 21;
+// alert('Сьогодні ' + date + ' жовтня');
+// date += 1;
+// alert(`Завтра ${date} жовтня`);
+
+// let bgc;
+
+// bgc = confirm('Я перефарбую фон у зелений?');
+// if (bgc === true) {
+//   document.body.style.backgroundColor = 'green';
+// }
+
+// let userInput;
+// userInput = Number.parseInt(prompt('Сколько Вам лет?'));
+// console.log(userInput);
+// console.log(typeof userInput);
+
+// if (userInput >= 18) {
+//   document.body.style.backgroundColor = 'green';
+// } else {
+//   document.body.style.backgroundColor = 'red';
+// }
+
+//                   ОСНОВНІ ОПЕРАТОРИ                    //
+//                   математичні оператори                    //
+// let result;
+// const a = 1;
+// const b = 2;
+// const c = 3;
+// const d = 10;
+// const e = 100;
+// const f = 100;
+// const h = 100;
+
+// result = a + b - (((c * d) / e) * f) / h;
+
+// console.log(result);
+
+// const x = 22;
+// const y = 4;
+
+// // Додавання
+// console.log(x + y); // 15
+
+// // Віднімання
+// console.log(x - y); // 5
+
+// // Множення
+// console.log(x * y); // 50
+
+// // Ділення
+// console.log(x / y); // 2
+
+// // Остача від ділення
+// console.log(x % y); // 0
+
+// // Додавання із заміною (також є для всіх інших операторів)
+// let value = 5;
+
+// // Аналогічно запису value = value + 10;
+// value += 10;
+// console.log(value); // 15
+
+//                   оператори порівняння                    //
+// const a = NaN;
+// const b = '10px';
+// let res1;
+// let res2;
+// // let num = isNaN(Number(NaN));
+// // let num2 = isNaN(Number('10px'));
+// let num = Number.isNaN(NaN);
+// let num2 = Number.isNaN(Number('10px'));
+// console.log(num);
+// console.log(num2);
+// // let res1 = a > b;
+// // res1 = a < b;
+// res1 = a == b;
+// res2 = num !== num2;
+
+// // alert(res1);
+
+// alert(res2);
+// // console.log(typeof res1);
+
+// const a = false;
+// const b = 0;
+
+// console.log(a === b);
+
 //                   ЧИСЛА                    //
 
 // let width = '50.5px';
@@ -15,7 +118,43 @@
 
 // const result = Number.isNaN(width2);
 // console.log(result);
+//               додавання дробових чисел         //
 
+// *100 дадати і поділити на 100
+
+// const a = 0.1;
+// const b = 0.2;
+
+// const result = (a * 100 + b * 100) / 100;
+
+// console.log(result);
+// console.log(result === 0.3);
+
+// додати а результат скоротити
+
+// const a = 0.1;
+// const b = 0.2;
+
+// const result = Number((a + b).toFixed(1));
+
+// console.log(result);
+// console.log(result === 0.3);
+
+//                      КЛАС Math                    //
+let a = 1.9;
+
+a = Math.floor(a);
+// 1--- повертає число до крапки(найменше ціле)
+
+a = 1.2;
+a = Math.ceil(a);
+// 2--- повертає
+
+console.log(a);
+
+//
+//
+//
 //                ВЕТВЛЕНИЯ                   //
 
 // ************  if  ************ //
