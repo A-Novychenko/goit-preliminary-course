@@ -141,16 +141,29 @@
 // console.log(result === 0.3);
 
 //                      КЛАС Math                    //
-let a = 1.9;
+// let a = 1.9;
 
-a = Math.floor(a);
-// 1--- повертає число до крапки(найменше ціле)
+// a = Math.floor(a);
+// // 1--- повертає число до крапки(найменше ціле)
 
-a = 1.2;
-a = Math.ceil(a);
-// 2--- повертає
+// a = 1.2;
+// a = Math.ceil(a);
+// // 2--- повертає найближче більше ціле (якщо а = 2.1 або 2,8  то поверне 3)
 
-console.log(a);
+// a = 1.5;
+// a= Math
+// console.log(a);
+
+// const a = 0.1;
+// const b = 0.3;
+
+// let result = a + b;
+// console.log(result);
+// console.log((0.1 + 0.2).toFixed(100));
+// console.log((0.1 * 100 + 0.2 * 100) / 100);
+
+// console.log(0.1 + 0.2 === 0.3);
+// console.log(0.1 + 0.2); // 0.30000000000000004
 
 //
 //
