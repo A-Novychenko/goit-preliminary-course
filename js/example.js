@@ -72,3 +72,39 @@
 
 // const bmi = (weight / Math.pow(height, 2)).toFixed(1);
 // console.log(bmi); // 28.8
+
+// Example 7 - Операторы сравнения и приведение типов Каким будет результат выражений?
+
+console.log(5 > 4); //true
+
+console.log(10 >= '7'); //true
+
+console.log('2' > '12'); //true
+
+console.log('2' < '12'); //false
+
+console.log('4' == 4); //true
+
+console.log('6' === 6); //false
+
+console.log('false' === false); //false
+
+console.log(1 == true); //true
+
+console.log(1 === true); //false
+
+console.log('0' == false); //true
+
+console.log('0' === false); //false
+
+console.log('Papaya' < 'papaya'); // true???
+
+console.log('Papaya' === 'papaya'); //false
+
+console.log(undefined == null); //true
+
+console.log(undefined === null); //false
+
+console.log('1' > '12'); //false сравнивает посимвольно: "1" = "1" ==> "" < "2" поэтому строка 12 больше
+
+console.log('1' < '12'); //true

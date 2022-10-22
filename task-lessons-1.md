@@ -41,7 +41,7 @@ let weight = '88,3'; let height = '1.75';
 
 const bmi = ; console.log(bmi); // 28.8 -->
 
-Example 7 - Операторы сравнения и приведение типов Каким будет результат выражений?
+<!-- Example 7 - Операторы сравнения и приведение типов Каким будет результат выражений?
 
 console.log(5 > 4);
 
@@ -71,7 +71,7 @@ console.log('Papaya' === 'papaya');
 
 console.log(undefined == null);
 
-console.log(undefined === null);
+console.log(undefined === null); -->
 
 Example 8 - Логические операторы Каким будет результат выражений?
 
