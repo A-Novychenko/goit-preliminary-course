@@ -73,7 +73,7 @@ console.log(undefined == null);
 
 console.log(undefined === null); -->
 
-Example 8 - Логические операторы Каким будет результат выражений?
+<!-- Example 8 - Логические операторы Каким будет результат выражений?
 
 console.log(true && 3);
 
@@ -93,7 +93,7 @@ console.log(null || 2 || undefined);
 
 console.log((1 && null && 2) > 0);
 
-console.log(null || (2 && 3) || 4);
+console.log(null || (2 && 3) || 4); -->
 
 Example 9 - Значение по умолчанию и оператор нулевого слияния Отрефактори код так, чтобы в
 переменную value присваивалось значение переменной incomingValue, если оно не равно undefined или
