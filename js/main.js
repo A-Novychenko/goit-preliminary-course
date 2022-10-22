@@ -154,18 +154,121 @@
 // a= Math
 // console.log(a);
 
-// const a = 0.1;
-// const b = 0.3;
+// console.log(Math.min(10, 20, 30, 100, 50));
+// console.log(Math.max(10, 20, 30, 100, 50));
 
-// let result = a + b;
-// console.log(result);
-// console.log((0.1 + 0.2).toFixed(100));
-// console.log((0.1 * 100 + 0.2 * 100) / 100);
+//                РЯДКИ                   //
+//       Конкатенація - додавання(зшивання рядків)         //
+// const a = 2;
+// const b = 5;
+// const c = '10';
 
-// console.log(0.1 + 0.2 === 0.3);
-// console.log(0.1 + 0.2); // 0.30000000000000004
+// let res;
 
+// res = a + b + c;
+// console.log(res);
+
+// const d = 'Mango';
+// const e = 'Apple';
+// // Звичайний рядок з підстановкою змінних. Фрукти
+// res = 'фрукт 1: ' + d + ', фрукт 2: ' + e + '.';
+// console.log(res);
+// // Шаблонний рядок
+// res = `фрукт 1: ${d}, фрукт 2: ${e}.`;
+// console.log(res);
+// //
+//        Влстивості рядків
 //
+// const massage = 'Hello !';
+// console.log(massage.length);
+// console.log('                            '.length);
+
+// const textSmall = 'ЦЕЙ ТЕКСТ ПОВИНЕН БУТИ В НИЖНЬОМУ РЕГІСТРІ';
+// const textBig = 'цей текст повинен бути в верхньому регістрі';
+// let s = textSmall.toLowerCase();
+// let b = textBig.toUpperCase();
+// console.log(s);
+// console.log(b);
+
+// const massageSmall = 'ПОВІДОМЛЕННЯ В НИЖНЬОМУ РЕГІСТРІ';
+// const massageBig = 'повідомлення в верхньому регістрі';
+// let mS = massageSmall.toLowerCase();
+// let mB = massageBig.toUpperCase();
+// console.log(mS);
+// console.log(mB);
+
+// const brand = 'DELL';
+// const userInput = prompt('Вкажіть марку монітора').toUpperCase();
+
+// if (brand === userInput) {
+//   alert('GOOD!');
+// } else {
+//   alert('EROR');
+// }
+
+// const testIndex = 'Test';
+
+// const index = testIndex.indexOf('et');
+// console.log(index);
+
+// const testIncludes = 'Перевіряє, чи міститься підрядок в рядку';
+
+// const includes = testIncludes.includes('чи міс');
+// console.log(includes);
+// const endsWith = testIncludes.endsWith('дку');
+// console.log(endsWith);
+
+// const replace = testIncludes.replace('е', 'е.');
+// console.log(replace);
+// const replaceAll = testIncludes.replaceAll('е', 'е.');
+// console.log(replaceAll);
+
+// let phrase = 'My last name Novichenko';
+// console.log(phrase);
+// console.log(phrase.indexOf('N'));
+// console.log(phrase.indexOf('c'));
+
+// let pseudonym = phrase.slice(13, 17 + 1);
+// pseudonym = pseudonym.replace('c', 'k');
+// console.log(pseudonym);
+
+// phrase = phrase.replace('last name Novichenko', 'pseudonym Novik');
+// console.log(phrase);
+//
+//
+//                 ЛОГІЧНІ ОПЕРАТОРИ                   //
+//                  Логічне І   &&                 //
+// console.log(1 && 5); // 5
+// console.log(5 && 1); // 1
+// console.log(0 && 2); // 0
+// console.log(2 && 0); // 0
+// console.log('' && 'Mango'); // ""
+// console.log('Mango' && ''); // ""
+// console.log('Mango' && 'Poly'); // 'Poly'
+// console.log('Poly' && 'Mango'); // "Mango"
+
+// //                  Логічне АБО   ||              //
+
+// console.log(true || false); // true
+// console.log(false || true); // true
+// console.log(true || true); // true
+
+// console.log(3 || false); // 3
+// console.log(false || 3); // 3
+// console.log(3 || true); // 3
+// console.log(true || 3); // true
+
+// //                  Логічне НЕ  !              //
+
+// console.log(!true); // false
+// console.log(!false); // true
+// console.log(!3); // false
+// console.log(!'Mango'); // false
+// console.log(!0); // true
+// console.log(!''); // true
+
+// const isOnline = true;
+// const isNotOnline = !isOnline; // false
 //
 //
 //                ВЕТВЛЕНИЯ                   //
