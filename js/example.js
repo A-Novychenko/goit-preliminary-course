@@ -327,3 +327,81 @@
 // link.includes('my-site') && !link.endsWith('/') ? (link += '/') : null;
 
 // console.log(link);
+
+///////////////////////////////////////////////////////////////////////
+
+// Example 8 - if...else и логические операторы Напиши скрипт который будет выводить в консоль браузера
+// строку в зависимости от значения переменной hours.
+
+// Если значение переменной hours:
+
+// меньше 17, выводи строку "Pending" больше либо равно 17 и меньше либо равно 24, выводи строку
+// "Expires" больше 24, выводи строку "Overdue"
+
+// const hours = 25;
+
+// if (hours < 17) {
+//   console.log('Pending');
+// } else if (hours >= 17 && hours <= 24) {
+//   console.log('Expires');
+// } else {
+//   console.log('Overdue');
+// }
+
+///////////////////////////////////////////////////////////////////////
+
+// Example 9 - Дедлайн сдачи проекта (if...else) Напиши скрипт для отображения времени дедлайна сдачи
+// проекта. Используй конструкцию if...else.
+
+// Eсли до дедлайна 0 дней - выведи строку "Сегодня" Eсли до дедлайна 1 день - выведи строку "Завтра"
+// Eсли до дедлайна 2 дня - выведи строку "Послезавтра" Eсли до дедлайна 3+ дней - выведи строку "Дата
+// в будущем"
+
+// Если до дедлайна атрицательное значение то вывести "Дедлайн просрочен"
+// const daysUntilDeadline = 0; // Пиши код ниже этой строки
+// let daysUntilDeadlineOverdue;
+// if (daysUntilDeadline < 0) {
+//   daysUntilDeadlineOverdue = daysUntilDeadline;
+// }
+
+// if (daysUntilDeadline === 0) {
+//   console.log('Сегодня');
+// } else if (daysUntilDeadline === 1) {
+//   console.log('Завтра');
+// } else if (daysUntilDeadline === 2) {
+//   console.log('Послезавтра');
+// } else if (daysUntilDeadline === daysUntilDeadlineOverdue) {
+//   console.log('Дедлайн просрочен');
+// } else {
+//   console.log('Дата в будущем');
+// }
+
+//////////////////////////////////////////////////////////////////////////
+
+// Example 10 - Дедлайн сдачи проекта (switch) Выполни рефакторинг кода задачи номер 9 используя
+// switch.
+
+// const daysUntilDeadline = 0;
+// let daysUntilDeadlineOverdue;
+// if (daysUntilDeadline < 0) {
+//   daysUntilDeadlineOverdue = daysUntilDeadline;
+// }
+
+// switch (daysUntilDeadline) {
+//   case 0:
+//     console.log('Сегодня');
+//     break;
+//   case 1:
+//     console.log('Завтра');
+//     break;
+//   case 2:
+//     console.log('Послезавтра');
+//     break;
+//   case daysUntilDeadlineOverdue:
+//     console.log('Дедлайн просрочен');
+//     break;
+//   default:
+//     console.log('Дата в будущем');
+// }
+
+///////////////////////////////////////////////////////////////////////////
