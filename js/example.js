@@ -212,10 +212,31 @@
 // JavaScript?". Если пользователь вводит ECMAScript, то показывай alert со строкой "Верно!", в
 // противном случае - "Не знаете? ECMAScript!"
 
-let userInput = prompt('Какое официальное название JavaScript?');
+// let userInput = prompt('Какое официальное название JavaScript?');
 
-if (userInput === 'ECMAScript') {
-  alert('Верно!');
-} else {
-  alert('Не знаете? ECMAScript!');
-}
+// if (userInput === 'ECMAScript') {
+//   alert('Верно!');
+// } else {
+//   alert('Не знаете? ECMAScript!');
+// }
+
+// Example 2 - Отображение времени (if...else) Напиши скрипт для отображения часов и минут в консоли
+// браузера в виде строки формата "14 ч. 26 мин.". Если значение переменной minutes равно 0, то выводи
+// строку "14 ч.", без минут.
+// const hours = 14;
+// const minutes = 0;
+// let timestring;
+
+// if (minutes === 0) {
+//   console.log(`Время: ${hours} ч.`);
+// } else {
+//   console.log(`Время: ${hours} ч. ${minutes} мин.`);
+// }
+
+// решение из урока
+// if (minutes > 0) {
+//   timestring = `${hours} ч. ${minutes} мин.`;
+// } else {
+//   timestring = `${hours} ч.`;
+// }
+// console.log(timestring);
