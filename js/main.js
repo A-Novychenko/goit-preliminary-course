@@ -509,3 +509,71 @@
 // for (let i = 0; i < max; i += 1) {
 //   console.log(`${max} % ${i} = `, max % i);
 // }
+//*
+//*
+//*
+//**************************************************************************** */
+
+//---------------------------- МАССИВЫ И ФУНКЦИИ-------------------------------//
+
+//**************************************************************************** */
+//*
+//*
+// //  ************  массив  ************ //
+// const brand = ['apple', 'samsung', 'hp', 'asus', 'dell', 'lenovo'];
+// const brandName = prompt('Введіть назву бренду').toLocaleUpperCase();
+// let message;
+
+// for (const currentBrand of brand) {
+//   // console.log(currentBrand);
+//   if (brandName === currentBrand.toLocaleUpperCase()) {
+//     message = `${brandName} присутній в асортименті`;
+//     break;
+//   }
+//   message = `${brandName} немає в асортименті`;
+// }
+// console.log(message);
+
+// const carPartsList = ['KYB', 'Sachs', 'Monroe', 'Kony', 'Bilstaine'];
+// const partsName = 'KYB';
+// let message;
+
+// for (const currentPartsName of carPartsList) {
+//   if (currentPartsName === partsName) {
+//     message = 'is available';
+//     break;
+//   }
+//   message = 'not available';
+// }
+// console.log(message);
+
+// // виведу числа менші за 10 (9 включно)
+// const numbers = [1, 3, 14, 10, 18, 4, 7, 29, 6, 34, 9];
+// // const threshold = 15;
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] < 10) {
+//     console.log(numbers[i]);
+//   }
+// }
+// виведу числа більші за threshold
+// const numbers = [1, 3, 14, 10, 18, 4, 7, 29, 6, 34, 9];
+// const threshold = 10;
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] < threshold) {
+//     continue;
+//   }
+//   console.log(numbers[i]);
+// }
+
+// виведу числа менші за threshold
+const numbers = [1, 3, 14, 10, 18, 4, 7, 29, 6, 34, 9];
+const threshold = 10;
+
+for (let i = 0; i < numbers.length; i += 1) {
+  if (numbers[i] >= threshold) {
+    continue;
+  }
+  console.log(numbers[i]);
+}
