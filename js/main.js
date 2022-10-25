@@ -568,12 +568,12 @@
 // }
 
 // виведу числа менші за threshold
-const numbers = [1, 3, 14, 10, 18, 4, 7, 29, 6, 34, 9];
-const threshold = 10;
+// const numbers = [1, 3, 14, 10, 18, 4, 7, 29, 6, 34, 9];
+// const threshold = 10;
 
-for (let i = 0; i < numbers.length; i += 1) {
-  if (numbers[i] >= threshold) {
-    continue;
-  }
-  console.log(numbers[i]);
-}
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] >= threshold) {
+//     continue;
+//   }
+//   console.log(numbers[i]);
+// }
