@@ -577,3 +577,160 @@
 //   }
 //   console.log(numbers[i]);
 // }
+
+//   ПРИСВОЮВАННЯ ЗА ЗНАЧЕННЯМ /
+
+// let a = 10;
+// const b = a;
+// console.log(a);
+// console.log(b);
+
+// a = 25;
+// console.log(a);
+// console.log(b);
+
+// let a = [10];
+// const b = a;
+// console.log(a);
+// console.log(b);
+
+// a[0] = 25;
+// console.log(a);
+// console.log(b);
+
+//  МЕТОД SPLIT i JOIN   //
+
+// const brand = 'samsung';
+
+// const brandLetter = brand.split('');
+// console.log(brandLetter);
+
+// const brandWord = brandLetter.join('');
+// console.log(brandWord);
+
+// const phrase =
+//   'Метод split(delimiter) перетворює рядок в масив, «розбиваючи» його роздільником delimiter. Якщо роздільник - це порожній рядок, то створиться масив окремих символів. Роздільником може бути один або декілька символів.';
+
+// const phraseWord = phrase.split(' ');
+// console.log(phraseWord);
+
+// const phraseSentence = phraseWord.join(' ');
+// console.log(phraseSentence);
+
+//////////////*************---------------------*******************------------------*** */
+// let a = 50;
+// let b = a;
+// console.log(a); // 5
+// console.log(b);
+
+// a = 20;
+// console.log(a);
+// console.log(b);
+
+// const m = [5];
+// const p = m;
+// console.log(m);
+// console.log(p);
+
+// m[0] = 25;
+// m.push(30);
+// console.log(m);
+// console.log(p);
+
+// p.push(35);
+// console.log(m);
+// console.log(p);
+
+// const text = "Метод масивів join(delimiter) об'єднує елементи масиву у рядок.";
+// const mas = text.split(" ");
+// console.log(mas);
+
+// const brand = "samsung";
+// let brandLater = brand.split("");
+// console.log(brandLater);
+// let brandWord = brandLater.join();
+// console.log(brandWord);
+
+// let textNew = mas.join(" ");
+// console.log(textNew);
+
+// const indexM = brandLater.indexOf("m");
+// console.log(indexM);
+
+// const test = ["test", "test2", "test3", "test4", "test5"];
+// const indexTest = test.indexOf("test3");
+// console.log(indexTest);
+// console.log(test.indexOf("test7"));
+// console.log(test.includes("test5"));
+// console.log(test.includes("test10"));
+
+// const cityUkraineList = ["Kyiv", "Kharkiv", "Zhytomyr", "Vinnytsia", "Poltava"];
+// const cityList = ["London", "Kyiv", "Praha"];
+// console.log("This is Ukrainians city?");
+
+// for (const currentCity of cityList) {
+//   if (cityUkraineList.includes(currentCity)) {
+//     console.log(currentCity);
+//     console.log("YES");
+//     console.log("");
+//   } else {
+//     console.log(currentCity);
+//     console.log("NO");
+//     console.log("");
+//   }
+// }
+
+// const cityUkraineList = ["Kyiv", "Kharkiv", "Zhytomyr", "Vinnytsia", "Poltava"];
+// const push1 = cityUkraineList.push("Odessa");
+// const unshift1 = cityUkraineList.unshift("Chernigiv");
+// console.log(cityUkraineList);
+// console.log(push1);
+// console.log(unshift1);
+// const pop1 = cityUkraineList.pop();
+// const shift1 = cityUkraineList.shift();
+
+// console.log(cityUkraineList);
+// console.log(pop1);
+// console.log(shift1);
+
+// const cityUkraineList = [
+//   "Kyiv",
+//   "Kharkiv",
+//   "Zhytomyr",
+//   "Vinnytsia",
+//   "Poltava",
+//   "London",
+//   "Praha",
+// ];
+
+// const sliceTest = cityUkraineList.slice(-2, 6);
+// console.log(cityUkraineList);
+// console.log(sliceTest);
+
+// const cityUkraineList = [
+//   "Kyiv",
+//   "Kharkiv",
+//   "Zhytomyr",
+//   "Vinnytsia",
+//   "Poltava",
+//   "London",
+//   "Praha",
+// ];
+// const spliceTest = cityUkraineList.splice(5, 2);
+// console.log(cityUkraineList);
+// console.log(spliceTest);
+// cityUkraineList.splice(1, 0, "Chernigiv");
+// const splice2 = cityUkraineList.splice(3, 0, "Odessa", "Dnipro", "Lviv");
+// console.log(cityUkraineList);
+// console.log(splice2);
+// cityUkraineList.splice(1, 8, "London", "Praga", "Sofiya");
+// console.log(cityUkraineList);
+
+// const color = ["red", "blue", "green"];
+// const newColor = ["tomato", "teal"];
+// const allColor = color.concat(newColor);
+// const reversColor = newColor.concat(color);
+// console.log(color);
+// console.log(newColor);
+// console.log(allColor);
+// console.log(reversColor);
