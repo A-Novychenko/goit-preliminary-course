@@ -734,3 +734,27 @@
 // console.log(newColor);
 // console.log(allColor);
 // console.log(reversColor);
+
+// let a = '0' == false;
+// console.log(a);
+
+// const nambers = [
+//   4, 65, 87, 21, 45, 8, 35, 73, 54, 35, 56, 97, 35, 86, 34, 64, 31, 4, 53, 35, 45, 3, 43, 54,
+// ];
+// let maxNumber = nambers[0];
+
+// for (const number of nambers) {
+//   if (number > maxNumber) {
+//     maxNumber = number;
+//   }
+// }
+// console.log(maxNumber);
+
+// const title = 'Top 10 benefits of React framework';
+
+// const url = title.toLowerCase().split(' ').join('-');
+// console.log(url);
+
+// const titleNormalise = title.toLowerCase();
+// const url = titleNormalise.split(' ').join('-');
+// console.log(url);
