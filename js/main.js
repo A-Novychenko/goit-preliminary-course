@@ -758,3 +758,26 @@
 // const titleNormalise = title.toLowerCase();
 // const url = titleNormalise.split(' ').join('-');
 // console.log(url);
+
+// const device = 'phone';
+// const brand = 'apple';
+
+// const deviceList = {
+//   [device]: brand,
+// };
+
+// console.log(deviceList);
+
+// deviceList.laptop = 'hp'; //добавление
+// deviceList.laptop = 'dell'; //переопределение
+
+// console.log(deviceList);
+
+const x = { a: 10, b: 20 };
+const y = { a: 10, b: 20 };
+const z = x;
+
+console.log(x === y, x === z);
+
+z.c = 30;
+console.log(x);
