@@ -773,11 +773,24 @@
 
 // console.log(deviceList);
 
-const x = { a: 10, b: 20 };
-const y = { a: 10, b: 20 };
-const z = x;
+// const x = { a: 10, b: 20 };
+// const y = { a: 10, b: 20 };
+// const z = x;
 
-console.log(x === y, x === z);
+// console.log(x === y, x === z);
 
-z.c = 30;
-console.log(x);
+// z.c = 30;
+// console.log(x);
+
+function add(...args) {
+  console.log(args);
+
+  let total = 0;
+  for (const arg of args) {
+    total += arg;
+  }
+  return total;
+}
+
+const result = add(1, 2, 3, 4, 5);
+console.log(result);
