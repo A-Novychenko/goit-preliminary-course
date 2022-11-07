@@ -795,60 +795,94 @@
 // const result = add(1, 2, 3, 4, 5);
 // console.log(result);
 
-const atTheOldToad = {
-  potions: [
-    { name: 'Speed potion', price: 460 },
-    { name: 'Dragon breath', price: 780 },
-    { name: 'Stone skin', price: 520 },
-  ],
-  // Change code below this line
-  // getPotions() {
-  //   return this.potions;
-  // },
-  // addPotion(newPotion) {
-  //   for (const potion of this.potions) {
-  //     if (potion.name.includes(newPotion.name)) {
-  //       return `Error! Potion ${newPotion} is already in your inventory!`;
-  //     }
-  //   }
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Dragon breath', price: 780 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+//   // Change code below this line
+//   // getPotions() {
+//   //   return this.potions;
+//   // },
+//   // addPotion(newPotion) {
+//   //   for (const potion of this.potions) {
+//   //     if (potion.name.includes(newPotion.name)) {
+//   //       return `Error! Potion ${newPotion} is already in your inventory!`;
+//   //     }
+//   //   }
 
-  //   this.potions.push(newPotion);
-  // },
-  removePotion(potionName) {
-    let potionIndex = 0;
-    // for (const potion of this.potions) {
-    // potionIndex = potion.name.indexOf(potionName.name);
-    // }
+//   //   this.potions.push(newPotion);
+//   // },
+//   removePotion(potionName) {
+//     let potionIndex = 0;
+//     // for (const potion of this.potions) {
+//     // potionIndex = potion.name.indexOf(potionName.name);
+//     // }
 
-    for (let i = 0; i < this.potions.length; i += 1) {
-      console.log(this.potions[i].name);
-      console.log(potionName);
-      // console.log(this.potions[i].name.indexOf(potionName));
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       console.log(this.potions[i].name);
+//       console.log(potionName);
+//       // console.log(this.potions[i].name.indexOf(potionName));
 
-      if (potionName === this.potions[i].name) {
-        potionIndex = i;
-        console.log(i);
-      } else {
-        return `Potion ${potionName} is not in inventory!`;
-      }
-    }
-    // if (potionIndex === -1) {
-    //   return `Potion ${potionName} is not in inventory!`;
-    // }
+//       if (potionName === this.potions[i].name) {
+//         potionIndex = i;
+//         console.log(i);
+//       } else {
+//         return `Potion ${potionName} is not in inventory!`;
+//       }
+//     }
+//     // if (potionIndex === -1) {
+//     //   return `Potion ${potionName} is not in inventory!`;
+//     // }
 
-    this.potions.splice(potionIndex, 1);
-  },
-  // updatePotionName(oldName, newName) {
-  //   const potionIndex = this.potions.indexOf(oldName);
+//     this.potions.splice(potionIndex, 1);
+//   },
+//   // updatePotionName(oldName, newName) {
+//   //   const potionIndex = this.potions.indexOf(oldName);
 
-  //   if (potionIndex === -1) {
-  //     return `Potion ${oldName} is not in inventory!`;
-  //   }
+//   //   if (potionIndex === -1) {
+//   //     return `Potion ${oldName} is not in inventory!`;
+//   //   }
 
-  //   this.potions.splice(potionIndex, 1, newName);
-  // },
-  // Change code above this line
-};
+//   //   this.potions.splice(potionIndex, 1, newName);
+//   // },
+//   // Change code above this line
+// };
 
-atTheOldToad.removePotion('Dragon breath');
-console.log(atTheOldToad);
+// atTheOldToad.removePotion('Dragon breath');
+// console.log(atTheOldToad);
+
+// const test = 'welcome';
+// const massive = test.split('');
+// console.log(massive);
+// const string = massive.join('');
+// console.log(string);
+
+// const index = massive.indexOf('e');
+// console.log(index);
+
+// const num = [1, 2, 3];
+// const lengthNum = num.push(4, 5, 6, 7);
+// console.log(num);
+// console.log(lengthNum);
+
+// const y = num.pop();
+// console.log(num);
+// console.log(y);
+
+// console.log('-----------------------------------------------------');
+
+// const u = num.unshift(100);
+// console.log(u);
+// console.log(num);
+
+// const s = num.shift();
+// console.log(s);
+// console.log(num);
+
+const word = ['w', 'e', 'l', 'c', 'o', 'm', 'e'];
+
+const newWord = word.slice(3, 6);
+console.log(word);
+console.log(newWord);
