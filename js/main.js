@@ -881,8 +881,42 @@
 // console.log(s);
 // console.log(num);
 
-const word = ['w', 'e', 'l', 'c', 'o', 'm', 'e'];
+// const word = ['w', 'e', 'l', 'c', 'o', 'm', 'e'];
 
-const newWord = word.slice(3, 6);
-console.log(word);
-console.log(newWord);
+// const newWord = word.slice(3, 6);
+// console.log(word);
+// console.log(newWord);
+
+// const word = ['w', 'e', 'l', 'c', 'o', 'm', 'e'];
+// const newWord = word.splice(3, 3);
+// console.log(word);
+// console.log(newWord);
+
+// const updateWord = word.splice(3, 0, 'c', 'o', 'm');
+// // console.log('-----------------------------------------------------');
+// console.log(word);
+// console.log(updateWord);
+
+// const languages = ['C', 'C++', 'Java', 'JavaScript'];
+// const change = languages.splice(0, 3, 'htmm', 'css');
+// console.log(languages);
+// console.log(change);
+// console.log(languages.concat(change));
+
+// function funcTest(x = 0, y = 1, z = 2) {
+//   //   console.log('good!');
+//   return x + y + z;
+// }
+// console.log(funcTest(1, 2));
+
+function calc() {
+  let total = 0;
+  for (const argument of arguments) {
+    total += argument;
+  }
+  return total;
+}
+
+console.log(calc(1, 1, 1, 1, 1, 1, 1, 1));
+console.log(calc(1, 2, 3));
+console.log(calc(0, 5, 5));
