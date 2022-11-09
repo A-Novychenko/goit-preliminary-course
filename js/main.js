@@ -937,19 +937,35 @@
 // console.log(calc(1, 2, 3));
 // console.log(calc(0, 5, 5));
 
-const sumsUp = function (...args) {
-  let total = 0;
+// const sumsUp = function (...args) {
+//   let total = 0;
 
-  for (const arg of args) {
-    total += arg;
-  }
+//   for (const arg of args) {
+//     total += arg;
+//   }
 
-  return total;
-};
+//   return total;
+// };
 
-const f = sumsUp(1, 5, 84, 98646, 54, 6, 5, 1, 64, 54, 51656, 0);
-const s = sumsUp(1, 1, 1, 1, 1, 1, 1);
+// const f = sumsUp(1, 5, 84, 98646, 54, 6, 5, 1, 64, 54, 51656, 0);
+// const s = sumsUp(1, 1, 1, 1, 1, 1, 1);
 
-console.log(f);
-console.log(s);
-console.log(sumsUp);
+// console.log(f);
+// console.log(s);
+// console.log(sumsUp);
+
+// const countrys = ['ukraine', 'germany', 'china', 'france', 'italy'];
+
+// const currentCountry = 'ukraine';
+
+// const validateCounry = function (currentCountry, countrys) {
+//   for (const country of countrys) {
+//     if (country === currentCountry) {
+//       return `${currentCountry} есть в списке`;
+//     }
+//   }
+//   return `${currentCountry} отсутствует в списке`;
+// };
+
+// const countryValid = validateCounry(currentCountry, countrys);
+// console.log(countryValid);
