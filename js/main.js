@@ -936,3 +936,16 @@
 // console.log(calc(1, 1, 1, 1, 1, 1, 1, 1));
 // console.log(calc(1, 2, 3));
 // console.log(calc(0, 5, 5));
+
+const sumsUp = function (...args) {
+  console.log(`Значение args: ${args}`);
+
+  let total = 0;
+  for (const arg of args) {
+    console.log(`Значение args: ${args}`);
+    total += arg;
+  }
+  return total;
+};
+
+sumsUp(1, 5, 84, 98646, 54, 6, 5, 1, 64, 54, 51656, 0);
