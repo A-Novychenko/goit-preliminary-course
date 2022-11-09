@@ -759,29 +759,180 @@
 // const url = titleNormalise.split(' ').join('-');
 // console.log(url);
 
-// function createArrayOfNumbers(min, max) {
-//   const numbers = [];
+// const device = 'phone';
+// const brand = 'apple';
+
+// const deviceList = {
+//   [device]: brand,
+// };
+
+// console.log(deviceList);
+
+// deviceList.laptop = 'hp'; //добавление
+// deviceList.laptop = 'dell'; //переопределение
+
+// function includes(array, value) {
 //   // Change code below this line
-//   for (let i = min; i <= max; i += 1) {
-//     numbers.push(i);
+//   let isThere;
+//   for (const arrayElement of array) {
+//     isThere = arrayElement === value ? true : false;
+//     console.log(arrayElement);
+//     console.log(value);
+//     console.log('----------------------------');
 //   }
+
+//   return isThere;
 //   // Change code above this line
-//   return numbers;
 // }
 
-// console.log(createArrayOfNumbers(1, 3));
-function includes(array, value) {
-  // Change code below this line
-  let isThere;
-  for (const arrayElement of array) {
-    isThere = arrayElement === value ? true : false;
-    console.log(arrayElement);
-    console.log(value);
-    console.log('----------------------------');
-  }
+// console.log(includes([1, 2, 3, 4, 5], 3));
 
-  return isThere;
-  // Change code above this line
-}
+// console.log(deviceList);
 
-console.log(includes([1, 2, 3, 4, 5], 3));
+// const x = { a: 10, b: 20 };
+// const y = { a: 10, b: 20 };
+// const z = x;
+
+// console.log(x === y, x === z);
+
+// z.c = 30;
+// console.log(x);
+
+// function add(...args) {
+//   console.log(args);
+
+//   let total = 0;
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   return total;
+// }
+
+// const result = add(1, 2, 3, 4, 5);
+// console.log(result);
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Dragon breath', price: 780 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+//   // Change code below this line
+//   // getPotions() {
+//   //   return this.potions;
+//   // },
+//   // addPotion(newPotion) {
+//   //   for (const potion of this.potions) {
+//   //     if (potion.name.includes(newPotion.name)) {
+//   //       return `Error! Potion ${newPotion} is already in your inventory!`;
+//   //     }
+//   //   }
+
+//   //   this.potions.push(newPotion);
+//   // },
+//   removePotion(potionName) {
+//     let potionIndex = 0;
+//     // for (const potion of this.potions) {
+//     // potionIndex = potion.name.indexOf(potionName.name);
+//     // }
+
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       console.log(this.potions[i].name);
+//       console.log(potionName);
+//       // console.log(this.potions[i].name.indexOf(potionName));
+
+//       if (potionName === this.potions[i].name) {
+//         potionIndex = i;
+//         console.log(i);
+//       } else {
+//         return `Potion ${potionName} is not in inventory!`;
+//       }
+//     }
+//     // if (potionIndex === -1) {
+//     //   return `Potion ${potionName} is not in inventory!`;
+//     // }
+
+//     this.potions.splice(potionIndex, 1);
+//   },
+//   // updatePotionName(oldName, newName) {
+//   //   const potionIndex = this.potions.indexOf(oldName);
+
+//   //   if (potionIndex === -1) {
+//   //     return `Potion ${oldName} is not in inventory!`;
+//   //   }
+
+//   //   this.potions.splice(potionIndex, 1, newName);
+//   // },
+//   // Change code above this line
+// };
+
+// atTheOldToad.removePotion('Dragon breath');
+// console.log(atTheOldToad);
+
+// const test = 'welcome';
+// const massive = test.split('');
+// console.log(massive);
+// const string = massive.join('');
+// console.log(string);
+
+// const index = massive.indexOf('e');
+// console.log(index);
+
+// const num = [1, 2, 3];
+// const lengthNum = num.push(4, 5, 6, 7);
+// console.log(num);
+// console.log(lengthNum);
+
+// const y = num.pop();
+// console.log(num);
+// console.log(y);
+
+// console.log('-----------------------------------------------------');
+
+// const u = num.unshift(100);
+// console.log(u);
+// console.log(num);
+
+// const s = num.shift();
+// console.log(s);
+// console.log(num);
+
+// const word = ['w', 'e', 'l', 'c', 'o', 'm', 'e'];
+
+// const newWord = word.slice(3, 6);
+// console.log(word);
+// console.log(newWord);
+
+// const word = ['w', 'e', 'l', 'c', 'o', 'm', 'e'];
+// const newWord = word.splice(3, 3);
+// console.log(word);
+// console.log(newWord);
+
+// const updateWord = word.splice(3, 0, 'c', 'o', 'm');
+// // console.log('-----------------------------------------------------');
+// console.log(word);
+// console.log(updateWord);
+
+// const languages = ['C', 'C++', 'Java', 'JavaScript'];
+// const change = languages.splice(0, 3, 'htmm', 'css');
+// console.log(languages);
+// console.log(change);
+// console.log(languages.concat(change));
+
+// function funcTest(x = 0, y = 1, z = 2) {
+//   //   console.log('good!');
+//   return x + y + z;
+// }
+// console.log(funcTest(1, 2));
+
+// function calc() {
+//   let total = 0;
+//   for (const argument of arguments) {
+//     total += argument;
+//   }
+//   return total;
+// }
+
+// console.log(calc(1, 1, 1, 1, 1, 1, 1, 1));
+// console.log(calc(1, 2, 3));
+// console.log(calc(0, 5, 5));
