@@ -758,3 +758,30 @@
 // const titleNormalise = title.toLowerCase();
 // const url = titleNormalise.split(' ').join('-');
 // console.log(url);
+
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Change code below this line
+//   for (let i = min; i <= max; i += 1) {
+//     numbers.push(i);
+//   }
+//   // Change code above this line
+//   return numbers;
+// }
+
+// console.log(createArrayOfNumbers(1, 3));
+function includes(array, value) {
+  // Change code below this line
+  let isThere;
+  for (const arrayElement of array) {
+    isThere = arrayElement === value ? true : false;
+    console.log(arrayElement);
+    console.log(value);
+    console.log('----------------------------');
+  }
+
+  return isThere;
+  // Change code above this line
+}
+
+console.log(includes([1, 2, 3, 4, 5], 3));
