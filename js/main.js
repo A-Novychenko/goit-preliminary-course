@@ -954,6 +954,11 @@
 // console.log(s);
 // console.log(sumsUp);
 
+//******************************************************************************************************** */
+//       SEARCH        //
+//******************************************************************************************************** */
+// Variant 1
+
 // const countrys = ['ukraine', 'germany', 'china', 'france', 'italy'];
 
 // const currentCountry = 'ukraine';
@@ -969,3 +974,22 @@
 
 // const countryValid = validateCounry(currentCountry, countrys);
 // console.log(countryValid);
+//************************* */
+//       variant 2        //
+//*********************** */
+
+// const countrys = ['ukraine', 'germany', 'china', 'france', 'italy'];
+
+// const currentCountry = 'ukraine';
+
+// const validateCounry = function (currentCountry, countrys) {
+//   return countrys.includes(currentCountry)
+//     ? `${currentCountry} есть в списке`
+//     : `${currentCountry} отсутствует в списке`;
+// };
+
+// const countryValid = validateCounry(currentCountry, countrys);
+// console.log(countryValid);
+//******************************************************************************************************** */
+//       /SEARCH        //
+//******************************************************************************************************** */
