@@ -1102,3 +1102,34 @@
 //   console.log(kV);
 //   console.log(`ключ:${kV[0]} значение:${kV[1]}`);
 // }
+
+// const cars = [
+//   {
+//     brand: 'toyota',
+//     model: 'highlander',
+//     year: 2020,
+//   },
+//   {
+//     brand: 'lexus',
+//     model: 'lx570',
+//     year: 2022,
+//   },
+//   {
+//     brand: 'bmw',
+//     model: 'x5',
+//     year: 2017,
+//   },
+// ];
+
+// const brandList = [];
+
+// for (const car of cars) {
+//   //   console.log(`Марка: ${car.brand.toUpperCase()}`);
+//   //   console.log(`Модель: ${car.model.toUpperCase()}`);
+//   //   console.log(`Год выпуска: ${car.year}
+//   //   ----------------------`);
+
+//   brandList.push(car.brand.toUpperCase());
+// }
+
+// console.log(brandList);
