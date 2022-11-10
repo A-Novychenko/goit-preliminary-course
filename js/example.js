@@ -626,3 +626,23 @@
 // const index = calcBMI(weightUderInput, heightUderInput);
 // // console.log(index);
 // determinesDegree(index);
+
+// Example 2 - Найменше з чисел Напиши функцію min(a,b), яка повертає менше з чисел a та b.
+
+// js console.log(min(2, 5)); // 2 console.log(min(3, -1)); // -1 console.log(min(1, 1)); // 1
+// const min = function (a, b) {
+//   return Math.min(a, b);
+// };
+
+// console.log(min(2, 5));
+// console.log(min(3, -1));
+// console.log(min(1, 1));
+
+// console.log('Example 3');
+// Example 3 - Площа прямокутника Напиши функцію getRectArea(dimensions) для обчислення площі
+// прямокутника зі сторонами, значення яких будуть передані до параметра dimensions у вигляді рядки.
+// Значення гарантовано розділені пробілом.
+
+// ``js function getRectArea(dimensions) {}
+
+// console.log(getRectArea('8 11')); ``
