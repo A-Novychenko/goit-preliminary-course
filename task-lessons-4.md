@@ -54,7 +54,7 @@ console.log(findLargestNumber([2, 17, 94, 1, 23, 37]))); // 94 console.log(findL
 console.log(calAverage(1, 2, 3, 4)); // 2.5 console.log(calAverage(14, 8, 2)); // 8
 console.log(calAverage(27, 43, 2, 8, 36)); // 23.2 `` -->
 
-Example 8 - Форматування часу Напиши функцію formatTime(minutes) яка переведе значення minutes
+<!-- Example 8 - Форматування часу Напиши функцію formatTime(minutes) яка переведе значення minutes
 (кількість хвилин) у рядок у форматі годин та хвилин HH:MM.
 
 ``js const hours = Math.floor(totalMinutes / 60); const minutes = totalMinutes % 60;
@@ -66,9 +66,9 @@ String(minutes).padStart(2, 0); console.log(${doubleDigitHours}:${doubleDigitMin
 function formatTime(minutes) {}
 
 console.log(formatTime(70)); // "01:10" console.log(formatTime(450)); // "07:30"
-console.log(formatTime(1441)); // "24:01" ``
+console.log(formatTime(1441)); // "24:01" `` -->
 
-Example 9 - Колекція курсів (includes, indexOf, push і т.д.) Напишіть функції для роботи з колекцією
+<!-- Example 9 - Колекція курсів (includes, indexOf, push і т.д.) Напишіть функції для роботи з колекцією
 навчальних курсів courses:
 
 addCourse(name) - додає курс до кінця колекції removeCourse(name) - видаляє курс з колекції
@@ -82,7 +82,7 @@ removeCourse('React'); console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'P
 'Express'] removeCourse('Vue'); // 'Курс з таким іменем не знайдено'
 
 updateCourse('Express', 'NestJS'); console.log(courses); // ['HTML', 'CSS', 'JavaScript',
-'PostgreSQL', 'NestJS'] ``
+'PostgreSQL', 'NestJS'] `` -->
 
 <!-- *
 
