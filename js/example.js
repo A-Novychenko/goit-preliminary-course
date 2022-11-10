@@ -765,3 +765,222 @@
 // console.log(formatTime(70)); // "01:10"
 // console.log(formatTime(450)); // "07:30"
 // console.log(formatTime(1441)); // "24:01" ``
+
+// Example 9 - Колекція курсів (includes, indexOf, push і т.д.) Напишіть функції для роботи з колекцією
+// навчальних курсів courses:
+
+// addCourse(name) - додає курс до кінця колекції removeCourse(name) - видаляє курс з колекції
+// updateCourse(oldName, newName) - змінює ім'я на нове ``js const courses = ['HTML', 'CSS',
+// 'JavaScript', 'React', 'PostgreSQL'];
+
+// addCourse('Express'); console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL',
+// 'Express'] addCourse('CSS'); // 'У вас вже є такий курс'
+
+// removeCourse('React'); console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL',
+// 'Express'] removeCourse('Vue'); // 'Курс з таким іменем не знайдено'
+
+// updateCourse('Express', 'NestJS'); console.log(courses); // ['HTML', 'CSS', 'JavaScript',
+// 'PostgreSQL', 'NestJS'] ``
+
+// ВАРИАНТ 1
+
+// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL']
+//   .join(' ')
+//   .toLowerCase()
+//   .split(' ');
+
+// console.log('Початковий список', courses);
+// const addName = prompt('Який курс додати?').toLowerCase(); //'Express';
+// const removeName = prompt('Який курс видалити?').toLowerCase(); //'React';
+// const updNameOld = prompt('Який курс змінити?').toLowerCase(); //'Express';
+// const updNameNew = prompt('На який курс замінити').toLowerCase(); //'NestJS';
+
+// const addCourse = function (coursesList, addEl) {
+//   if (!coursesList.includes(addEl)) {
+//     coursesList.push(addEl);
+//     return `Курс ${addEl}добавлено`;
+//   }
+
+//   return 'У вас вже є такий курс';
+// };
+
+// const removeCourse = function (coursesList, removeName) {
+//   if (coursesList.indexOf(removeName) !== -1) {
+//     coursesList.splice(coursesList.indexOf(removeName), 1);
+//     return `Курс ${removeName} видалено!`
+//   }
+
+//   return `Курс не знайдено`;
+// };
+
+// const updateCourse = function (coursesList, updNameOld, updNameNew) {
+//   if (coursesList.indexOf(updNameOld) !== -1) {
+//     coursesList.splice(coursesList.indexOf(updNameOld), 1, updNameNew);
+//     return `Курс ${updNameOld} змінено на ${updNameNew}`;
+//   }
+
+// return `Курс не знайдено`;
+// };
+
+// addCourse(courses, addName);
+// removeCourse(courses, removeName);
+// updateCourse(courses, updNameOld, updNameNew);
+// console.log('Змінений список', courses);
+
+// ВАРИАНТ 2
+
+// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL']
+//   .join(' ')
+//   .toLowerCase()
+//   .split(' ');
+
+// console.log('Початковий список', courses);
+// const addName = prompt('Який курс додати?').toLowerCase(); //'Express';
+// // const removeName = prompt('Який курс видалити?').toLowerCase(); //'React';
+// // const updNameOld = prompt('Який курс змінити?').toLowerCase(); //'Express';
+// // const updNameNew = prompt('На який курс замінити').toLowerCase(); //'NestJS';
+
+// const includesCourse = function (coursesList, inputName) {
+//   if (coursesList.indexOf(inputName) === -1) {
+//     return false;
+//   }
+
+//   return true;
+// };
+
+// const addCourse = function (coursesList, addEl) {
+//   return !includesCourse(coursesList, addEl) ? coursesList.push(addEl) : 'У вас вже є такий курс';
+// };
+
+// // const removeCourse = function (coursesList, removeName) {
+// //   includesCourse(coursesList, removeName);
+
+// //   return includesCourse(coursesList, removeName)
+// //     ? coursesList.splice(coursesList.indexOf(removeName), 1)
+// //     : `Курс не знайдено`;
+// // };
+
+// // const updateCourse = function (coursesList, updNameOld, updNameNew) {
+// //   return includesCourse(coursesList, updNameOld)
+// //     ? coursesList.splice(coursesList.indexOf(updNameOld), 1, updNameNew)
+// //     : `Курс не знайдено`;
+// // };
+// console.log(addCourse(courses, addName));
+// // console.log(removeCourse(courses, removeName));
+// // console.log(updateCourse(courses, updNameOld, updNameNew));
+
+// console.log('Змінений список', courses);
+
+// Вариант решения из урока
+/**
+ * Task 9 - Колекція курсів.
+ * Напишіть функції для роботи з колекцією навчальних курсів `courses`:
+ * ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
+ *
+ * - `addCourse(name)` - додає курс до кінця колекції
+ * - `removeCourse(name)` - видаляє курс з колекції
+ * - `updateCourse(oldName, newName)` - змінює ім'я на нове
+ */
+
+// 1) Додаємо курс до колекції `addCourse`
+//   1.1 створити функцію додавання курсу - function
+//   1.2 оголосити параметр функції, який прийматиме значення аргумента для додавання
+//   1.3 додамо курс до колекції - push
+//   1.4 Повернемо оновлену колекцію - return
+
+// 2) Видалити курс із колекції `removeCourse`
+//   2.1 створити функцію видалення курсу
+//   2.2 оголосити параметр функції, який прийматеме значення аргумента для видалення
+//   2.3 Перевірити чи є курс у колекції - indexOf
+//   2.4 Якщо є, видаляємо - splice
+//   2.5 Повертаємо із функції елемент який був видалений
+
+// 3) Оновлення курса `updateCourse`
+//   1. Створюємо функцію оновлення курсу, старе імʼя замінюємо новим
+//   2. Даємо два параметра: старе імя, нове імя(oldName, newName)
+//   3. Перевірити чи є курс у колекції - indexOf
+//   4. Якщо є, записуємо нове значення по індексу
+
+// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
+
+// /** Щоб додати інтерактивности, запитуємо користувача ввести дані - prompt */
+// const courseName = prompt('Введіть назву курсу');
+// const newName = prompt('Введіть нове імʼя');
+
+// const addCourse = function(newCourse) {
+
+//   if (courses.includes(newCourse)) {
+//     console.log('Такий курс вже є');
+//     return // ранній вихід із функції
+//   }
+
+//   courses.push(newCourse);
+//   return courses; // Памʼятайте, що змінна courses це посилання на масив!
+// }
+
+// const removeCourse = function (courseName) {
+
+//   const index = courses.indexOf(courseName);
+
+//   if (index === -1) {
+//     console.log('такого курсу нема')
+//     return
+//   }
+
+//   const deletedCourses = courses.splice(index, 1);
+//   return deletedCourses
+// }
+
+// const updateCourse = function (oldName, newName) {
+//   const index = courses.indexOf(oldName);
+
+//   if (index === -1) {
+//     console.log('такого курсу нема')
+//     return
+//   }
+
+//   courses[index] = newName
+// }
+
+// /** checkCourseName - функція в яку ми винесли перевірку елемнту в масиві. */
+// const checkCourseName = function (value) {
+//   const index = courses.indexOf(value);
+
+//   if (index === -1) {
+//     console.log('такого курсу нема')
+//     return false
+//   } else {
+//     console.log('Такий курс вже є');
+//     return true
+//   }
+// }
+
+// /** Дублюю ті самі функції, але тепер з викристанням винесеної перевірки в окрему функцію */
+// // const addCourse = function(newCourse) {
+
+// //   if (checkCourseName(newCourse)) return
+
+// //   courses.push(newCourse);
+// //   return courses;
+// // }
+
+// // const removeCourse = function (courseName) {
+
+// //   if (!checkCourseName(courseName)) return
+
+// //   const deletedCourses = courses.splice(index, 1);
+// //   return deletedCourses
+// // }
+
+// // const updateCourse = function (oldName, newName) {
+// //   if (!checkCourseName(oldName)) return
+// //   courses[index] = newName
+// // } -->
+
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//  Модуль 3. Заняття 5. Об'єкти
+
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
