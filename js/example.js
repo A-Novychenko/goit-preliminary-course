@@ -664,11 +664,35 @@
 
 // logItems(['Mango', 'Poly', 'Ajax']); logItems(['🍎', '🍇', '🍑', '🍌', '🍋']); ``
 
-const logItems = function (items) {
-  for (let i = 0; i < items.length; i += 1) {
-    console.log(`№:${i + 1} елемент: ${items[i]}`);
-  }
-};
+// const logItems = function (items) {
+//   for (let i = 0; i < items.length; i += 1) {
+//     console.log(`№:${i + 1} елемент: ${items[i]}`);
+//   }
+// };
 
-logItems(['Mango', 'Poly', 'Ajax']);
-logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
+// logItems(['Mango', 'Poly', 'Ajax']);
+// logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
+
+// Example 5 - Логування контактів Напиши функцію printContactsInfo(names, phones) яка виводить у
+// консоль ім'я та телефонний номер користувача. У параметри names та phones будуть передані рядки імен
+// та телефонних номерів, розділені комами. Порядковий номер імен та телефонів у рядках вказують на
+// відповідність. Кількість імен та телефонів гарантовано однакове.
+
+// ``js function printContactsInfo(names, phones) {}
+
+// printContactsInfo( 'Jacob, William, Solomon, Artemis',
+// '89001234567,89001112233,890055566377,890055566300', ); ``
+
+// const printContactsInfo = function (names, phones) {
+//   const nameClients = names.split(', ');
+//   const phoneClients = phones.split(',');
+
+//   for (let i = 0; i < nameClients.length; i += 1) {
+//     console.log(`Клиент: ${nameClients[i]} и его тел.:${phoneClients[i]}`);
+//   }
+// };
+
+// printContactsInfo(
+//   'Jacob, William, Solomon, Artemis',
+//   '89001234567,89001112233,890055566377,890055566300'
+// );
