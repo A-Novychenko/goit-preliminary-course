@@ -1056,3 +1056,49 @@
 //   console.log(`${key} === ${myCar[key]}`);
 // }
 // ********996-1045 */
+
+// const phone = {
+//   good: 'apple',
+// };
+
+// const oS = Object.create(phone);
+// oS.best = 'ios';
+// oS.bad = 'android';
+// oS.normal = 'microsoft';
+
+// // console.log(oS);
+// // console.log(oS.good);
+// // console.log('good' in oS); //true
+// // console.log(oS.hasOwnProperty('good')); //false
+// // console.log(oS.hasOwnProperty('best')); //true
+
+// // for (const key in oS) {
+// //   if (oS.hasOwnProperty(key)) {
+// //     console.log(key);
+// //     console.log(oS[key]);
+// //   }
+// // }
+
+// // const keys = Object.keys(oS);
+// // // console.log(keys);
+
+// // for (const key of keys) {
+// //   //   console.log(`Ключ:${key} = ${oS[key]}`);
+// // }
+
+// // const values = Object.values(oS);
+
+// // for (const value of values) {
+// //   console.log(value);
+// // }
+
+// // const oSString = values.join(', ');
+
+// // console.log(`OS list: ${oSString}`);
+
+// const keyValue = Object.entries(oS);
+
+// for (const kV of keyValue) {
+//   console.log(kV);
+//   console.log(`ключ:${kV[0]} значение:${kV[1]}`);
+// }
