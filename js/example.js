@@ -696,3 +696,26 @@
 //   'Jacob, William, Solomon, Artemis',
 //   '89001234567,89001112233,890055566377,890055566300'
 // );
+
+// Example 6 - Пошук найбільшого елемента Напиши функцію findLargestNumber(numbers) яка шукає найбільше
+// число в масиві.
+
+// ``js function findLargestNumber(numbers) {}
+
+// console.log(findLargestNumber([2, 17, 94, 1, 23, 37]))); // 94 console.log(findLargestNumber([49, 4,
+// 7, 83, 12]))); // 83 ``
+
+// const findLargestNumber = function (numbers) {
+//   let max = numbers[0];
+//   for (const number of numbers) {
+//     if (max < number) {
+//       max = number;
+//     }
+//   }
+//   return max;
+// };
+
+// console.log(findLargestNumber([2, 17, 94, 1, 23, 37]));
+// // 94
+// console.log(findLargestNumber([49, 4, 7, 83, 12]));
+// // 83 ``
