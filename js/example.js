@@ -719,3 +719,27 @@
 // // 94
 // console.log(findLargestNumber([49, 4, 7, 83, 12]));
 // // 83 ``
+
+// Example 7 - Середнє значення Напишіть функцію calAverage() яка приймає довільну кількість аргументів
+// і повертає їхнє середнє значення. Усі аргументи будуть лише числами.
+
+// ``js function calAverage() {}
+
+// console.log(calAverage(1, 2, 3, 4)); // 2.5 console.log(calAverage(14, 8, 2)); // 8
+// console.log(calAverage(27, 43, 2, 8, 36)); // 23.2 ``
+
+// const calAverage = function (...args) {
+//   let sum = 0;
+
+//   for (const arg of args) {
+//     sum += arg;
+//   }
+//   return sum / args.length;
+// };
+
+// console.log(calAverage(1, 2, 3, 4));
+// // 2.5
+// console.log(calAverage(14, 8, 2));
+// // 8
+// console.log(calAverage(27, 43, 2, 8, 36));
+// // 23.2 ``
