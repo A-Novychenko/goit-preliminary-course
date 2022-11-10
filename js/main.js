@@ -993,3 +993,61 @@
 //******************************************************************************************************** */
 //       /SEARCH        //
 //******************************************************************************************************** */
+const inputName = 'changeOilPeriod';
+const inputValue = 10000;
+const inputNameColor = 'color';
+const inputValueColor = 'silver';
+const email = 'NovychenkoA@outlook.com';
+const login = 'NovychenkoA';
+const password = 'Sd151515';
+const inputDate = 'registrationDate';
+
+const myCar = {
+  registration: {
+    email,
+    login,
+    password,
+  },
+  [inputDate]: 2008,
+  carName: {
+    brand: 'chevrolet',
+    model: 'aveo',
+    type: 'sedan',
+  },
+  year: 2008,
+  startMileage: 128954,
+  currentMileage: 226123,
+
+  myYearsOfOperation: [2017, 2018, 2019, 2020, 2021, 2022],
+  sumMyYearsOfOperation(years) {
+    return years[years.length - 1] - years[0];
+  },
+  myMileage(start, current) {
+    return current - start;
+  },
+  averageMileage() {
+    const averageMile =
+      myCar.myMileage(myCar.startMileage, myCar.currentMileage) /
+      myCar.sumMyYearsOfOperation(myCar.myYearsOfOperation);
+    return console.log(`Средний пробег за год ${averageMile} км`);
+  },
+};
+
+myCar.modelType = 'T250';
+myCar.engine = 1.6;
+myCar[inputName] = inputValue;
+myCar['color'] = 'red';
+myCar[inputNameColor] = inputValueColor;
+myCar.myYearsOfOperation.unshift(2008, '...');
+myCar.myYearsOfOperation.shift(1);
+myCar.myYearsOfOperation.shift(0);
+
+myCar.averageMileage(myCar.myYearsOfOperation);
+
+// console.log(myCar);
+// console.log(myCar.carName.brand);
+// console.log(myCar.myYearsOfOperation[myCar.myYearsOfOperation.length - 1]);
+// console.log(myCar['year']);
+// console.log(myCar.registration);
+
+// console.log(myCar);
