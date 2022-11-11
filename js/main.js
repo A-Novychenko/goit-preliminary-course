@@ -1249,3 +1249,21 @@
 // for (const foundItem of foundItems) {
 //   console.table(foundItem);
 // }
+////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+const shockAbsorbers = [
+  { name: 'kyb', type: 'gas', side: 'front', price: 2000 },
+  { name: 'sachs', type: 'gas', side: 'front', price: 2500 },
+  { name: 'monroe', type: 'oil', side: 'front', price: 1800 },
+  { name: 'kyb', type: 'gas', side: 'rear', price: 1200 },
+  { name: 'sachs', type: 'gas', side: 'rear', price: 1300 },
+];
+let names = [];
+
+for (const shockAbsorber of shockAbsorbers) {
+  names.push(shockAbsorber.name);
+}
+
+console.log(names);
