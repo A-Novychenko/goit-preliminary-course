@@ -1133,3 +1133,27 @@
 // }
 
 // console.log(brandList);
+
+const phone = {
+  name: 'nokia',
+  model: '3310',
+  price: [500, 510, 490, 700],
+
+  changeName(phoneName) {
+    this.name = phoneName;
+  },
+  addPrice(price) {
+    this.price.push(price);
+  },
+  getPriceQuantity() {
+    return this.price.length;
+  },
+};
+
+phone.changeName('apple');
+phone.addPrice(499);
+const x = phone.getPriceQuantity();
+console.log(`Количество вариантов цены: ${x}`);
+
+console.log(phone);
+// console.log(phone.price);
