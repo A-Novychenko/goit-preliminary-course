@@ -1134,26 +1134,118 @@
 
 // console.log(brandList);
 
-const phone = {
-  name: 'nokia',
-  model: '3310',
-  price: [500, 510, 490, 700],
+// const phone = {
+//   name: 'nokia',
+//   model: '3310',
+//   price: [500, 510, 490, 700],
 
-  changeName(phoneName) {
-    this.name = phoneName;
-  },
-  addPrice(price) {
-    this.price.push(price);
-  },
-  getPriceQuantity() {
-    return this.price.length;
-  },
-};
+//   changeName(phoneName) {
+//     this.name = phoneName;
+//   },
+//   addPrice(price) {
+//     this.price.push(price);
+//   },
+//   getPriceQuantity() {
+//     return this.price.length;
+//   },
+// };
 
-phone.changeName('apple');
-phone.addPrice(499);
-const x = phone.getPriceQuantity();
-console.log(`Количество вариантов цены: ${x}`);
+// phone.changeName('apple');
+// phone.addPrice(499);
+// const x = phone.getPriceQuantity();
+// console.log(`Количество вариантов цены: ${x}`);
 
-console.log(phone);
-// console.log(phone.price);
+// console.log(phone);
+// // console.log(phone.price);
+
+// const color = {
+//   red: 10,
+//   yellow: 20,
+//   blue: 10,
+//   green: 30,
+// };
+
+// const values = Object.values(color);
+// let total = 0;
+
+// for (const value of values) {
+//   total += value;
+// }
+
+// console.log(`Количество: ${total}`);
+
+// const shockAbsorbers = [
+//   { name: 'kyb', type: 'gas', side: 'front', price: 2000 },
+//   { name: 'sachs', type: 'gas', side: 'front', price: 2500 },
+//   { name: 'monroe', type: 'oil', side: 'front', price: 1800 },
+//   { name: 'kyb', type: 'gas', side: 'rear', price: 1200 },
+//   { name: 'sachs', type: 'gas', side: 'rear', price: 1300 },
+// ];
+
+// // console.table(shockAbsorbers);
+
+// shockAbsorbers[0].index = 11;
+// shockAbsorbers[1].index = 11;
+// shockAbsorbers[2].index = 10;
+// shockAbsorbers[3].index = 21;
+// shockAbsorbers[4].index = 21;
+
+// for (const shockAbsorber of shockAbsorbers) {
+//   shockAbsorber.quantity = 20;
+//   //   console.log(shockAbsorber.name, shockAbsorber.side);
+// }
+// // console.table(shockAbsorbers);
+
+// //  Отфильтровать по бренду "kyb"
+
+// const searchName = 'kyb';
+
+// const filterBrand = function (shockAbsorbers, searchName) {
+//   let list = [];
+
+//   for (const shockAbsorber of shockAbsorbers) {
+//     const brand = Object.values(shockAbsorber);
+
+//     if (brand.includes(searchName)) {
+//       //   console.log(shockAbsorber);
+//       list.push(shockAbsorber);
+//     }
+//   }
+
+//   return list;
+// };
+
+// const serchBrand = filterBrand(shockAbsorbers, searchName);
+// console.table(serchBrand);
+
+///////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+
+// const shockAbsorbers = [
+//   { name: 'kyb', type: 'gas', side: 'front', price: 2000 },
+//   { name: 'sachs', type: 'gas', side: 'front', price: 2500 },
+//   { name: 'monroe', type: 'oil', side: 'front', price: 1800 },
+//   { name: 'kyb', type: 'gas', side: 'rear', price: 1200 },
+//   { name: 'sachs', type: 'gas', side: 'rear', price: 1300 },
+// ];
+
+// const searchBrand = 'sachs';
+
+// const filterProduct = function (products, name) {
+//   let foundItem = [];
+
+//   for (const product of products) {
+//     if (product.name === name) {
+//       foundItem.push(product);
+//     }
+//   }
+
+//   return foundItem;
+// };
+
+// const foundItems = filterProduct(shockAbsorbers, searchBrand);
+
+// for (const foundItem of foundItems) {
+//   console.table(foundItem);
+// }
