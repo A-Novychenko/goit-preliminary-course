@@ -1295,3 +1295,22 @@
 
 // const foundItem = oilShockAbsorbers(shockAbsorbers, type);
 // console.table(foundItem);
+
+// const temps = [14, -4, 25, 8, 11];
+
+// // console.log(...temps);
+
+// const copyOfTemps = [...temps];
+// // console.log(copyOfTemps);
+// const lastWeekTemps = [14, 25, 11];
+// const currentWeekTemps = [23, 17, 18];
+
+// const concatenatedArray = [...temps, ...lastWeekTemps, ...currentWeekTemps];
+// console.log(concatenatedArray);
+
+const first = { propA: 5, propB: 10, propC: 50 };
+const second = { propC: 15, propD: 20 };
+
+const concatObject = { ...first, ...second };
+
+console.table(concatObject);
