@@ -1272,26 +1272,26 @@
 // console.log(namesList(shockAbsorbers));
 //////////////////////////////
 
-const shockAbsorbers = [
-  { name: 'kyb', type: 'gas', side: 'front', price: 2000 },
-  { name: 'sachs', type: 'gas', side: 'front', price: 2500 },
-  { name: 'monroe', type: 'oil', side: 'front', price: 1800 },
-  { name: 'kyb', type: 'gas', side: 'rear', price: 1200 },
-  { name: 'sachs', type: 'gas', side: 'rear', price: 1300 },
-  { name: 'mando', type: 'oil', side: 'rear', price: 1000 },
-];
+// const shockAbsorbers = [
+//   { name: 'kyb', type: 'gas', side: 'front', price: 2000 },
+//   { name: 'sachs', type: 'gas', side: 'front', price: 2500 },
+//   { name: 'monroe', type: 'oil', side: 'front', price: 1800 },
+//   { name: 'kyb', type: 'gas', side: 'rear', price: 1200 },
+//   { name: 'sachs', type: 'gas', side: 'rear', price: 1300 },
+//   { name: 'mando', type: 'oil', side: 'rear', price: 1000 },
+// ];
 
-const type = 'oil';
+// const type = 'oil';
 
-const oilShockAbsorbers = function (products, type) {
-  let oilShockAbsorber = [];
-  for (const product of products) {
-    if (product.type === type) {
-      oilShockAbsorber.push(product);
-    }
-  }
-  return oilShockAbsorber;
-};
+// const oilShockAbsorbers = function (products, type) {
+//   let oilShockAbsorber = [];
+//   for (const product of products) {
+//     if (product.type === type) {
+//       oilShockAbsorber.push(product);
+//     }
+//   }
+//   return oilShockAbsorber;
+// };
 
-const foundItem = oilShockAbsorbers(shockAbsorbers, type);
-console.table(foundItem);
+// const foundItem = oilShockAbsorbers(shockAbsorbers, type);
+// console.table(foundItem);
