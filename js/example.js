@@ -993,15 +993,37 @@
 // - - виводить вміст об'єкта `user` у форматі `ключ:значення` використовуючи `Object.keys()` та
 //     `for...of` \*/
 
-const user = {
-  hobby: 'html',
-  premium: false,
-};
-user.mood = 'happy';
-user.hobby = 'skydiving';
-user.premium = true;
+// const user = {
+//   hobby: 'html',
+//   premium: false,
+// };
+// user.mood = 'happy';
+// user.hobby = 'skydiving';
+// user.premium = true;
 
-const userKeys = Object.keys(user);
-for (const key of userKeys) {
-  console.log(`${key}: ${user[key]}`);
-}
+// const userKeys = Object.keys(user);
+
+// for (const key of userKeys) {
+//   console.log(`${key}: ${user[key]}`);
+// }
+
+// - Task 2.
+// - У нас є об'єкт, де зберігаються зарплати нашої команди.
+// - Напишіть код для підсумовування всіх зарплат і збережіть
+// - результат у змінній sum. Повинно вийти 390.
+// - Якщо об'єкт `salaries` порожній,
+// - то результат має бути 0. \*/
+
+// const salaries = { John: 100, Ann: 160, Pete: 130 };
+
+// const sumSalaries = function (salaries) {
+//   let sum = 0;
+//   const valuesSalaries = Object.values(salaries);
+
+//   for (const value of valuesSalaries) {
+//     sum += value;
+//   }
+
+//   return sum;
+// };
+// console.log(sumSalaries(salaries));

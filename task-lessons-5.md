@@ -1,4 +1,4 @@
-/\*\*
+<!-- /\*\*
 
 - Task 1.
 - Напиши скрипт, який для об'єкта `user`, послідовно:
@@ -20,9 +20,9 @@ user.mood = 'happy'; user.hobby = 'skydiving'; user.premium = false;
 
 for (const key of userKeys) { console.log(`${key}: ${user[key]}`) }
 
-/\*\*
+/\*\* -->
 
-- Task 2.
+<!-- - Task 2.
 - У нас є об'єкт, де зберігаються зарплати нашої команди.
 - Напишіть код для підсумовування всіх зарплат і збережіть
 - результат у змінній sum. Повинно
@@ -33,10 +33,10 @@ const salaries = { John: 100, Ann: 160, Pete: 130, };
 
 const salariesValues = Object.values(salaries); let salarySum = 0;
 
-for (const value of salariesValues) { salarySum += value  
+for (const value of salariesValues) { salarySum += value
 }
 
-console.log(salarySum)
+console.log(salarySum) -->
 
 /\*\* Example 3
 
@@ -87,11 +87,9 @@ array: ['HTML', 'JS'],
 - Викликає createTransaction для створення об'єкта транзакції
 - після чого додає його до історії транзакцій \*/ deposit(amount) { amount = Math.abs(amount);
 
+  this.balance += amount; const newTransaction = this.createTransaction(amount, Types.DEPOSIT);
 
-    this.balance += amount;
-    const newTransaction = this.createTransaction(amount, Types.DEPOSIT);
-
-    this.transactions.push(newTransaction)
+  this.transactions.push(newTransaction)
 
 },
 
@@ -106,16 +104,11 @@ array: ['HTML', 'JS'],
 - про те, що зняття такої суми не можливе, недостатньо коштів. \*/ withdraw(amount) { amount =
   Math.abs(amount);
 
+  const newTransaction = this.createTransaction(amount, Types.WITHDRAW);
 
-    const newTransaction = this.createTransaction(amount, Types.WITHDRAW);
+  if (amount > this.balance) { console.log('Нема грошей!'); return }
 
-    if (amount > this.balance) {
-      console.log('Нема грошей!');
-      return
-    }
-
-    this.balance -= amount;
-    this.transactions.push(newTransaction)
+  this.balance -= amount; this.transactions.push(newTransaction)
 
 },
 
@@ -133,14 +126,10 @@ array: ['HTML', 'JS'],
 - Метод повертає кількість коштів
 - певного типу транзакції з усієї історії транзакцій \*/ getTransactionTotal(type) { let result = 0;
 
+  for (const transaction of this.transactions) { if (type === transaction.type) { result +=
+  transaction.amount } }
 
-    for (const transaction of this.transactions) {
-      if (type === transaction.type) {
-        result += transaction.amount
-      }
-    }
-
-    return result;
+  return result;
 
 },
 
