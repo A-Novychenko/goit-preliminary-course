@@ -1061,79 +1061,79 @@
  * Можна покласти чи зняти гроші з рахунку.
  */
 
-const Transaction = {
-  DEPOSIT: 'deposit',
-  WITHDRAW: 'withdraw',
-};
-// Кожна транзакція це об'єкт із властивостями: id, type та amount
-const account = {
-  balance: 0, // Поточний баланс рахунку
-  transactions: [], // Історія транзакцій
+// const Transaction = {
+//   DEPOSIT: 'deposit',
+//   WITHDRAW: 'withdraw',
+// };
+// // Кожна транзакція це об'єкт із властивостями: id, type та amount
+// const account = {
+//   balance: 0, // Поточний баланс рахунку
+//   transactions: [], // Історія транзакцій
 
-  //  Метод створює та повертає об'єкт транзакції. Приймає суму та тип транзакції.
-  createTransaction(amount, type) {
-    return {
-      type,
-      amount,
-      id: this.transactions.length,
-    };
-  },
+//   //  Метод створює та повертає об'єкт транзакції. Приймає суму та тип транзакції.
+//   createTransaction(amount, type) {
+//     return {
+//       type,
+//       amount,
+//       id: this.transactions.length,
+//     };
+//   },
 
-  //    * Метод, що відповідає за додавання суми до балансу. Приймає суму транзакції. Викликає createTransaction для створення об'єкта транзакції після чого додає його до історії транзакцій
-  deposit(amount) {
-    this.transactions.push(this.createTransaction(amount, Transaction.DEPOSIT));
-    this.balance += amount;
-  },
+//   //    * Метод, що відповідає за додавання суми до балансу. Приймає суму транзакції. Викликає createTransaction для створення об'єкта транзакції після чого додає його до історії транзакцій
+//   deposit(amount) {
+//     this.transactions.push(this.createTransaction(amount, Transaction.DEPOSIT));
+//     this.balance += amount;
+//   },
 
-  // Метод, що відповідає за зняття суми з балансу. Приймає суму транзакції. Викликає createTransaction для створення об'єкта транзакції
-  // після чого додає його до історії транзакцій. Якщо amount більше ніж поточний баланс, виводь повідомлення про те, що зняття такої суми не можливе, недостатньо коштів.
-  withdraw(amount) {
-    if (amount <= this.getBalance()) {
-      this.transactions.push(this.createTransaction(amount, Transaction.WITHDRAW));
-      this.balance -= amount;
+//   // Метод, що відповідає за зняття суми з балансу. Приймає суму транзакції. Викликає createTransaction для створення об'єкта транзакції
+//   // після чого додає його до історії транзакцій. Якщо amount більше ніж поточний баланс, виводь повідомлення про те, що зняття такої суми не можливе, недостатньо коштів.
+//   withdraw(amount) {
+//     if (amount <= this.getBalance()) {
+//       this.transactions.push(this.createTransaction(amount, Transaction.WITHDRAW));
+//       this.balance -= amount;
 
-      return;
-    }
-    console.log(`Зняття такої суми не можливе, недостатньо коштів`);
-  },
+//       return;
+//     }
+//     console.log(`Зняття такої суми не можливе, недостатньо коштів`);
+//   },
 
-  //  Метод повертає поточний баланс
-  getBalance() {
-    return this.balance;
-  },
+//   //  Метод повертає поточний баланс
+//   getBalance() {
+//     return this.balance;
+//   },
 
-  // Метод шукає та повертає об'єкт транзакції по id
-  getTransactionDetails(id) {
-    for (const transaction of this.transactions) {
-      if (transaction.id === id) {
-        return transaction;
-      }
-    }
+//   // Метод шукає та повертає об'єкт транзакції по id
+//   getTransactionDetails(id) {
+//     for (const transaction of this.transactions) {
+//       if (transaction.id === id) {
+//         return transaction;
+//       }
+//     }
 
-    console.log(`НЕ ЗНАЙДЕНО!!!`);
-  },
+//     console.log(`НЕ ЗНАЙДЕНО!!!`);
+//   },
 
-  //  Метод повертає кількість коштів певного типу транзакції з усієї історії транзакцій
-  getTransactionTotal(type) {
-    let totalType = 0;
-    for (const transaction of this.transactions) {
-      if (transaction.type === type) {
-        totalType += transaction.amount;
-      }
-    }
+//   //  Метод повертає кількість коштів певного типу транзакції з усієї історії транзакцій
+//   getTransactionTotal(type) {
+//     let totalType = 0;
+//     for (const transaction of this.transactions) {
+//       if (transaction.type === type) {
+//         totalType += transaction.amount;
+//       }
+//     }
 
-    return totalType;
-  },
-};
+//     return totalType;
+//   },
+// };
 
-account.deposit(10000);
-account.withdraw(250);
-account.deposit(1000);
-account.withdraw(750);
-account.withdraw(5000);
+// account.deposit(10000);
+// account.withdraw(250);
+// account.deposit(1000);
+// account.withdraw(750);
+// account.withdraw(5000);
 
-console.table(account.transactions);
-console.log(account.getTransactionDetails(3));
-console.log('Пополнено: ', account.getTransactionTotal(Transaction.DEPOSIT));
-console.log('Потрачено: ', account.getTransactionTotal(Transaction.WITHDRAW));
-console.log('Текущий баланс: ', account.getBalance());
+// console.table(account.transactions);
+// console.log(account.getTransactionDetails(3));
+// console.log('Пополнено: ', account.getTransactionTotal(Transaction.DEPOSIT));
+// console.log('Потрачено: ', account.getTransactionTotal(Transaction.WITHDRAW));
+// console.log('Текущий баланс: ', account.getBalance());
