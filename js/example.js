@@ -1027,3 +1027,28 @@
 //   return sum;
 // };
 // console.log(sumSalaries(salaries));
+
+// /\*\* Example 3
+
+// - Напишіть функцію `calcTotalPrice(stones, stoneName)`, яка приймає масив
+// - об'єктів та рядок з назвою каменю. Функція рахує і повертає загальну вартість
+// - каміння з таким ім'ям, ціною та кількістю з об'єкта \*/
+// const stoneName = 'Діамант';
+// const stones = [
+//   { name: 'Смарагд', price: 1300, quantity: 4 },
+//   { name: 'Діамант', price: 2700, quantity: 3 },
+//   { name: 'Сапфір', price: 400, quantity: 7 },
+//   { name: 'Щебінь', price: 200, quantity: 2 },
+// ];
+
+// const calcTotalPrice = function (stones, stoneName) {
+//   for (const stone of stones) {
+//     if (stone.name === stoneName) {
+//       return stone.price * stone.quantity;
+//     }
+//   }
+// };
+
+// const total = calcTotalPrice(stones, stoneName);
+
+// console.log(`Сумма каміння "${stoneName}", яке є в наявності ${total} кредитів`);

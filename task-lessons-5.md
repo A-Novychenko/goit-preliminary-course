@@ -38,7 +38,7 @@ for (const value of salariesValues) { salarySum += value
 
 console.log(salarySum) -->
 
-/\*\* Example 3
+<!-- /\*\* Example 3
 
 - Напишіть функцію `calcTotalPrice(stones, stoneName)`, яка приймає масив
 - об'єктів та рядок з назвою каменю. Функція рахує і повертає загальну вартість
@@ -58,7 +58,7 @@ for (const stone of stones) { if (stone.name === stoneName) { result = stone.pri
 return result }
 
 let total = calcTotalPrice(stones, 'Діамант'); let total2 = calcTotalPrice(stones, 'Сапфір');
-console.log(total, total2)
+console.log(total, total2) -->
 
 /\*\* Example 4 - Комплексні завдання
 
