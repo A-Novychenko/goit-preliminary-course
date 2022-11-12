@@ -60,7 +60,7 @@ return result }
 let total = calcTotalPrice(stones, 'Діамант'); let total2 = calcTotalPrice(stones, 'Сапфір');
 console.log(total, total2) -->
 
-/\*\* Example 4 - Комплексні завдання
+<!-- /\*\* Example 4 - Комплексні завдання
 
 - Напиши скрипт управління особистим кабінетом інтернет банку. Є об'єкт `account`
 - в якому необхідно реалізувати методи для роботи з балансом та історією транзакцій.
@@ -171,4 +171,4 @@ const string = 'Hello my name is longestone'; let res = findLongestWord(string);
 // Ось цей запис: string.split(' ').reduce((a, b) => b.length > a.length ? b : a);
 
 // Ідентичний оцьому: string.split(' ').reduce(function(prev, item) { if (prev.length > item.length)
-{ return prev } return item });
+{ return prev } return item }); -->
