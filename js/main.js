@@ -1314,3 +1314,38 @@
 // const concatObject = { ...first, ...second };
 
 // console.table(concatObject);
+
+// const array = [10, 10, 10, 10, 10];
+// const array2 = [20, 20, 20, 20, 20];
+
+// console.log(Math.max(...array, ...array2));
+
+// const newArray = [...array, ...array2];
+// console.log(newArray);
+
+// const first = { propA: 5, propB: 10 };
+// const second = { propC: 15 };
+// const third = { propD: 20, probG: 9, propA: 777 };
+// const newObject = { ...first, ...second, ...third };
+// console.log(newObject);
+
+// const temps = [14, -4, 25, 8, 11];
+// const x = 10;
+
+// const calcAverage = function (...args) {
+//   console.log(args);
+//   let sum = 0;
+//   for (const arg of args) {
+//     sum += arg;
+//   }
+//   return sum / args.length;
+// };
+
+// // const averageNumber = calcAverage(1, 2, 3, 4, 5, 6, 7);
+// const averageNumber = calcAverage(...temps);
+// console.log(averageNumber);
+
+// let v = { a: 1 };
+// let c = { b: 1 };
+// let b = { ...v, ...c };
+// console.log(b);
