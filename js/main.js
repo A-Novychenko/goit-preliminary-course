@@ -1349,3 +1349,95 @@
 // let c = { b: 1 };
 // let b = { ...v, ...c };
 // console.log(b);
+
+// const books = [
+//   {
+//     title: 'Title',
+//     xxx: {
+//       qwe: 1,
+//       subtitle: 'Start',
+//     },
+//   },
+//   {
+//     title: 'endTitle',
+//     xxx: {
+//       //   qwe: 10,
+//       subtitle: 'End',
+//     },
+//   },
+// ];
+
+// const [
+//   {
+//     title,
+//     xxx: { qwe: part = 'end', subtitle },
+//   },
+//   {
+//     title: title2,
+//     xxx: { qwe: part2 = 'end', subtitle: subtitle2 },
+//   },
+// ] = books;
+
+// console.log(title);
+// console.log(part);
+// console.log(subtitle);
+
+// console.log(title2);
+// console.log(part2);
+// console.log(subtitle2);
+
+// const array = ['red', 'green', 'blue'];
+// const [r, g, b] = array;
+// const text = r + g + b;
+// console.log(text);
+
+// const array = [
+//   { color: 'red', weight: 700 },
+//   { color: 'black', weight: 500 },
+// ];
+// const [warning, normal] = array;
+
+// const { color: colorWarning, weight: weightWarning } = warning;
+// const { color: colorNormal, weight: weightNormal } = normal;
+
+// console.log(
+//   `Для важного текста нужно использовать цвет ${colorWarning} и вес ${weightWarning} а для обычного цвет ${colorNormal} и вес ${weightNormal}`
+// );
+
+// const textColor = { color: 10, weight: 700 };
+
+// const changeColor = function ({ color, weight }) {
+//   console.log(color, weight);
+//   return color * weight;
+// };
+
+// console.log(changeColor(textColor));
+// console.log(textColor);
+
+// const qwe = { p1: 1, p2: 2, p3: 3 };
+// const q = function (par) {
+//   const { p1, p2, p3 } = par;
+//   return p1 * p3;
+// };
+// console.log(q(qwe));
+
+// const array = [
+//   { color: 'red', weight: 700 },
+//   { color: 'black', weight: 500 },
+// ];
+
+// const average = function (args) {
+//   let sum = 0;
+//   //   for (const { weight } of args) {
+//   //     sum += weight;
+//   //   }
+
+//   for (const arg of args) {
+//     const { weight } = arg;
+//     sum += weight;
+//   }
+
+//   return sum / array.length;
+// };
+
+// console.log(average(array));
