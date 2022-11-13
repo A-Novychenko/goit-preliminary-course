@@ -1441,3 +1441,16 @@
 // };
 
 // console.log(average(array));
+
+// const origin = [
+//   { salary: 18000, mount: 'october' },
+//   { salary: 38000, mount: 'november' },
+// ];
+
+// const updSalary = [...origin];
+// updSalary[1].salary = 50000;
+// console.log(origin);
+
+// const control =
+//   updSalary[1].salary === origin[1].salary ? 'Они равны, это та же ячейка памяти' : 'Упс';
+// console.log(control);
