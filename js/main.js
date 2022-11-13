@@ -1308,9 +1308,9 @@
 // const concatenatedArray = [...temps, ...lastWeekTemps, ...currentWeekTemps];
 // console.log(concatenatedArray);
 
-const first = { propA: 5, propB: 10, propC: 50 };
-const second = { propC: 15, propD: 20 };
+// const first = { propA: 5, propB: 10, propC: 50 };
+// const second = { propC: 15, propD: 20 };
 
-const concatObject = { ...first, ...second };
+// const concatObject = { ...first, ...second };
 
-console.table(concatObject);
+// console.table(concatObject);
