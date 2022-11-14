@@ -1,4 +1,4 @@
-Модуль 3 Заняття 6. Деструктуризація та rest/spread
+<!-- Модуль 3 Заняття 6. Деструктуризація та rest/spread
 //----------------------------------------------------------------------------------------- Example
 1 - Деструктуризація Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору
 незалежних аргументів.
@@ -14,8 +14,8 @@ console.log(calcBMI('118,3', '1.95'));
 weight: '68,3', height: '1.65', }), ); console.log( calcBMI({ weight: '118,3', height: '1.95', }),
 );
 
-//-----------------------------------------------------------------------------------------
-//Example 2 //
+//----------------------------------------------------------------------------------------- -->
+<!-- //Example 2 //
 
 - Деструктуризація Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору
   незалежних аргументів.
@@ -28,10 +28,11 @@ console.log(`${nameList[i]}: ${phoneList[i]}`); } }
 '89001234567,89001112233,890055566377,890055566300', // );
 
 // Очікується printContactsInfo({ names: 'Jacob,William,Solomon,Artemis', phones:
-'89001234567,89001112233,890055566377,890055566300', });
+'89001234567,89001112233,890055566377,890055566300', }); -->
 
 //-----------------------------------------------------------------------------------------
-//Example3
+
+<!-- //Example3
 //-----------------------------------------------------------------------------------------
 
 - Глибока деструктуризація Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість
@@ -43,8 +44,9 @@ function getBotReport(companyName, repairBots, defenceBots) { return
 // Було // console.log(getBotReport('Cyberdyne Systems', 150, 50));
 
 // Очікується console.log( getBotReport({ companyName: 'Cyberdyne Systems', bots: { repair: 150,
-defence: 50, }, }), ); // "Cyberdyne Systems has 200 bots in stock" //
-//-----------------------------------------------------------------------------------------
+defence: 50, }, }), ); // "Cyberdyne Systems has 200 bots in stock" // -->
+
+<!-- //-----------------------------------------------------------------------------------------
 //Example 4 - Деструктуризація // Напиши функцію так, щоб вона приймала об'єкт параметрів із
 властивостями companyName та stock та виводила репорт про кількість товарів на складі будь-якої
 компанії.
@@ -55,10 +57,11 @@ defence: 50, }, }), ); // "Cyberdyne Systems has 200 bots in stock" //
 150, defenceBots: 50, }, }), ); // "Cyberdyne Systems has 200 items in stock"
 
 console.log( getStockReport({ companyName: 'Belacci', stock: { shoes: 20, skirts: 10, hats: 5, },
-}), ); // "Belacci has 35 item in stock"
+}), ); // "Belacci has 35 item in stock" -->
 
 // //----------------------------------------------------------------------------------------- // //
-Example 5 - // Операція spread Напиши функцію createContact(contact) так, щоб вона повертала новий
+
+<!-- Example 5 - // Операція spread Напиши функцію createContact(contact) так, щоб вона повертала новий
 об'єкт контакту з доданими властивостями id та createdAt, а також list зі значенням "default" якщо в
 contact немає такої властивості.
 
@@ -67,9 +70,11 @@ contact немає такої властивості.
 console.log( createContact({ name: 'Mango', email: 'mango@mail.com', list: 'friends', }), );
 console.log( createContact({ name: 'Poly', email: 'poly@hotmail.com', }), );
 
-function generateId() { return '\_' + Math.random().toString().substring(2, 9); } // /// //
+function generateId() { return '\_' + Math.random().toString().substring(2, 9); } // /// // -->
+
 //----------------------------------------------------------------------------------------- //
-Example 6 //
+
+<!-- Example 6 //
 
 - Операція rest Напиши функцію transformUsername(user) так, щоб вона повертала новий об'єкт із
   властивістю fullName, замість firstName та lastName.
@@ -80,7 +85,7 @@ console.log( transformId({ id: 1, firstName: 'Jacob', lastName: 'Mercer', email:
 'j.mercer@mail.com', friendCount: 40, }), );
 
 console.log( transformId({ id: 2, firstName: 'Adrian', lastName: 'Cross', email:
-'a.cross@hotmail.com', friendCount: 20, }), );
+'a.cross@hotmail.com', friendCount: 20, }), ); -->
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
