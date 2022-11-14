@@ -1305,39 +1305,39 @@
 // test.countTotalPrice();
 // console.log(test.items);
 
-const cartAutoParts = {
-  brand: 'myshop',
-  productList: [],
+// const cartAutoParts = {
+//   brand: 'myshop',
+//   productList: [],
 
-  getproductList() {
-    return this.productList;
-  },
+//   getproductList() {
+//     return this.productList;
+//   },
 
-  addNewProduct(productCard) {
-    const { productList } = this;
+//   addNewProduct(productCard) {
+//     const { productList } = this;
 
-    for (const product of productList) {
-      if (product.name === productCard.name) {
-        product.quantity += 1;
+//     for (const product of productList) {
+//       if (product.name === productCard.name) {
+//         product.quantity += 1;
 
-        return;
-      }
-    }
+//         return;
+//       }
+//     }
 
-    const createNewProdact = {
-      ...productCard,
-      quantity: 1,
-    };
+//     const createNewProdact = {
+//       ...productCard,
+//       quantity: 1,
+//     };
 
-    productList.push(createNewProdact);
-  },
-};
+//     productList.push(createNewProdact);
+//   },
+// };
 
-console.log(cartAutoParts.getproductList());
+// console.log(cartAutoParts.getproductList());
 
-cartAutoParts.addNewProduct({ name: 'kyb', price: 2000 });
-cartAutoParts.addNewProduct({ name: 'sachs', price: 5500 });
-cartAutoParts.addNewProduct({ name: 'sachs', price: 5500 });
-cartAutoParts.addNewProduct({ name: 'monro', price: 1800 });
+// cartAutoParts.addNewProduct({ name: 'kyb', price: 2000 });
+// cartAutoParts.addNewProduct({ name: 'sachs', price: 5500 });
+// cartAutoParts.addNewProduct({ name: 'sachs', price: 5500 });
+// cartAutoParts.addNewProduct({ name: 'monro', price: 1800 });
 
-console.table(cartAutoParts.getproductList());
+// console.table(cartAutoParts.getproductList());
