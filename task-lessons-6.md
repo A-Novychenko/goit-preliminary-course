@@ -1,308 +1,182 @@
-Модуль 4. Заняття 7. Коллбеки. Стрілочні функції. forEach Example 1 - Коллбек функції Напишіть
-наступні функції:
+Модуль 3 Заняття 6. Деструктуризація та rest/spread Example 1 - Деструктуризація Перепиши функцію
+так, щоб вона приймала один об'єкт параметрів замість набору незалежних аргументів.
 
-createProduct(obj, callback) - приймає об'єкт товару без id, а також коллбек. Функція створює об'єкт
-товару, додаючи йому унікальний ідентифікатор у властивість id та викликає коллбек передаючи йому
-створений об'єкт. logProduct(product) - колббек приймаючий об'єкт продукту і логуючий його в консоль
-logTotalPrice(product) - колббек, що приймає об'єкт продукту і логіює загальну вартість товару в
-консоль // your code here
+function calcBMI(weight, height) { const numericWeight = Number(weight.replace(',', '.')); const
+numericHeight = Number(height.replace(',', '.')); return Number((numericWeight / numericHeight \*\*
+2).toFixed(1)); }
 
-createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct); createProduct({ name: '🍋',
-price: 20, quantity: 5 }, logTotalPrice); Example 2 - Коллбек функції Додайте об'єкт account методи
-withdraw(amount, onSuccess, onError) та deposit(amount, onSuccess, onError), де перший параметр це
-сума операції, а другий та третій - коллбеки.
+// Було // console.log(calcBMI('88,3', '1.75')); // console.log(calcBMI('68,3', '1.65')); //
+console.log(calcBMI('118,3', '1.95'));
 
-Метод withdraw викликає onError якщо amount більше TRANSACTION_LIMIT або this.balance, і onSuccess в
-іншому випадку.
+// Очікується console.log( calcBMI({ weight: '88,3', height: '1.75', }), ); console.log( calcBMI({
+weight: '68,3', height: '1.65', }), ); console.log( calcBMI({ weight: '118,3', height: '1.95', }),
+); Example 2 - Деструктуризація Перепиши функцію так, щоб вона приймала один об'єкт параметрів
+замість набору незалежних аргументів.
 
-Метод deposit викликає onError якщо amount більше TRANSACTION_LIMIT або менше або дорівнює нулю, і
-onSuccess в іншому випадку.
-
-const TRANSACTION_LIMIT = 1000;
-
-const account = { username: 'Jacob', balance: 400, withdraw(amount, onSuccess, onError) {
-
-}, deposit(amount, onSuccess, onError) {
-
-}, };
-
-account.withdraw(2000, handleSuccess, handleError); account.withdraw(600, handleSuccess,
-handleError); account.withdraw(300, handleSuccess, handleError); account.deposit(1700,
-handleSuccess, handleError); account.deposit(0, handleSuccess, handleError); account.deposit(-600,
-handleSuccess, handleError); account.deposit(600, handleSuccess, handleError); Example 3 - Коллбек
-функції Напишіть функцію each(array, callback), яка першим параметром очікує масив, а другим -
-функцію, яка застосовується до кожного елемента масиву. Функція each повинна повернути новий масив,
-елементами якого будуть результати виклику коллбека.
-
-const employees = [ { name: 'Artur', bonus: 64.5 }, { name: 'Ivan', bonus: 49.2 }, { name: 'Makar',
-bonus: 36 }, { name: 'Anastasiya', bonus: 25 }, { name: 'Olha', bonus: 165.13 }, ] Example 4 -
-Стрілочні функції Виконайте рефакторинг коду за допомогою стрілочних функцій.
-
-function createProduct(partialProduct, callback) { const product = { id: Date.now(),
-...partialProduct }; callback(product); }
-
-function logProduct(product) { console.log(product); }
-
-function logTotalPrice(product) { console.log(product.price \* product.quantity); }
-
-createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct); createProduct({ name: '🍋',
-price: 20, quantity: 5 }, logTotalPrice); Example 5 - Стрілочні функції Виконайте рефакторинг коду
-задачи EXAMPLE 2 за допомогою стрілочних функцій.
-
-Example 6 - Інлайн стрілочні функції Виконайте рефакторинг коду за задачи EXAMPLE 3 за допомогою
-стрілочних функцій.
-
-Example 7 - Метод forEach Виконайте рефакторинг коду за допомогою методу forEach та стрілочні
-функції.
-
-function logItems(items) { console.log(items); for (let i = 0; i < items.length; i += 1) {
-console.log(`${i + 1} - ${items[i]}`); } }
-
-logItems(['Mango', 'Poly', 'Ajax']); logItems(['🍎', '🍇', '🍑', '🍌', '🍋']); Example 8 - Метод
-forEach Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
-
-function printContactsInfo({ names, phones }) { const nameList = names.split(','); const phoneList =
+function printContactsInfo(names, phones) { const nameList = names.split(','); const phoneList =
 phones.split(','); for (let i = 0; i < nameList.length; i += 1) {
 console.log(`${nameList[i]}: ${phoneList[i]}`); } }
 
-printContactsInfo({ names: 'Jacob,William,Solomon,Artemis', phones:
-'89001234567,89001112233,890055566377,890055566300', }); Example 9 - Метод forEach Виконайте
-рефакторинг коду за допомогою методу forEach та стрілочні функції.
+// Було // printContactsInfo( // 'Jacob,William,Solomon,Artemis', //
+'89001234567,89001112233,890055566377,890055566300', // );
 
-function calсulateAverage(...args) { let total = 0; for (let i = 0; i < args.length; i++) { total +=
-args[i]; } return total / args.length; }
+// Очікується printContactsInfo({ names: 'Jacob,William,Solomon,Artemis', phones:
+'89001234567,89001112233,890055566377,890055566300', }); Example 3 - Глибока деструктуризація
+Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору незалежних аргументів.
 
-console.log(calсulateAverage(1, 2, 3, 4)); // 2.5 console.log(calсulateAverage(14, 8, 2)); // 8
-console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
+function getBotReport(companyName, repairBots, defenceBots) { return
+`${companyName} has ${repairBots + defenceBots} bots in stock`; }
 
-//4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
-//6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666 //
-решение
+// Було // console.log(getBotReport('Cyberdyne Systems', 150, 50));
 
-/\*\*
+// Очікується console.log( getBotReport({ companyName: 'Cyberdyne Systems', bots: { repair: 150,
+defence: 50, }, }), ); // "Cyberdyne Systems has 200 bots in stock" Example 4 - Деструктуризація
+Напиши функцію так, щоб вона приймала об'єкт параметрів із властивостями companyName та stock та
+виводила репорт про кількість товарів на складі будь-якої компанії.
 
-- Напишіть наступні функції:
-- `createProduct(obj, callback)` - приймає об'єкт товару без id, а також коллбек.
-- Функція створює об'єкт товару, додаючи йому унікальний ідентифікатор у властивість `id` та
-  викликає коллбек
-- передаючи йому створений об'єкт.
--
-- `logProduct(product)` - колббек приймаючий об'єкт продукту і логуючий його в консоль
-- `logTotalPrice(product)` - колббек, що приймає об'єкт продукту і логіює загальну вартість товару в
-  консоль \*/
+// Рішення function getStockReport(companyName, stock) { // your code here }
 
-const product = { name: "chocolate", price: 34, quantity: 5 }
+// Перевірка console.log( getStockReport({ companyName: 'Cyberdyne Systems', stock: { repairBots:
+150, defenceBots: 50, }, }), ); // "Cyberdyne Systems has 200 items in stock"
 
-const createProduct = (obj, callback) => { // створили новий обʼєкт товару, оператором спред забралм
-всі властивости із параметра obj const product = { ...obj, id: 1 };
+console.log( getStockReport({ companyName: 'Belacci', stock: { shoes: 20, skirts: 10, hats: 5, },
+}), ); // "Belacci has 35 item in stock" Example 5 - Операція spread Напиши функцію
+createContact(contact) так, щоб вона повертала новий об'єкт контакту з доданими властивостями id та
+createdAt, а також list зі значенням "default" якщо в contact немає такої властивості.
 
-// викликали функцію callback яку передають в параметрах. Передали їй новий обʼєкт як аргумент //
-Повернули результат виконання колбека return callback(product) };
+// Рішення function createContact() { // your code here }
 
-// Створили просто окрему функцію, яка приймає один параметр(будь-що) і виводить його в консоль.
-const logger = (val) => { console.log(val) }
+console.log( createContact({ name: 'Mango', email: 'mango@mail.com', list: 'friends', }), );
+console.log( createContact({ name: 'Poly', email: 'poly@hotmail.com', }), );
 
-// Створили ще одну окрему функцію якак приймає параметром обʼєкт(товар) і рахує вартість. const
-calculateTotalPrice = ({price, quantity}) => { const total = price \* quantity; return total }
+function generateId() { return '\_' + Math.random().toString().substring(2, 9); } Example 6 -
+Операція rest Напиши функцію transformUsername(user) так, щоб вона повертала новий об'єкт із
+властивістю fullName, замість firstName та lastName.
 
-/\*\*
+// Рішення function transformUsername() { // your code }
 
-- коротша форма запису:
-- const logger = val => console.log(val)
-- const calculateTotalPrice = ({price, quantity}) => price _ quantity _/
+console.log( transformId({ id: 1, firstName: 'Jacob', lastName: 'Mercer', email:
+'j.mercer@mail.com', friendCount: 40, }), );
 
-//викликали createProduct. Передали два аргументи: обʼєкт товара і будь-яку функцію колбек
-createProduct(product, logger); // колбеком буде функція looger const totalPrice =
-createProduct(product, calculateTotalPrice); // колбеком буде функція calculateTotalPrice
-console.log(totalPrice)
+console.log( transformId({ id: 2, firstName: 'Adrian', lastName: 'Cross', email:
+'a.cross@hotmail.com', friendCount: 20, }), );
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /\*\*
 
-- Task 2
-- Додайте в об'єкт `account` методи `withdraw (amount, onSuccess, onError)` та
-- `deposit(amount, onSuccess, onError)`, де перший параметр це сума операції, а другий та третій -
-  коллбеки.
--
-- Метод `withdraw` викликає onError якщо amount більше TRANSACTION_LIMIT або this.balance, і
-  onSuccess в іншому випадку.
-- Метод `deposit` викликає onError якщо amount більше TRANSACTION_LIMIT або менше або дорівнює нулю,
-  і onSuccess в іншому випадку. \*/
+- 1.  Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору
+- незалежних аргументів. \*/
 
-const TRANSACTION_LIMIT = 1000;
+function calcBMI({weight, height}) {
 
-const account = { username: 'Jacob', balance: 40000,
+const numericWeight = Number(weight.replace(',', '.')); const numericHeight =
+Number(height.replace(',', '.'));
 
-withdraw (amount, onSuccess, onError) { if(amount > this.balance) { return onError(amount,
-'Недостатньо балансу') }
+return Number((numericWeight / numericHeight \*\* 2).toFixed(1)); }
 
-    if(amount > TRANSACTION_LIMIT) {
-      return onError(amount, 'перевищенно ліміт операцій')
-    }
-
-    onSuccess(amount);
-
-},
-
-deposit (amount, onSuccess, onError) { if (amount > TRANSACTION_LIMIT || amount <= 0) { return
-onError(amount) }
-
-    onSuccess(amount);
-
-}, };
-
-const handleSuccess = (amount) => { console.log(`${amount} успішно опрацьовано!`) }
-
-const handleError = (amount, message = 'Невідомо') => {
-console.log(`${amount} Не опрацьовано! По причині: ${message}`) }
-
-account.withdraw(2000, handleSuccess, handleError); account.withdraw(600, handleSuccess,
-handleError); account.withdraw(300, handleSuccess, handleError); account.deposit(1700,
-handleSuccess, handleError); account.deposit(0, handleSuccess, handleError); account.deposit(-600,
-handleSuccess, handleError); account.deposit(600, handleSuccess, handleError);
+console.log( calcBMI({ weight: '88,3', height: '1.75', }), ); console.log( calcBMI({ weight: '68,3',
+height: '1.65', }), ); console.log( calcBMI({ weight: '118,3', height: '1.95', }), );
 
 /\*\*
 
-- Task 3
-- Напишіть функцію `each(array, callback)`, яка першим параметром очікує
-- масив, а другим - функцію, яка застосовується до кожного елемента масиву.
-- Функція each повинна повернути новий масив, елементами якого будуть результати виклику коллбека.
-  \*/
+- 2.
+- Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору
+- незалежних аргументів. \*/
 
-// коллекція співробітників, де кожен елемент це обʼєкт з іменем і сумою бонусів const employees = [
-{ name: 'Artur', bonus: 64.5 }, { name: 'Ivan', bonus: 49.2 }, { name: 'Makar', bonus: 36 }, { name:
-'Anastasiya', bonus: 25 }, { name: 'Olha', bonus: 165.13 }, ]
-
-// створили функцію each, яка чекає масив і функцію в параметрах const each = (arr, callback) => {
-const resultArr = []; // новий масав який будемо повертати
-
-/\*\*
-
-- перебираємо циклом масив, диструктурувавши елемент на кожній ітерації
-- запис еквівалентний цьому: for (const item of arr) { resultArr.push({ name: item.name, bonus:
-  callback(item.bonus) }) } \*/ for (const {name, bonus} of arr) { // на кожній ітерації викликаємо
-  колбек для бонусу і кладемо новий обʼєкт в новий масив resultArr.push({ name, bonus:
-  callback(bonus) }) }
-
-return resultArr; // повертаємо новий масив }
-
-const roundBonus = value => Math.floor(value) // те саме, що
-
-// 1. const roundBonus = (value) => { // return Math.floor(value) // }
-
-// 2. function roundBonus (value) { // return Math.floor(value) // }
-
-// 3. const roundBonus = function (value) { // return Math.floor(value) // }
-
-// викликали each, передали їй масив з даними і функцію як колбек. Очікуємо отримати новий масив в
-результат const roundedBonuses = each(employees, roundBonus); console.log(roundedBonuses);
-
-/\*\*
-
-- Task 4
-- Переписати функції на arrow functions \*/
-
-// origin. P.S. Це задача з першого завдання ;) function createProduct(partialProduct, callback) {
-const product = { id: Date.now(), ...partialProduct }; callback(product); }
-
-// arrorw. 1 const createProduct = (partialProduct, callback) => { const product = { id: Date.now(),
-...partialProduct }; callback(product); }
-
-// arrorw. 2 const createProduct = (partialProduct, callback) => callback({ id: Date.now(),
-...partialProduct });
-
-// origin function logProduct(product) { console.log(product); }
-
-// arrow const logProduct = product => console.log(product)
-
-// origin function logTotalPrice(product) { console.log(product.price \* product.quantity); }
-
-//arrow 1 const logTotalPrice = product => console.log(product.price \* product.quantity);
-
-// arrow 2 const logTotalPrice = ({price, quantity}) => console.log(price \* quantity);
-
-// createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct); // createProduct({ name: '🍋',
-price: 20, quantity: 5 }, logTotalPrice);
-
-/\*\*
-
-- Task 5 & 6 ми зробили одразу. Треба перевести функції з завдань 2 & 3 на arrow functions \*/
-
-/\*\*
-
-- Task 7
-- Виконайте рефакторинг коду за допомогою методу `forEach` та стрілочні функції. \*\*/ function
-  logItems(items) { console.log(items);
-
-// звичайний цикл for // for (let i = 0; i < items.length; i += 1) { //
-console.log(`${i + 1} - ${items[i]}`); // }
-
-// метод масива forEach. Повна форма запису items.forEach(function(item, index) {
-console.log(`${index + 1} - ${item}`); });
-
-// метод forEach. Коротка форма за допомогою arrow function items.forEach((item, index) =>
-console.log(`${index + 1} - ${item}`)) }
-
-// logItems(['Mango', 'Poly', 'Ajax']); // logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
-
-/\*\*
-
-- Task 8
-- Виконайте рефакторинг коду за допомогою методу `forEach` та стрілочні функції.
-- Те саме: цикл for замінили на forEach \*\*/
-
-function printContactsInfo({ names, phones }) { const nameList = names.split(','); const phoneList =
+function printContactsInfo({names, phones}) { const nameList = names.split(','); const phoneList =
 phones.split(',');
 
-// for (let i = 0; i < nameList.length; i += 1) { // console.log(`${nameList[i]}: ${phoneList[i]}`);
-// }
-
-nameList.forEach((name, currentIndex) => { console.log(`${name}: ${phoneList[currentIndex]}`); });
-
-}
+for (let i = 0; i < nameList.length; i += 1) { console.log(`${nameList[i]}: ${phoneList[i]}`); } }
 
 printContactsInfo({ names: 'Jacob,William,Solomon,Artemis', phones:
 '89001234567,89001112233,890055566377,890055566300', });
 
 /\*\*
 
-- Task 9
-- Виконайте рефакторинг коду за допомогою методу `forEach` та стрілочні функції. \*\*/
+- 3.  Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору незалежних
+      аргументів. \*/
 
-const calсulateAverage = (...args) => { let total = 0;
+function getBotReport(object) {
 
-// for (let i = 0; i < args.length; i++) { // total += args[i]; // }
+console.log(object)
 
-// ці два forEach еквівалентні args.forEach(number => total += number);
+const {companyName, bots} = object console.log(companyName); console.log(bots);
 
-// args.forEach(function(el) { // total = total + el // });
+const { repair: repairBots = 56, defence: defenceBots = 45 } = bots;
 
-return total / args.length; }
+console.log(repairBots) console.log(defenceBots)
 
-console.log(calсulateAverage(1, 2, 3, 4)); // 2.5 console.log(calсulateAverage(14, 8, 2)); // 8
-console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
+return `${companyName} has ${repairBots + defenceBots} bots in stock`; }
 
-/** Питання №1 від Вови \*/ /**Відповідь return має бути після виконання циклу. \*/ // під час
-виконання автоперевірки попадаю на неправильно поставленний return чому правильно: const pizzaPalace
-= { pizzas: ["Ultracheese", "Smoked", "Four meats"], order(pizzaName, onSuccess, onError) {
+const company = { companyName: 'Cyberdyne Systems', bots: { repair: 150, defence: 50, }, }
 
-    for (let pizza of pizzaPalace.pizzas) {
-      if (pizza === pizzaName){
-        return makePizza(pizzaName)
-      }
+getBotReport(company)
+
+/\*\*
+
+- 4.
+- Напиши функцію так, щоб вона приймала об'єкт параметрів із
+- властивостями `companyName` та `stock` та
+- виводила репорт про кількість товарів на складі будь-якої компанії.
+-
+- Extended: Переписали так щоб функція прймала масив з обʼєктами \*/
+
+const companies = [ { companyName: 'Cyberdyne Systems', stock: { repairBots: 150, defenceBots: 50,
+}, }, { companyName: 'Belacci', stock: { shoes: 20, skirts: 10, hats: 5, }, } ]
+
+function getStockReport(companies) {
+
+for (let {companyName, stock} of companies) {
+
+    let total = 0;
+    for (let value of Object.values(stock)) {
+      total += value
     }
 
-    return onOrderError(`There is no pizza with a name ${pizzaName} in the assortment.`)
+    console.log(`${companyName} has ${total} items in stock`)
 
-}, };
+} // return `${companyName} has ${total} items in stock`
 
-// а не : const pizzaPalace2 = { pizzas: ["Ultracheese", "Smoked", "Four meats"], order(pizzaName,
-onSuccess, onError) { for (let pizza of pizzaPalace.pizzas) {
+}
 
-      if (pizza === pizzaName){
-        return makePizza(pizzaName)
-      }
+getStockReport(companies)
 
-      return onOrderError(`There is no pizza with a name ${pizzaName} in the assortment.`)
-    }
+/\*\*
 
-}, };
+- Task 5
+- Напиши функцію `createContact(contact)` так, щоб вона повертала новий
+- об'єкт контакту з доданими властивостями `id` та `createdAt`, а також `list` зі
+- значенням "default" якщо в `contact` немає такої властивості. \*/
+
+const createContact = function(contact) { // 1. Створити новий обʼєкт // 2. Додати до нього нові
+ключі // id // createdAt // list, якщо його нема, то дати дефолтне значення return { list:
+'default', ...contact, id: 1 } }
+
+const contact = { name: 'Mango', email: 'mango@mail.com', list: 'friends', }
+
+const newContact = createContact(contact); newContact.name = "Ser. Pan";
+
+console.log(newContact) console.log(contact)
+
+/\*\*
+
+- 6.
+- Напиши функцію `transformUsername(user)` так,
+- щоб вона повертала новий об'єкт із властивістю
+- `fullName`, замість `firstName` та `lastName`. \*/
+
+const transformUsername = function ({firstName, lastName, ...restProps}) {
+
+return { fullName: `${firstName} ${lastName}`, ...restProps } }
+
+const user = { id: 1, firstName: 'Jacob', lastName: 'Mercer', email: 'j.mercer@mail.com',
+friendCount: 40, }
+
+const newUser = transformUsername(user); console.log(newUser)
+
+const userP = { email: "mango@mail.com", age: 20 };
+
+const { email: userEmail } = userP;
+
+console.log(email) // Помилка, бо змінної email нема

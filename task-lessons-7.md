@@ -1,397 +1,308 @@
-Модуль 4. Заняття 8. Перебираючі методи масиву Колекція об'єктів для всіх прикладів з автомобілями
-const cars = [ { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true
-}, { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true }, { make:
-'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false }, { make: 'Mazda',
-model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true }, { make: 'Toyota', model:
-'4Runner', type: 'suv', amount: 19, price: 34210, onSale: false }, { make: 'Toyota', model:
-'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false }, { make: 'Toyota', model:
-'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true }, { make: 'Ford', model: 'F-150',
-type: 'truck', amount: 11, price: 27110, onSale: true }, { make: 'Ford', model: 'Fusion', type:
-'sedan', amount: 13, price: 22120, onSale: true }, { make: 'Ford', model: 'Explorer', type: 'suv',
-amount: 6, price: 31660, onSale: false } ]; Example 1 - Метод map Нехай функція getModels повертає
-масив моделей (поле model) всіх автомобілів.
+Модуль 4. Заняття 7. Коллбеки. Стрілочні функції. forEach Example 1 - Коллбек функції Напишіть
+наступні функції:
 
-const getModels = cars => {};
+createProduct(obj, callback) - приймає об'єкт товару без id, а також коллбек. Функція створює об'єкт
+товару, додаючи йому унікальний ідентифікатор у властивість id та викликає коллбек передаючи йому
+створений об'єкт. logProduct(product) - колббек приймаючий об'єкт продукту і логуючий його в консоль
+logTotalPrice(product) - колббек, що приймає об'єкт продукту і логіює загальну вартість товару в
+консоль // your code here
 
-console.table(getModels(cars)); Example 2 - Метод map Нехай функція makeCarsWithDiscount повертає
-новий масив об'єктів із змінним значенням властивості price залежно від переданої знижки.
+createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct); createProduct({ name: '🍋',
+price: 20, quantity: 5 }, logTotalPrice); Example 2 - Коллбек функції Додайте об'єкт account методи
+withdraw(amount, onSuccess, onError) та deposit(amount, onSuccess, onError), де перший параметр це
+сума операції, а другий та третій - коллбеки.
 
-const makeCarsWithDiscount = (cars, discount) => {};
+Метод withdraw викликає onError якщо amount більше TRANSACTION_LIMIT або this.balance, і onSuccess в
+іншому випадку.
 
-console.table(makeCarsWithDiscount(cars, 0.2)); console.table(makeCarsWithDiscount(cars, 0.4));
-Example 3 - Метод filter Нехай функція filterByPrice повертає масив автомобілів ціна яких менша ніж
-значення параметра threshold.
+Метод deposit викликає onError якщо amount більше TRANSACTION_LIMIT або менше або дорівнює нулю, і
+onSuccess в іншому випадку.
 
-const filterByPrice = (cars, threshold) => {};
+const TRANSACTION_LIMIT = 1000;
 
-console.table(filterByPrice(cars, 30000)); console.table(filterByPrice(cars, 25000)); Example 4 -
-Метод filter Нехай функція getCarsWithDiscount повертає масив автомобілів властивість onSale яких
-true.
+const account = { username: 'Jacob', balance: 400, withdraw(amount, onSuccess, onError) {
 
-const getCarsWithDiscount = cars => {};
+}, deposit(amount, onSuccess, onError) {
 
-console.table(getCarsWithDiscount(cars)); Example 5 - Метод filter Нехай функція getCarsWithType
-повертає масив автомобілів тип яких збігається зі значенням параметра type.
+}, };
 
-const getCarsWithType = (cars, type) => {};
+account.withdraw(2000, handleSuccess, handleError); account.withdraw(600, handleSuccess,
+handleError); account.withdraw(300, handleSuccess, handleError); account.deposit(1700,
+handleSuccess, handleError); account.deposit(0, handleSuccess, handleError); account.deposit(-600,
+handleSuccess, handleError); account.deposit(600, handleSuccess, handleError); Example 3 - Коллбек
+функції Напишіть функцію each(array, callback), яка першим параметром очікує масив, а другим -
+функцію, яка застосовується до кожного елемента масиву. Функція each повинна повернути новий масив,
+елементами якого будуть результати виклику коллбека.
 
-console.table(getCarsWithType(cars, 'suv')); console.table(getCarsWithType(cars, 'sedan')); Example
-6 - Метод find const getCarByModel = (cars, model) => {};
+const employees = [ { name: 'Artur', bonus: 64.5 }, { name: 'Ivan', bonus: 49.2 }, { name: 'Makar',
+bonus: 36 }, { name: 'Anastasiya', bonus: 25 }, { name: 'Olha', bonus: 165.13 }, ] Example 4 -
+Стрілочні функції Виконайте рефакторинг коду за допомогою стрілочних функцій.
 
-console.log(getCarByModel(cars, 'F-150')); console.log(getCarByModel(cars, 'CX-9')); Example 7 -
-Метод sort Нехай функція sortByAscendingAmount повертає новий масив автомобілів відсортований за
-зростанням значення якості amount.
+function createProduct(partialProduct, callback) { const product = { id: Date.now(),
+...partialProduct }; callback(product); }
 
-const sortByAscendingAmount = cars => {};
+function logProduct(product) { console.log(product); }
 
-console.table(sortByAscendingAmount(cars)); Example 8 - Метод sort Нехай функція
-sortByDescendingPrice повертає новий масив автомобілів відсортований за зменшенням значення
-властивості price.
+function logTotalPrice(product) { console.log(product.price \* product.quantity); }
 
-const sortByDescendingPrice = cars => {};
+createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct); createProduct({ name: '🍋',
+price: 20, quantity: 5 }, logTotalPrice); Example 5 - Стрілочні функції Виконайте рефакторинг коду
+задачи EXAMPLE 2 за допомогою стрілочних функцій.
 
-console.table(sortByDescendingPrice(cars)); Example 9 - Метод sort Нехай функція sortByModel
-повертає новий масив автомобілів відсортований за назвою моделі в алфавітному та зворотному
-алфавітному порядку, в залежності від значення параметра order.
+Example 6 - Інлайн стрілочні функції Виконайте рефакторинг коду за задачи EXAMPLE 3 за допомогою
+стрілочних функцій.
 
-const sortByModel = (cars, order) => {};
+Example 7 - Метод forEach Виконайте рефакторинг коду за допомогою методу forEach та стрілочні
+функції.
 
-console.table(sortByModel(cars, 'asc')); console.table(sortByModel(cars, 'desc')); Example 10 -
-Метод reduce Нехай функція getTotalAmount повертає загальну кількість автомобілів (значення
-властивостей amount).
+function logItems(items) { console.log(items); for (let i = 0; i < items.length; i += 1) {
+console.log(`${i + 1} - ${items[i]}`); } }
 
-const getTotalAmount = cars => {};
+logItems(['Mango', 'Poly', 'Ajax']); logItems(['🍎', '🍇', '🍑', '🍌', '🍋']); Example 8 - Метод
+forEach Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
 
-console.log(getTotalAmount(cars)); Example 11 - Ланцюжки методів Нехай функція getAvailableCarNames
-повертає масив моделей автомобілів, але тільки тих, які зараз на розпродажі.
+function printContactsInfo({ names, phones }) { const nameList = names.split(','); const phoneList =
+phones.split(','); for (let i = 0; i < nameList.length; i += 1) {
+console.log(`${nameList[i]}: ${phoneList[i]}`); } }
 
-const getModelsOnSale = cars => {};
+printContactsInfo({ names: 'Jacob,William,Solomon,Artemis', phones:
+'89001234567,89001112233,890055566377,890055566300', }); Example 9 - Метод forEach Виконайте
+рефакторинг коду за допомогою методу forEach та стрілочні функції.
 
-console.table(getModelsOnSale(cars)); Example 12 - Ланцюжки методів Нехай функція
-getSortedCarsOnSale повертає масив автомобілів на розпродажі (Властивість onSale), відсортованих за
-зростанням ціни.
+function calсulateAverage(...args) { let total = 0; for (let i = 0; i < args.length; i++) { total +=
+args[i]; } return total / args.length; }
 
-const getSortedCarsOnSale = cars => {};
+console.log(calсulateAverage(1, 2, 3, 4)); // 2.5 console.log(calсulateAverage(14, 8, 2)); // 8
+console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
 
-console.table(getSortedCarsOnSale(cars));
-
-//444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
-//888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
-//решение
-
-\*\*
-
-- Task 1.
-- Написати функцію котра буде повертати масив моделей авто
--
-- 1.  Визначити метод
-- 2.  перебрати масив з авто
-- 2.  Зібрати масив з моделями автою. \*/
-
-const cars = [ { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true
-}, { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true }, { make:
-'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false }, { make: 'Mazda',
-model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true }, { make: 'Toyota', model:
-'4Runner', type: 'suv', amount: 19, price: 34210, onSale: false }, { make: 'Toyota', model:
-'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false }, { make: 'Toyota', model:
-'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true }, { make: 'Ford', model: 'F-150',
-type: 'truck', amount: 11, price: 27110, onSale: true }, { make: 'Ford', model: 'Fusion', type:
-'sedan', amount: 13, price: 22120, onSale: true }, { make: 'Ford', model: 'Explorer', type: 'suv',
-amount: 6, price: 31660, onSale: false } ];
-
-// const getModels = cars => cars.map(car => car.model) // short form
-
-// full form const getModels = cars => {
-
-const models = cars.map((element, index, array) => {
-
-    console.log(element)
-    console.log(index)
-    console.log(array)
-
-    // в array зберігається масив до якого застосували метод. Можно до ноьго звернутися по індексу!
-    // array[index]
-
-    return element.model
-
-})
-
-return models }
-
-const allModels = getModels(cars); // console.table(allModels);
+//4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
+//6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666 //
+решение
 
 /\*\*
 
-- Task 2.
-- Нехай функція `makeCarsWithDiscount` повертає новий масив об'єктів із змінени
-- значенням властивості `price` залежно від переданої знижки.
+- Напишіть наступні функції:
+- `createProduct(obj, callback)` - приймає об'єкт товару без id, а також коллбек.
+- Функція створює об'єкт товару, додаючи йому унікальний ідентифікатор у властивість `id` та
+  викликає коллбек
+- передаючи йому створений об'єкт.
 -
-- 1.  Перебрати масив з авто
-- 2.  Повернути новий масив з оновленою ціною залежно від скидки \*/
+- `logProduct(product)` - колббек приймаючий об'єкт продукту і логуючий його в консоль
+- `logTotalPrice(product)` - колббек, що приймає об'єкт продукту і логіює загальну вартість товару в
+  консоль \*/
 
-// Short form // const makeCarsWithDiscount = (cars, discount) => cars.map(car => ({ // ...car, //
-price: car.price - (car.price \* discount) // }))
+const product = { name: "chocolate", price: 34, quantity: 5 }
 
-// full form const makeCarsWithDiscount = (cars, discount) => { const carsWithDiscount =
-cars.map(car => { return { ...car, price: car.price - (car.price \* discount) } });
+const createProduct = (obj, callback) => { // створили новий обʼєкт товару, оператором спред забралм
+всі властивости із параметра obj const product = { ...obj, id: 1 };
 
-return carsWithDiscount };
+// викликали функцію callback яку передають в параметрах. Передали їй новий обʼєкт як аргумент //
+Повернули результат виконання колбека return callback(product) };
 
-const carsDiscount = makeCarsWithDiscount(cars, 0.2); // console.table(carsDiscount)
+// Створили просто окрему функцію, яка приймає один параметр(будь-що) і виводить його в консоль.
+const logger = (val) => { console.log(val) }
+
+// Створили ще одну окрему функцію якак приймає параметром обʼєкт(товар) і рахує вартість. const
+calculateTotalPrice = ({price, quantity}) => { const total = price \* quantity; return total }
 
 /\*\*
 
-- Task 3.
-- Нехай функція `filterByPrice` повертає масив автомобілів ціна яких менша
-- ніж значення параметра `threshold`. \*/
+- коротша форма запису:
+- const logger = val => console.log(val)
+- const calculateTotalPrice = ({price, quantity}) => price _ quantity _/
 
-//short form // const filterByPrice = (cars, threshold) => cars.filter(({price}) => price <
-threshold)
+//викликали createProduct. Передали два аргументи: обʼєкт товара і будь-яку функцію колбек
+createProduct(product, logger); // колбеком буде функція looger const totalPrice =
+createProduct(product, calculateTotalPrice); // колбеком буде функція calculateTotalPrice
+console.log(totalPrice)
 
-// full form const filterByPrice = (cars, threshold) => {
+/\*\*
 
-const filteredCars = cars.filter((car) => {
+- Task 2
+- Додайте в об'єкт `account` методи `withdraw (amount, onSuccess, onError)` та
+- `deposit(amount, onSuccess, onError)`, де перший параметр це сума операції, а другий та третій -
+  коллбеки.
+-
+- Метод `withdraw` викликає onError якщо amount більше TRANSACTION_LIMIT або this.balance, і
+  onSuccess в іншому випадку.
+- Метод `deposit` викликає onError якщо amount більше TRANSACTION_LIMIT або менше або дорівнює нулю,
+  і onSuccess в іншому випадку. \*/
 
-    if (car.price < threshold) {
-      return true
+const TRANSACTION_LIMIT = 1000;
+
+const account = { username: 'Jacob', balance: 40000,
+
+withdraw (amount, onSuccess, onError) { if(amount > this.balance) { return onError(amount,
+'Недостатньо балансу') }
+
+    if(amount > TRANSACTION_LIMIT) {
+      return onError(amount, 'перевищенно ліміт операцій')
     }
 
-    return false
+    onSuccess(amount);
 
-});
+},
 
-return filteredCars };
+deposit (amount, onSuccess, onError) { if (amount > TRANSACTION_LIMIT || amount <= 0) { return
+onError(amount) }
 
-const filteredByPrice = filterByPrice(cars, 30000); // console.table(filteredByPrice);
+    onSuccess(amount);
 
-/\*\*
+}, };
 
-- Task 4.
-- Нехай функція `getCarsWithDiscount` повертає масив автомобілів властивість onSale яких true. \*/
+const handleSuccess = (amount) => { console.log(`${amount} успішно опрацьовано!`) }
 
-// same task as previous one, just filter on other property const getCarsWithDiscount = cars =>
-cars.filter(({onSale}) => onSale);
+const handleError = (amount, message = 'Невідомо') => {
+console.log(`${amount} Не опрацьовано! По причині: ${message}`) }
 
-const filteredBySale = getCarsWithDiscount(cars); // console.table(filteredBySale);
-
-/\*\*
-
-- Task 5
-- Нехай функція `getCarsWithType` повертає масив автомобілів тип яких
-- збігається зі значенням параметра `type`. \*/
-
-// short form // const getCarsWithType = (cars, type) => cars.filter(({type: carType}) => carType
-=== type);
-
-// full form const getCarsWithType = (cars, type) => {
-
-const filteredCars = cars.filter(car => { if (car.type === type) { return true } })
-
-return filteredCars }
-
-const filteredByType = getCarsWithType(cars, 'suv'); // console.table(filteredByType);
+account.withdraw(2000, handleSuccess, handleError); account.withdraw(600, handleSuccess,
+handleError); account.withdraw(300, handleSuccess, handleError); account.deposit(1700,
+handleSuccess, handleError); account.deposit(0, handleSuccess, handleError); account.deposit(-600,
+handleSuccess, handleError); account.deposit(600, handleSuccess, handleError);
 
 /\*\*
 
-- Task 6.
-- нехай ф-я getCarByModel повертає одне авто за моделю \*/
+- Task 3
+- Напишіть функцію `each(array, callback)`, яка першим параметром очікує
+- масив, а другим - функцію, яка застосовується до кожного елемента масиву.
+- Функція each повинна повернути новий масив, елементами якого будуть результати виклику коллбека.
+  \*/
 
-// short form // const getCarByModel = (cars, model => cars.find(({model: carModel}) => carModel ===
-model))
+// коллекція співробітників, де кожен елемент це обʼєкт з іменем і сумою бонусів const employees = [
+{ name: 'Artur', bonus: 64.5 }, { name: 'Ivan', bonus: 49.2 }, { name: 'Makar', bonus: 36 }, { name:
+'Anastasiya', bonus: 25 }, { name: 'Olha', bonus: 165.13 }, ]
 
-// full form const getCarByModel = (cars, model) => {
-
-const foundCar = cars.find(car => { if(car.model === model) { return true } })
-
-return foundCar };
-
-const foundCarByModel = getCarByModel(cars, 'F-150'); // console.log(foundCarByModel);
-
-/\*\*
-
-- Task 7.
-- Нехай функція `sortByAscendingAmount` повертає новий масив автомобілів відсортований за
-- зростанням значення якості `amount`. \*/
-
-//short form // const sortByAscendingAmount = cars => [...cars].sort((a,b) => b.amount - a.amount)
-
-// full form const sortByAscendingAmount = cars => {
-
-const sortedCars = [...cars];
-
-sortedCars.sort((a, b) => { if (a.amount > b.amount) return 1;
-
-    return -1
-
-});
-
-return sortedCars
-
-};
-
-const sortedByAmountCars = sortByAscendingAmount(cars); // console.table(sortedByAmountCars);
+// створили функцію each, яка чекає масив і функцію в параметрах const each = (arr, callback) => {
+const resultArr = []; // новий масав який будемо повертати
 
 /\*\*
 
-- Task 8.
-- Нехай функція `sortByDescendingPrice` повертає новий масив автомобілів
-- відсортований за зменшенням значення властивості `price`. \*/ // Same task as previous one, just
-  sort by price form bigger to smaller const sortByDescendingPrice = cars => [...cars].sort((a ,b)
-  => b.price - a.price );
+- перебираємо циклом масив, диструктурувавши елемент на кожній ітерації
+- запис еквівалентний цьому: for (const item of arr) { resultArr.push({ name: item.name, bonus:
+  callback(item.bonus) }) } \*/ for (const {name, bonus} of arr) { // на кожній ітерації викликаємо
+  колбек для бонусу і кладемо новий обʼєкт в новий масив resultArr.push({ name, bonus:
+  callback(bonus) }) }
 
-const sortedByPrice = sortByDescendingPrice(cars); // console.table(sortedByPrice);
+return resultArr; // повертаємо новий масив }
+
+const roundBonus = value => Math.floor(value) // те саме, що
+
+// 1. const roundBonus = (value) => { // return Math.floor(value) // }
+
+// 2. function roundBonus (value) { // return Math.floor(value) // }
+
+// 3. const roundBonus = function (value) { // return Math.floor(value) // }
+
+// викликали each, передали їй масив з даними і функцію як колбек. Очікуємо отримати новий масив в
+результат const roundedBonuses = each(employees, roundBonus); console.log(roundedBonuses);
 
 /\*\*
 
-- Task 9.
-- Нехай функція `sortByModel` повертає новий масив автомобілів відсортований
-- за назвою моделі в алфавітному та зворотному алфавітному порядку, в залежності від
-- значення параметра `order`. \*/
+- Task 4
+- Переписати функції на arrow functions \*/
+
+// origin. P.S. Це задача з першого завдання ;) function createProduct(partialProduct, callback) {
+const product = { id: Date.now(), ...partialProduct }; callback(product); }
+
+// arrorw. 1 const createProduct = (partialProduct, callback) => { const product = { id: Date.now(),
+...partialProduct }; callback(product); }
+
+// arrorw. 2 const createProduct = (partialProduct, callback) => callback({ id: Date.now(),
+...partialProduct });
+
+// origin function logProduct(product) { console.log(product); }
+
+// arrow const logProduct = product => console.log(product)
+
+// origin function logTotalPrice(product) { console.log(product.price \* product.quantity); }
+
+//arrow 1 const logTotalPrice = product => console.log(product.price \* product.quantity);
+
+// arrow 2 const logTotalPrice = ({price, quantity}) => console.log(price \* quantity);
+
+// createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct); // createProduct({ name: '🍋',
+price: 20, quantity: 5 }, logTotalPrice);
 
 /\*\*
 
--
-- 1.  в середині функції робимо копію масиву і будемо сортувати його
-- 2.  Робимо розгалуження if, перевіряємо значення order
-- 3.  Застосовуємо метод sort, але з різною умовою сортування в залежностиі від значення order \*/
+- Task 5 & 6 ми зробили одразу. Треба перевести функції з завдань 2 & 3 на arrow functions \*/
 
-const sortByModel = (cars, order) => { const sortedCars = [...cars];
+/\*\*
 
-// Short form of sort if (order === 'asc') { sortedCars.sort((a, b) => a.model > b.model ? 1 : -1) }
-else if(order === 'desc') { sortedCars.sort((a, b) => a.model < b.model ? 1 : -1) }
+- Task 7
+- Виконайте рефакторинг коду за допомогою методу `forEach` та стрілочні функції. \*\*/ function
+  logItems(items) { console.log(items);
 
-// OR full form of sort
+// звичайний цикл for // for (let i = 0; i < items.length; i += 1) { //
+console.log(`${i + 1} - ${items[i]}`); // }
 
-if (order === 'asc') { sortedCars.sort((a, b) => { if (a.model > b.model) { return 1 }
+// метод масива forEach. Повна форма запису items.forEach(function(item, index) {
+console.log(`${index + 1} - ${item}`); });
 
-      return -1
-    })
+// метод forEach. Коротка форма за допомогою arrow function items.forEach((item, index) =>
+console.log(`${index + 1} - ${item}`)) }
 
-} else if (order === 'desc') { sortedCars.sort((a, b) => { if (a.model < b.model) { return 1 }
+// logItems(['Mango', 'Poly', 'Ajax']); // logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
 
-      return -1
-    })
+/\*\*
+
+- Task 8
+- Виконайте рефакторинг коду за допомогою методу `forEach` та стрілочні функції.
+- Те саме: цикл for замінили на forEach \*\*/
+
+function printContactsInfo({ names, phones }) { const nameList = names.split(','); const phoneList =
+phones.split(',');
+
+// for (let i = 0; i < nameList.length; i += 1) { // console.log(`${nameList[i]}: ${phoneList[i]}`);
+// }
+
+nameList.forEach((name, currentIndex) => { console.log(`${name}: ${phoneList[currentIndex]}`); });
 
 }
 
-return sortedCars
-
-};
-
-const cars1 = sortByModel(cars, 'asc'); const cars2 = sortByModel(cars, 'desc');
-
-// console.log(cars1) // console.log(cars2)
+printContactsInfo({ names: 'Jacob,William,Solomon,Artemis', phones:
+'89001234567,89001112233,890055566377,890055566300', });
 
 /\*\*
 
-- Task 10.
--
-- Нехай функція `getTotalAmount` повертає загальну кількість автомобілів (значення
-- властивостей `amount`). \*/
+- Task 9
+- Виконайте рефакторинг коду за допомогою методу `forEach` та стрілочні функції. \*\*/
 
-// short form // const getTotalAmount = cars => cars.reduce((total, car) => total += car.amount, 0)
+const calсulateAverage = (...args) => { let total = 0;
 
-// full form const getTotalAmount = cars => {
+// for (let i = 0; i < args.length; i++) { // total += args[i]; // }
 
-const total = cars.reduce((total, car) => {
+// ці два forEach еквівалентні args.forEach(number => total += number);
 
-    total += car.amount
-    return total
+// args.forEach(function(el) { // total = total + el // });
 
-}, 0)
+return total / args.length; }
 
-return total };
+console.log(calсulateAverage(1, 2, 3, 4)); // 2.5 console.log(calсulateAverage(14, 8, 2)); // 8
+console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
 
-// console.log('Total',getTotalAmount(cars))
+/** Питання №1 від Вови \*/ /**Відповідь return має бути після виконання циклу. \*/ // під час
+виконання автоперевірки попадаю на неправильно поставленний return чому правильно: const pizzaPalace
+= { pizzas: ["Ultracheese", "Smoked", "Four meats"], order(pizzaName, onSuccess, onError) {
 
-/\*\*
+    for (let pizza of pizzaPalace.pizzas) {
+      if (pizza === pizzaName){
+        return makePizza(pizzaName)
+      }
+    }
 
-- Task 11.
-- Нехай функція `getAvailableCarNames` повертає масив моделей автомобілів, але
-- тільки тих, які зараз на розпродажі. \*/
+    return onOrderError(`There is no pizza with a name ${pizzaName} in the assortment.`)
 
-/\*\*
+}, };
 
-- 1. спочатку треба отпримати відфільтровний масив, де тільки ті машини котрі на розпродажу
-- 2. Потім методом map, створити з фітфльтрованого масива автомобілів новий масив, де тільки назви
-     моделей будуть \*/
+// а не : const pizzaPalace2 = { pizzas: ["Ultracheese", "Smoked", "Four meats"], order(pizzaName,
+onSuccess, onError) { for (let pizza of pizzaPalace.pizzas) {
 
-// sort form // const getModelsOnSale = cars => cars.filter(car => car.onSale).map(car =>
-car.model);
+      if (pizza === pizzaName){
+        return makePizza(pizzaName)
+      }
 
-// full form const getModelsOnSale = (cars) => { const carsOnSale = cars.filter( car => { return
-car.onSale })
+      return onOrderError(`There is no pizza with a name ${pizzaName} in the assortment.`)
+    }
 
-const carModels = carsOnSale.map(car => { return car.model });
-
-return carModels }
-
-// console.table(getModelsOnSale(cars));
-
-/\*\*
-
-- Task 12.
-- Нехай функція `getSortedCarsOnSale` повертає масив автомобілів на розпродажі
-- (Властивість onSale), відсортованих за зростанням ціни. \*/
-
-/\*\*
-
--
-- 1.  Фільтруємо автомобілі по параметру sale(filter повертає новий масив)
-- 2.  Сортуємо масив який отримали, по зростанню ціні \*/
-
-// short form // const getSortedCarsOnSale = cars => cars.filter(car => car.onSale).sort((a, b) =>
-a.price - b.price)
-
-// full form const getSortedCarsOnSale = cars => {
-
-const carsOnSale = cars.filter( car => { return car.onSale })
-
-return carsOnSale.sort((a, b) => a.price - b.price) // sort зміннює масив. НЕ створює новий
-
-}
-
-// console.table(getSortedCarsOnSale(cars));
-
-const sortCarsByProp = (cars, prop) => {
-
-let countCalls = 0;
-
-// функція sortCars замкнена в контексті функції sortCarsByProp. // Вона завжди має доступ до
-параметрів і локальних змінних const sortCars = (param) => { cars.sort((a,b) => a[prop] - b[prop]);
-countCalls++; console.log(countCalls) }
-
-return sortCars }
-
-const sortSomething = sortCarsByProp(cars, 'price');
-
-sortSomething(param) sortSomething() sortSomething() sortSomething()
-
-const tweets = [ { id: "000", likes: 5, tags: ["js", "nodejs"] }, { id: "001", likes: 2, tags:
-["html", "css"] }, { id: "002", likes: 17, tags: ["html", "js", "nodejs"] }, { id: "003", likes: 8,
-tags: ["css", "react"] }, { id: "004", likes: 0, tags: ["js", "nodejs", "react"] }, ];
-
-const getTags = tweets => tweets.reduce((allTags, tweet) => { allTags.push(...tweet.tags);
-
-    return allTags;
-
-}, []);
-
-const tags = getTags(tweets); // console.log(tags)
-
-const getTagStats = (acc, tag) => {
-
-const hasProp = acc.hasOwnProperty(tag);
-
-if (hasProp) { acc[tag] += 1;
-
-} else { acc[tag] = 0; }
-
-return acc; };
-
-const countTags = tags => tags.reduce(getTagStats, {});
-
-const tagCount = countTags(tags); // console.log(tagCount);
-
-const uniqueCourses = allCourses.filter( (course, index, array) => array.indexOf(course) === index
-);
+}, };
