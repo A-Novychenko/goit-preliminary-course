@@ -1281,3 +1281,63 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const test = {
+//   name: 'test',
+//   items: [
+//     { quantity: 1, price: 1000 },
+//     { quantity: 2, price: 2000 },
+//     { quantity: 3, price: 3000 },
+//   ],
+
+//   countTotalPrice() {
+//     let total = 0;
+//     for (const { price } of this.items) {
+//       console.log(price);
+
+//     }
+//     // for (const { price, quantity } of this.items) {
+//     //   total += price * quantity;
+//     // }
+//     // return total;
+//   },
+// };
+// test.countTotalPrice();
+// console.log(test.items);
+
+const cartAutoParts = {
+  brand: 'myshop',
+  productList: [],
+
+  getproductList() {
+    return this.productList;
+  },
+
+  addNewProduct(productCard) {
+    const { productList } = this;
+
+    for (const product of productList) {
+      if (product.name === productCard.name) {
+        product.quantity += 1;
+
+        return;
+      }
+    }
+
+    const createNewProdact = {
+      ...productCard,
+      quantity: 1,
+    };
+
+    productList.push(createNewProdact);
+  },
+};
+
+console.log(cartAutoParts.getproductList());
+
+cartAutoParts.addNewProduct({ name: 'kyb', price: 2000 });
+cartAutoParts.addNewProduct({ name: 'sachs', price: 5500 });
+cartAutoParts.addNewProduct({ name: 'sachs', price: 5500 });
+cartAutoParts.addNewProduct({ name: 'monro', price: 1800 });
+
+console.table(cartAutoParts.getproductList());
