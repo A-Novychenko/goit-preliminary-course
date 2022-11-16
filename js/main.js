@@ -1565,12 +1565,33 @@
 // // Logging value: 1
 // // Logging value: 2
 
-const callback = function () {
-  console.log('выполнилось после таймера 7s');
-};
-const callback1 = function () {
-  console.log('выполнилось после таймера 2s');
-};
+// const callback = function () {
+//   console.log('выполнилось после таймера 7s');
+// };
+// const callback1 = function () {
+//   console.log('выполнилось после таймера 2s');
+// };
 
-setTimeout(callback, 7000);
-setTimeout(callback1, 2000);
+// setTimeout(callback, 7000);
+// setTimeout(callback1, 2000);
+
+// const ifLessThanFive = function (number) {
+//   return number <= 5;
+// };
+// const ifMoreThanFive = function (number) {
+//   return number > 5;
+// };
+
+// const filter = function (array, callback) {
+//   let filteredArray = [];
+
+//   for (const element of array) {
+//     if (callback(element)) {
+//       filteredArray.push(element);
+//     }
+//   }
+//   return filteredArray;
+// };
+
+// console.log(filter([1, 2, 3, 4, 5, 6, 7, 8, 9], ifLessThanFive));
+// console.log(filter([1, 2, 5, 7, 8, 9], ifMoreThanFive));
