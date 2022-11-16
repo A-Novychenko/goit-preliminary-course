@@ -1687,6 +1687,11 @@
 // oneHundread(0.1);
 // oneHundread(1);
 
+// const one = calc100(0.01);
+// one(50);
+// one(10);
+// one(100);
+
 ////////////////////////////////////////////////////
 
 // const calc = (array, callback) => {
