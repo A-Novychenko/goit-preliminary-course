@@ -1454,3 +1454,123 @@
 // const control =
 //   updSalary[1].salary === origin[1].salary ? 'Они равны, это та же ячейка памяти' : 'Упс';
 // console.log(control);
+
+// function greet(name) {
+//   return `Ласкаво просимо ${name}.`;
+// }
+
+// // Викликаємо функцію greet і виводимо результат у консоль
+// console.log(greet('Манго')); // Ласкаво просимо Манго.
+
+// // Виводимо функцію greet у консоль, не викликаючи її
+// console.log(greet); // ƒ greet() { return `Ласкаво просимо ${name}.`; }
+
+// let test = greet;
+// console.log(test);
+// console.log(test('Манго'));
+
+/////////////////////////////////////////
+
+// // Колбек-функція
+// function greet(name) {
+//   console.log(`Ласкаво просимо ${name}.`);
+// }
+
+// // Функція вищого порядку
+// function registerGuest(name, callback) {
+//   //   console.log(`Реєструємо гостя ${name}.`);
+//   //   console.log(callback); //ƒ greet(name) {console.log(`Ласкаво просимо ${name}.`);}
+//   callback(name);
+// }
+
+// registerGuest('Манго', greet);
+
+// function result(calcSum, ...args) {
+//   const calc = calcSum(args);
+//   const text = `Калькулятор насчитал: ${calc}`;
+//   console.log(text);
+// }
+
+// function calcSum(args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   return total;
+// }
+
+// result(calcSum, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1);
+
+// function processCall(recipient, onAvailable, onNotAvailable) {
+//   // Імітуємо доступність абонента випадковим числом
+//   const isRecipientAvailable = Math.random() > 0.5;
+
+//   if (!isRecipientAvailable) {
+//     onNotAvailable(recipient);
+//     return;
+//   }
+
+//   onAvailable(recipient);
+// }
+
+// function takeCall(name) {
+//   console.log(`З'єднуємо з ${name}, очікуйте...`);
+//   // Логіка прийняття дзвінка
+// }
+
+// function activateAnsweringMachine(name) {
+//   console.log(`Абонент ${name} недоступний, залиште повідомлення.`);
+//   // Логіка активації автовідповідача
+// }
+
+// function leaveHoloMessage(name) {
+//   console.log(`Абонент ${name} недоступний, записуємо голограму.`);
+//   // Логіка запису голограми
+// }
+
+// processCall('Манго', takeCall, activateAnsweringMachine);
+// processCall('Полі', takeCall, leaveHoloMessage);
+
+// function iterator(n) {
+//   for (let i = 10; i <= n; i += 10) {
+//     console.log(i);
+//   }
+// }
+// iterator(100);
+
+// function printValue(value) {
+//   console.log(value);
+// }
+
+// function prettyPrint(value) {
+//   console.log('Logging value: ', value);
+// }
+
+// function repeat(n, action) {
+//   for (let i = 0; i < n; i += 1) {
+//     action(i);
+//   }
+// }
+
+// // Передаємо printValue як callback-функцію
+// repeat(3, printValue);
+// // 0
+// // 1
+// // 2
+
+// // Передаємо prettyPrint як callback-функцію
+// repeat(3, prettyPrint);
+// // Logging value: 0
+// // Logging value: 1
+// // Logging value: 2
+
+const callback = function () {
+  console.log('выполнилось после таймера 7s');
+};
+const callback1 = function () {
+  console.log('выполнилось после таймера 2s');
+};
+
+setTimeout(callback, 7000);
+setTimeout(callback1, 2000);
