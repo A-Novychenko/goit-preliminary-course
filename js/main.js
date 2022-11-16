@@ -1619,3 +1619,5 @@
 
 // const listDoOrder = filterFruit(fruits, el => el.qauntity < 100);
 // console.table(listDoOrder);
+// const orderBlacklist = filterFruit(fruits, el => el.qauntity >= 1000);
+// console.table(orderBlacklist);
