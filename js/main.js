@@ -1595,3 +1595,27 @@
 
 // console.log(filter([1, 2, 3, 4, 5, 6, 7, 8, 9], ifLessThanFive));
 // console.log(filter([1, 2, 5, 7, 8, 9], ifMoreThanFive));
+
+// const fruits = [
+//   { name: 'apple', price: 1200, qauntity: 500 },
+//   { name: 'appleGolden', price: 1200, qauntity: 1200 },
+//   { name: 'appleMakintosh', price: 1200, qauntity: 99 },
+//   { name: 'mango', price: 1200, qauntity: 78 },
+//   { name: 'cherry', price: 1200, qauntity: 1500 },
+//   { name: 'kiwi', price: 1200, qauntity: 5 },
+// ];
+
+// const filterFruit = (array, test) => {
+//   const newListFruits = [];
+
+//   for (const fruit of array) {
+//     if (test(fruit)) {
+//       newListFruits.push(fruit);
+//     }
+//   }
+
+//   return newListFruits;
+// };
+
+// const listDoOrder = filterFruit(fruits, el => el.qauntity < 100);
+// console.table(listDoOrder);
