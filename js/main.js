@@ -1621,3 +1621,28 @@
 // console.table(listDoOrder);
 // const orderBlacklist = filterFruit(fruits, el => el.qauntity >= 1000);
 // console.table(orderBlacklist);
+
+// const test = function (parametr) {
+//   const innerConst = `Hello`;
+
+//   const innerFunction = function (parametr) {
+//     console.log(`inner out     ${innerConst} ${parametr}`);
+//   };
+//   return innerFunction;
+// };
+
+// const fnTest = test();
+// console.log(fnTest('diar client!'));
+
+const makeDeveloper = function (name) {
+  const makeSteck = function (steck) {
+    console.log(`Создан програмист ${name} с навыками технологи ${steck}`);
+  };
+  return makeSteck;
+};
+
+const novik = makeDeveloper('Novik');
+
+novik('JS');
+novik('CSS');
+novik('HTML');
