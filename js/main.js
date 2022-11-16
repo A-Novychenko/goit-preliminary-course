@@ -1634,15 +1634,76 @@
 // const fnTest = test();
 // console.log(fnTest('diar client!'));
 
-const makeDeveloper = function (name) {
-  const makeSteck = function (steck) {
-    console.log(`Создан програмист ${name} с навыками технологи ${steck}`);
-  };
-  return makeSteck;
-};
+///////////////////////////////////
 
-const novik = makeDeveloper('Novik');
+// const makeDeveloper = function (name) {
+//   const makeSteck = function (steck) {
+//     console.log(`Создан програмист ${name} с навыками технологи ${steck}`);
+//   };
+//   return makeSteck;
+// };
 
-novik('JS');
-novik('CSS');
-novik('HTML');
+// const novik = makeDeveloper('Novik');
+
+// novik('JS');
+// novik('CSS');
+// novik('HTML');
+
+/////////////////////////////////////////////////////////
+
+// const makeReader = function (name) {
+//   const book = function (bookName) {
+//     console.log(`${name} читает ${bookName}.`);
+//   };
+
+//   return book;
+// };
+
+// const piter = makeReader('Piter');
+// piter('bukvar');
+// piter('JS specifications');
+
+// const makeReader1 = name1 => {
+//   const book1 = bookName1 => {
+//     console.log(`${name1} читает ${bookName1}.`);
+//   };
+
+//   return book1;
+// };
+// const piter1 = makeReader1('Piiiiittttteeerrrr');
+// piter1('interesting book');
+
+////////////замыкание
+
+// const calc100 = number100 => {
+//   const result = number => {
+//     const x = number100 * number;
+//     console.log(`Число ${number} умножено ${number100}% на равно: ${x}% `);
+//   };
+//   return result;
+// };
+// const oneHundread = calc100(100);
+// oneHundread(0.5);
+// oneHundread(0.1);
+// oneHundread(1);
+
+////////////////////////////////////////////////////
+
+// const calc = (array, callback) => {
+//   let result = 1;
+
+//   for (const value of array) {
+//     if (callback(value)) {
+//       result *= value;
+//     }
+//   }
+
+//   return result;
+// };
+
+// const test = value => value <= 0;
+
+// const x = calc([-1, 2, -9, -8, -7, 1, -5, 2], test);
+// console.log(x);
+
+//////////////////////////////////////////////////////////////
