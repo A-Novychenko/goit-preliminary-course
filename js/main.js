@@ -1804,9 +1804,9 @@
 ////////--------------- /array.flatMap(callback)
 
 ///////------------------------------ array.filter(callback)
-const array = [1, 3, 4, 5, 2, 4, 5, 5, 2, 4, 5, 2, 3, 4, 3, 4, 2, 3, 4, 3, 4, 5, 6, 7];
+// const array = [1, 3, 4, 5, 2, 4, 5, 5, 2, 4, 5, 2, 3, 4, 3, 4, 2, 3, 4, 3, 4, 5, 6, 7];
 
-// const arrayOnes = array.filter(number => (number % 2 === 0) & (number < 5));
+// const arrayOnes = array.filter(number => (number % 2 === 0) && (number < 5));
 // console.log(array);
 // console.log(arrayOnes);
 // console.log('------------------------');
@@ -1815,9 +1815,29 @@ const array = [1, 3, 4, 5, 2, 4, 5, 5, 2, 4, 5, 2, 3, 4, 3, 4, 2, 3, 4, 3, 4, 5,
 // console.log(filteredNumber);
 
 //////////
-console.log(
-  array
-    .filter(number => (number % 2 === 0) & (number < 5))
-    .filter((num, ind, arr) => arr.indexOf(num) === ind)
-);
-////////--------------- /array.filter(callback)
+// console.log(
+//   array
+//     .filter(number => (number % 2 === 0) & (number < 5))
+//     .filter((num, ind, arr) => arr.indexOf(num) === ind)
+// );
+
+// const LOW_SCORE = 50;
+// const HIGH_SCORE = 80;
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: "Х'юстон", score: 64 },
+// ];
+
+// const hight = students.filter(student => student.score >= HIGH_SCORE);
+// const low = students.filter(student => student.score < LOW_SCORE);
+// const midle = students.filter(student => student.score >= LOW_SCORE && student.score < HIGH_SCORE);
+
+// console.table('hight: ', hight);
+
+// console.table('low: ', low);
+
+// console.table('midle: ', midle);
+// ////////--------------- /array.filter(callback)
