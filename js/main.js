@@ -1841,3 +1841,42 @@
 
 // console.table('midle: ', midle);
 // ////////--------------- /array.filter(callback)
+
+//////************************* */----------    find()   --------------------//
+
+// const colorPickerOptions = [
+//   { label: 'red', color: '#F44336' },
+//   { label: 'green', color: '#4CAF50' },
+//   { label: 'blue', color: '#2196F3' },
+//   { label: 'pink', color: '#E91E63' },
+//   { label: 'indigo', color: '#3F51B5' },
+// ];
+
+// colorPickerOptions.find(option => option.label === 'blue'); // { label: 'blue', color: '#2196F3' }
+// colorPickerOptions.find(option => option.label === 'pink'); // { label: 'pink', color: '#E91E63' }
+// colorPickerOptions.find(option => option.label === 'white'); // undefined
+
+// console.log(colorPickerOptions.find(option => option.label === 'blue'));
+
+//////************************* */----------    /find()   --------------------//
+//////************************* */----------    findIndex()   --------------------//
+
+// const colorPickerOptions = [
+//   { label: 'red', color: '#F44336' },
+//   { label: 'green', color: '#4CAF50' },
+//   { label: 'blue', color: '#2196F3' },
+//   { label: 'pink', color: '#E91E63' },
+//   { label: 'indigo', color: '#3F51B5' },
+// ];
+
+// const x = colorPickerOptions.findIndex(option => option.label === 'red'); // 0
+// console.log(x);
+
+// const testMinus1 = colorPickerOptions.findIndex(option => option.label === 'orangered'); // -1
+// console.log(testMinus1);
+
+// colorPickerOptions.findIndex(option => option.label === 'blue'); // 2
+// colorPickerOptions.findIndex(option => option.label === 'pink'); // 3
+// colorPickerOptions.findIndex(option => option.label === 'white'); // -1
+
+//////************************* */----------    /findIndex()   --------------------//
