@@ -1758,3 +1758,66 @@
 // console.log(y);
 // console.log(z);
 // console.log(g);
+
+///////------------------------------ array.map(callback)
+// const array = [1, 2, 3, 4, 5, 6, 7];
+
+// const arrayOnes = array.map(number => number / number);
+// console.log(array, arrayOnes);
+////////--------------- /array.map(callback)
+
+//
+//
+///
+///
+//
+///////------------------------------ array.flatMap(callback)
+// const playerExecutors = [
+//   { generes: 'tarns', executors: ['Armin van Buuren', 'DJ Tiesto', 'Ferry Corsten'] },
+//   { generes: 'club', executors: ['Benny Benassi', 'DJ Groov', 'Global Deejays'] },
+// ];
+
+// const executor = playerExecutors.flatMap(
+//   allExecutorsOfPlayerExecutors => allExecutorsOfPlayerExecutors.executors
+// );
+// console.log(executor);
+//----------------------------
+
+// const array = [
+//   { name: 'first', items: [1, 2, 3, 4, 5] },
+//   { name: 'second', items: [6, 7, 8, 9, 10] },
+//   { name: 'n3', items: [11, 12, 13, 14, 15] },
+//   { name: 'n4', items: [16, 17, 18, 19, 20] },
+//   { name: 'n5', items: [21, 22, 23, 24, 25] },
+//   { name: 'n6', items: [26, 27, 28, 29, 30] },
+// ];
+
+// const allNumbers = array.flatMap(number => number.items);
+// console.log(allNumbers);
+// const allNumbers2 = array.map(number => number.items);
+// console.log(allNumbers2);
+
+// const allNames = array.flatMap(name => name.name);
+// console.log(allNames);
+// const allNames2 = array.map(name => name.name);
+// console.log(allNames2);
+////////--------------- /array.flatMap(callback)
+
+///////------------------------------ array.filter(callback)
+const array = [1, 3, 4, 5, 2, 4, 5, 5, 2, 4, 5, 2, 3, 4, 3, 4, 2, 3, 4, 3, 4, 5, 6, 7];
+
+// const arrayOnes = array.filter(number => (number % 2 === 0) & (number < 5));
+// console.log(array);
+// console.log(arrayOnes);
+// console.log('------------------------');
+
+// const filteredNumber = arrayOnes.filter((num, ind, arr) => arr.indexOf(num) === ind);
+// console.log(filteredNumber);
+
+//////////
+console.log(
+  array
+    .filter(number => (number % 2 === 0) & (number < 5))
+    .filter((num, ind, arr) => arr.indexOf(num) === ind)
+);
+////////--------------- /array.filter(callback)
