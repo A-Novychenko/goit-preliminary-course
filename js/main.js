@@ -1712,3 +1712,49 @@
 // console.log(x);
 
 //////////////////////////////////////////////////////////////
+// const numbers = [5, 10, 15, 20, 25];
+
+// // Класичний for
+// for (let i = 0; i < numbers.length; i += 1) {
+//   console.log(`Індекс ${i}, значення ${numbers[i]}`);
+// }
+
+// // Метод перебирання forEach
+// numbers.forEach(function (number, index) {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// });
+
+// const cars = ['bmw', 'toyota', 'vw', 'audi', 'fiat'];
+
+// cars.forEach((car, number) =>
+//   console.log(
+//     `Код автомобиля - ${number + Math.floor(Math.random() * (10000 + 1000) - 1000)}, марка: ${car} `
+//   )
+// // );
+
+// const changeEven = (numbers, value) => {
+//   // Change code below this line
+//   const newNumbers = [];
+
+//   numbers.forEach(number => {
+//     if (number % 2 === 0) {
+//       newNumbers.push(number + value);
+//     } else {
+//       newNumbers.push(number);
+//     }
+//   });
+//   // Change code above this line
+//   return newNumbers;
+// };
+
+// console.log(changeEven([1, 2, 3, 4, 5, 6, 7], 10));
+// // Оголошена функція `changeEven(numbers, value)`
+// const x = changeEven([1, 2, 3, 4, 5], 10); //повертає новий масив [1, 12, 3, 14, 5]
+// const y = changeEven([2, 8, 3, 7, 4, 6], 10); //повертає новий масив `[12, 18, 3, 7, 14, 16]`
+// const z = changeEven([17, 24, 68, 31, 42], 100); //повертає новий масив `[17, 124, 168, 31, 142]`
+// const g = changeEven([44, 13, 81, 92, 36, 54], 100);
+
+// console.log(x);
+// console.log(y);
+// console.log(z);
+// console.log(g);
