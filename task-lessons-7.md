@@ -1,4 +1,4 @@
-Модуль 4. Заняття 7. Коллбеки. Стрілочні функції. forEach
+<!-- Модуль 4. Заняття 7. Коллбеки. Стрілочні функції. forEach
 
 Example 1 - Коллбек функції Напишіть наступні функції:
 
@@ -9,9 +9,9 @@ logTotalPrice(product) - колббек, що приймає об'єкт про�
 консоль // your code here
 
 createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct); createProduct({ name: '🍋',
-price: 20, quantity: 5 }, logTotalPrice);
+price: 20, quantity: 5 }, logTotalPrice); -->
 
-Example 2 - Коллбек функції
+<!-- Example 2 - Коллбек функції
 
 Додайте об'єкт account методи withdraw(amount, onSuccess, onError) та deposit(amount, onSuccess,
 onError), де перший параметр це сума операції, а другий та третій - коллбеки.
@@ -33,7 +33,7 @@ const account = { username: 'Jacob', balance: 400, withdraw(amount, onSuccess, o
 account.withdraw(2000, handleSuccess, handleError); account.withdraw(600, handleSuccess,
 handleError); account.withdraw(300, handleSuccess, handleError); account.deposit(1700,
 handleSuccess, handleError); account.deposit(0, handleSuccess, handleError); account.deposit(-600,
-handleSuccess, handleError); account.deposit(600, handleSuccess, handleError);
+handleSuccess, handleError); account.deposit(600, handleSuccess, handleError); -->
 
 Example 3 - Коллбек функції
 

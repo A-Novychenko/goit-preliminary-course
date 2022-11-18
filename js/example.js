@@ -1648,3 +1648,45 @@
 
 // createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
 // createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
+
+// Example 2 - Коллбек функції
+
+// Додайте об'єкт account методи withdraw(amount, onSuccess, onError) та deposit(amount, onSuccess,
+// onError), де перший параметр це сума операції, а другий та третій - коллбеки.
+
+// Метод withdraw викликає onError якщо amount більше TRANSACTION_LIMIT або this.balance, і onSuccess в
+// іншому випадку.
+
+// Метод deposit викликає onError якщо amount більше TRANSACTION_LIMIT або менше або дорівнює нулю, і
+// onSuccess в іншому випадку.
+
+// const TRANSACTION_LIMIT = 1000;
+
+// const account = {
+//   username: 'Jacob',
+//   balance: 400,
+//   withdraw(amount, onSuccess, onError) {
+//     if (amount > TRANSACTION_LIMIT || amount > this.balance) {
+//       return onError(amount);
+//     }
+
+//     return onSuccess(amount);
+//   },
+//   deposit(amount, onSuccess, onError) {
+//     if (amount > TRANSACTION_LIMIT || amount <= 0) {
+//       return onError(amount);
+//     }
+//     return onSuccess(amount);
+//   },
+// };
+
+// const handleError = amount => console.log(`${amount} --- EROR !!!`);
+// const handleSuccess = amount => console.log(`${amount} --- Successfully!`);
+
+// account.withdraw(2000, handleSuccess, handleError);
+// account.withdraw(600, handleSuccess, handleError);
+// account.withdraw(300, handleSuccess, handleError);
+// account.deposit(1700, handleSuccess, handleError);
+// account.deposit(0, handleSuccess, handleError);
+// account.deposit(-600, handleSuccess, handleError);
+// account.deposit(600, handleSuccess, handleError);
