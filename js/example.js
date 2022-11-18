@@ -1722,14 +1722,41 @@
 
 // Виконайте рефакторинг коду за допомогою стрілочних функцій.
 
-const createProduct = (partialProduct, callback) => {
-  const product = { id: Date.now(), ...partialProduct };
-  callback(product);
-};
+// const createProduct = (partialProduct, callback) => {
+//   const product = { id: Date.now(), ...partialProduct };
+//   callback(product);
+// };
 
-const logProduct = product => console.log(product);
+// const logProduct = product => console.log(product);
 
-const logTotalPrice = product => console.log(product.price * product.quantity);
+// const logTotalPrice = product => console.log(product.price * product.quantity);
 
-createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
-createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
+// createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
+// createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
+
+// Example 5 - Стрілочні функції
+
+// Виконайте рефакторинг коду задачи EXAMPLE 2 за допомогою стрілочних функцій
+
+// ГОТОВО  !!!  Изначально писал arrow function
+
+// Example 6 - Інлайн стрілочні функції
+
+// Виконайте рефакторинг коду за задачи EXAMPLE 3 за допомогою стрілочних функцій.
+
+// ГОТОВО  !!!  Изначально писал arrow function inline
+
+// Example 7 - Метод forEach
+
+// Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
+
+// function logItems(items) {
+//   console.log(items);
+//   //   for (let i = 0; i < items.length; i += 1) {
+//   //     console.log(`${i + 1} - ${items[i]}`);
+//   //   }
+//   items.forEach((element, ind) => console.log(`${ind + 1} - ${element}`));
+// }
+
+// logItems(['Mango', 'Poly', 'Ajax']);
+// logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
