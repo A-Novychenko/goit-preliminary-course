@@ -1918,3 +1918,5 @@
 // // const names = books.map(book => book.author).filter(el => el > MIN_BOOK_RATING);
 // // //   .sort((firstBook, secondBook) => firstBook.name.localeCompare(secondBook.name));
 // console.log(names);
+
+//
