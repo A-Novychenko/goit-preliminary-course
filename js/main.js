@@ -1944,3 +1944,23 @@
 
 // концепция сортировки строк const x = [...array].sort((firstEL, secondEl) = firstEl.localCompare(secondEl)) отсортирует в порядке возростания
 //                            const y = [...array].sort((firstEL, secondEl) = secondEl.localCompare(firstEl)) отсортирует в обратном порядке
+
+const students = [
+  { name: 'Манго', score: 83 },
+  { name: 'Полі', score: 59 },
+  { name: 'Аякс', score: 37 },
+  { name: 'Ківі', score: 94 },
+];
+
+const sortNumberUp = [...students].sort((firstEl, secondEl) => firstEl.score - secondEl.score);
+console.table('min=>max: ', sortNumberUp);
+const sortNumberDown = [...students].sort((firstEl, secondEl) => secondEl.score - firstEl.score);
+console.table('max=>min: ', sortNumberDown);
+const sortStringUp = [...students].sort((firstEl, secondEl) =>
+  firstEl.name.localeCompare(secondEl.name)
+);
+console.table('min=>max: ', sortStringUp);
+const sortStringDw = [...students].sort((firstEl, secondEl) =>
+  secondEl.name.localeCompare(firstEl.name)
+);
+console.table('max=>min: ', sortStringDw);
