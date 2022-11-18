@@ -35,16 +35,16 @@ handleError); account.withdraw(300, handleSuccess, handleError); account.deposit
 handleSuccess, handleError); account.deposit(0, handleSuccess, handleError); account.deposit(-600,
 handleSuccess, handleError); account.deposit(600, handleSuccess, handleError); -->
 
-Example 3 - Коллбек функції
+<!-- Example 3 - Коллбек функції
 
 Напишіть функцію each(array, callback), яка першим параметром очікує масив, а другим - функцію, яка
 застосовується до кожного елемента масиву. Функція each повинна повернути новий масив, елементами
 якого будуть результати виклику коллбека.
 
 const employees = [ { name: 'Artur', bonus: 64.5 }, { name: 'Ivan', bonus: 49.2 }, { name: 'Makar',
-bonus: 36 }, { name: 'Anastasiya', bonus: 25 }, { name: 'Olha', bonus: 165.13 }, ]
+bonus: 36 }, { name: 'Anastasiya', bonus: 25 }, { name: 'Olha', bonus: 165.13 }, ] -->
 
-Example 4 - Стрілочні функції
+<!-- Example 4 - Стрілочні функції
 
 Виконайте рефакторинг коду за допомогою стрілочних функцій.
 
@@ -56,7 +56,7 @@ function logProduct(product) { console.log(product); }
 function logTotalPrice(product) { console.log(product.price \* product.quantity); }
 
 createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct); createProduct({ name: '🍋',
-price: 20, quantity: 5 }, logTotalPrice);
+price: 20, quantity: 5 }, logTotalPrice); -->
 
 Example 5 - Стрілочні функції
 
