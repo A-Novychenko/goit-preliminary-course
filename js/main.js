@@ -1920,3 +1920,8 @@
 // console.log(names);
 
 //
+// const scores = [61, 19, 74, 35, 92, 56];
+// const descendingScores = [...scores].sort((a, b) => b - a);
+// console.log(descendingScores); // [92, 74, 61, 56, 35, 19]
+// const etst = [...scores].sort((a, b) => a - b);
+// console.log(etst); //
