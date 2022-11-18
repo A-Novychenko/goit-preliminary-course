@@ -1750,13 +1750,32 @@
 
 // Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
 
-// function logItems(items) {
+// const logItems = items => {
 //   console.log(items);
 //   //   for (let i = 0; i < items.length; i += 1) {
 //   //     console.log(`${i + 1} - ${items[i]}`);
 //   //   }
 //   items.forEach((element, ind) => console.log(`${ind + 1} - ${element}`));
-// }
+// };
 
 // logItems(['Mango', 'Poly', 'Ajax']);
 // logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
+
+// Example 8 - Метод forEach
+
+// Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
+
+// const printContactsInfo = ({ names, phones }) => {
+//   const nameList = names.split(',');
+//   const phoneList = phones.split(',');
+//   //   for (let i = 0; i < nameList.length; i += 1) {
+//   //     console.log(`${nameList[i]}: ${phoneList[i]}`);
+//   //   }
+
+//   nameList.forEach((name, ind) => console.log(`${name}: ${phoneList[ind]}`));
+// };
+
+// printContactsInfo({
+//   names: 'Jacob,William,Solomon,Artemis',
+//   phones: '89001234567,89001112233,890055566377,890055566300',
+// });
