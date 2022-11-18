@@ -1925,3 +1925,22 @@
 // console.log(descendingScores); // [92, 74, 61, 56, 35, 19]
 // const etst = [...scores].sort((a, b) => a - b);
 // console.log(etst); //
+
+// const scores0 = [19, 18, 19, 20];
+// const descendingScores0 = [...scores0].sort((a, b) => a - b);
+// console.log(descendingScores0); // [92, 74, 61, 56, 35, 19]
+
+// const students = ['Віка', 'Андрій', 'Олег', 'Юля', 'Борис', 'Катя'];
+// const testSortString = [...students].sort((firstElement, secondElement) =>
+//   firstElement.localeCompare(secondElement)
+// );
+
+// console.log(testSortString);
+
+// const testSortString2 = [...students].sort((firstElement, secondElement) =>
+//   secondElement.localeCompare(firstElement)
+// );
+// console.log(testSortString2);
+
+// концепция сортировки строк const x = [...array].sort((firstEL, secondEl) = firstEl.localCompare(secondEl)) отсортирует в порядке возростания
+//                            const y = [...array].sort((firstEL, secondEl) = secondEl.localCompare(firstEl)) отсортирует в обратном порядке
