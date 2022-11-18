@@ -75,7 +75,7 @@ console.log(`${i + 1} - ${items[i]}`); } }
 
 logItems(['Mango', 'Poly', 'Ajax']); logItems(['🍎', '🍇', '🍑', '🍌', '🍋']); -->
 
-Example 8 - Метод forEach
+<!-- Example 8 - Метод forEach
 
 Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
 
@@ -84,9 +84,9 @@ phones.split(','); for (let i = 0; i < nameList.length; i += 1) {
 console.log(`${nameList[i]}: ${phoneList[i]}`); } }
 
 printContactsInfo({ names: 'Jacob,William,Solomon,Artemis', phones:
-'89001234567,89001112233,890055566377,890055566300', });
+'89001234567,89001112233,890055566377,890055566300', }); -->
 
-Example 9 - Метод forEach
+<!-- Example 9 - Метод forEach
 
 Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
 
@@ -94,7 +94,7 @@ function calсulateAverage(...args) { let total = 0; for (let i = 0; i < args.le
 args[i]; } return total / args.length; }
 
 console.log(calсulateAverage(1, 2, 3, 4)); // 2.5 console.log(calсulateAverage(14, 8, 2)); // 8
-console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
+console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2 -->
 
 <!-- //4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
 //6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666 //
