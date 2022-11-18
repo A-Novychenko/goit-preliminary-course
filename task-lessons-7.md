@@ -1,5 +1,6 @@
-Модуль 4. Заняття 7. Коллбеки. Стрілочні функції. forEach Example 1 - Коллбек функції Напишіть
-наступні функції:
+Модуль 4. Заняття 7. Коллбеки. Стрілочні функції. forEach
+
+Example 1 - Коллбек функції Напишіть наступні функції:
 
 createProduct(obj, callback) - приймає об'єкт товару без id, а також коллбек. Функція створює об'єкт
 товару, додаючи йому унікальний ідентифікатор у властивість id та викликає коллбек передаючи йому
@@ -8,9 +9,12 @@ logTotalPrice(product) - колббек, що приймає об'єкт про�
 консоль // your code here
 
 createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct); createProduct({ name: '🍋',
-price: 20, quantity: 5 }, logTotalPrice); Example 2 - Коллбек функції Додайте об'єкт account методи
-withdraw(amount, onSuccess, onError) та deposit(amount, onSuccess, onError), де перший параметр це
-сума операції, а другий та третій - коллбеки.
+price: 20, quantity: 5 }, logTotalPrice);
+
+Example 2 - Коллбек функції
+
+Додайте об'єкт account методи withdraw(amount, onSuccess, onError) та deposit(amount, onSuccess,
+onError), де перший параметр це сума операції, а другий та третій - коллбеки.
 
 Метод withdraw викликає onError якщо amount більше TRANSACTION_LIMIT або this.balance, і onSuccess в
 іншому випадку.
@@ -29,14 +33,20 @@ const account = { username: 'Jacob', balance: 400, withdraw(amount, onSuccess, o
 account.withdraw(2000, handleSuccess, handleError); account.withdraw(600, handleSuccess,
 handleError); account.withdraw(300, handleSuccess, handleError); account.deposit(1700,
 handleSuccess, handleError); account.deposit(0, handleSuccess, handleError); account.deposit(-600,
-handleSuccess, handleError); account.deposit(600, handleSuccess, handleError); Example 3 - Коллбек
-функції Напишіть функцію each(array, callback), яка першим параметром очікує масив, а другим -
-функцію, яка застосовується до кожного елемента масиву. Функція each повинна повернути новий масив,
-елементами якого будуть результати виклику коллбека.
+handleSuccess, handleError); account.deposit(600, handleSuccess, handleError);
+
+Example 3 - Коллбек функції
+
+Напишіть функцію each(array, callback), яка першим параметром очікує масив, а другим - функцію, яка
+застосовується до кожного елемента масиву. Функція each повинна повернути новий масив, елементами
+якого будуть результати виклику коллбека.
 
 const employees = [ { name: 'Artur', bonus: 64.5 }, { name: 'Ivan', bonus: 49.2 }, { name: 'Makar',
-bonus: 36 }, { name: 'Anastasiya', bonus: 25 }, { name: 'Olha', bonus: 165.13 }, ] Example 4 -
-Стрілочні функції Виконайте рефакторинг коду за допомогою стрілочних функцій.
+bonus: 36 }, { name: 'Anastasiya', bonus: 25 }, { name: 'Olha', bonus: 165.13 }, ]
+
+Example 4 - Стрілочні функції
+
+Виконайте рефакторинг коду за допомогою стрілочних функцій.
 
 function createProduct(partialProduct, callback) { const product = { id: Date.now(),
 ...partialProduct }; callback(product); }
@@ -46,28 +56,39 @@ function logProduct(product) { console.log(product); }
 function logTotalPrice(product) { console.log(product.price \* product.quantity); }
 
 createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct); createProduct({ name: '🍋',
-price: 20, quantity: 5 }, logTotalPrice); Example 5 - Стрілочні функції Виконайте рефакторинг коду
-задачи EXAMPLE 2 за допомогою стрілочних функцій.
+price: 20, quantity: 5 }, logTotalPrice);
 
-Example 6 - Інлайн стрілочні функції Виконайте рефакторинг коду за задачи EXAMPLE 3 за допомогою
-стрілочних функцій.
+Example 5 - Стрілочні функції
 
-Example 7 - Метод forEach Виконайте рефакторинг коду за допомогою методу forEach та стрілочні
-функції.
+Виконайте рефакторинг коду задачи EXAMPLE 2 за допомогою стрілочних функцій.
+
+Example 6 - Інлайн стрілочні функції
+
+Виконайте рефакторинг коду за задачи EXAMPLE 3 за допомогою стрілочних функцій.
+
+Example 7 - Метод forEach
+
+Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
 
 function logItems(items) { console.log(items); for (let i = 0; i < items.length; i += 1) {
 console.log(`${i + 1} - ${items[i]}`); } }
 
-logItems(['Mango', 'Poly', 'Ajax']); logItems(['🍎', '🍇', '🍑', '🍌', '🍋']); Example 8 - Метод
-forEach Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
+logItems(['Mango', 'Poly', 'Ajax']); logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
+
+Example 8 - Метод forEach
+
+Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
 
 function printContactsInfo({ names, phones }) { const nameList = names.split(','); const phoneList =
 phones.split(','); for (let i = 0; i < nameList.length; i += 1) {
 console.log(`${nameList[i]}: ${phoneList[i]}`); } }
 
 printContactsInfo({ names: 'Jacob,William,Solomon,Artemis', phones:
-'89001234567,89001112233,890055566377,890055566300', }); Example 9 - Метод forEach Виконайте
-рефакторинг коду за допомогою методу forEach та стрілочні функції.
+'89001234567,89001112233,890055566377,890055566300', });
+
+Example 9 - Метод forEach
+
+Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
 
 function calсulateAverage(...args) { let total = 0; for (let i = 0; i < args.length; i++) { total +=
 args[i]; } return total / args.length; }
@@ -75,7 +96,7 @@ args[i]; } return total / args.length; }
 console.log(calсulateAverage(1, 2, 3, 4)); // 2.5 console.log(calсulateAverage(14, 8, 2)); // 8
 console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
 
-//4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
+<!-- //4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
 //6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666 //
 решение
 
@@ -305,4 +326,4 @@ onSuccess, onError) { for (let pizza of pizzaPalace.pizzas) {
       return onOrderError(`There is no pizza with a name ${pizzaName} in the assortment.`)
     }
 
-}, };
+}, }; -->
