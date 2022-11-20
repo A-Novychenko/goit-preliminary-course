@@ -1969,3 +1969,14 @@
 //   [...users]
 //     .filter((el, ind, arr) => arr.map(us => us.gender).includes(gender))
 //     .reduce((total, num) => (total += num.balance), 0);
+
+const scores = [61, 19, 74, 35, 92, 56];
+
+const array = [];
+scores.forEach(score => {
+  const k = score * 10;
+  array.push(k);
+});
+
+console.log(array);
+console.log(scores);
