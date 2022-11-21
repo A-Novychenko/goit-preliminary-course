@@ -1970,13 +1970,37 @@
 //     .filter((el, ind, arr) => arr.map(us => us.gender).includes(gender))
 //     .reduce((total, num) => (total += num.balance), 0);
 
-const scores = [61, 19, 74, 35, 92, 56];
+// const scores = [61, 19, 74, 35, 92, 56];
 
-const array = [];
-scores.forEach(score => {
-  const k = score * 10;
-  array.push(k);
-});
+// const array = [];
+// scores.forEach(score => {
+//   const k = score * 10;
+//   array.push(k);
+// });
 
-console.log(array);
-console.log(scores);
+// console.log(array);
+// console.log(scores);
+
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+// ];
+
+// // const newArray = [];
+// // students.forEach(student => {
+// //   if (student.score > 50) {
+// //     newArray.push(student);
+// //   }
+// // });
+
+// // console.log(newArray);
+
+// // const arrayMap = students.map(student => student.score);
+// // console.log(arrayMap);
+
+// console.table(students);
+
+// const studentUpd = students.map(student => ({ ...student, score: student.score + 10 }));
+// console.table(studentUpd);
