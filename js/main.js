@@ -1970,16 +1970,173 @@
 //     .filter((el, ind, arr) => arr.map(us => us.gender).includes(gender))
 //     .reduce((total, num) => (total += num.balance), 0);
 
-// const scores = [61, 19, 74, 35, 92, 56];
+// // const scores = [61, 19, 74, 35, 92, 56];
 
-// const array = [];
-// scores.forEach(score => {
-//   const k = score * 10;
-//   array.push(k);
+// // const array = [];
+// // scores.forEach(score => {
+// //   const k = score * 10;
+// //   array.push(k);
+// // });
+
+// // console.log(array);
+// // console.log(scores);
+
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+// ];
+
+// // const newArray = [];
+// // students.forEach(student => {
+// //   if (student.score > 50) {
+// //     newArray.push(student);
+// //   }
+// // });
+
+// // console.log(newArray);
+
+// // const arrayMap = students.map(student => student.score);
+// // console.log(arrayMap);
+
+// console.table(students);
+
+// const studentUpd = students.map(student => ({ ...student, score: student.score + 10 }));
+// console.table(studentUpd);
+
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+// ];
+
+// console.table(students);
+
+// const nameUpd = 'Полі';
+
+// const studentsAddScore = students.map(student => {
+//   if (student.name === nameUpd) {
+//     return {
+//       ...student,
+//       score: student.score + 41,
+//     };
+//   }
+//   return student;
 // });
 
-// console.log(array);
-// console.log(scores);
+// console.table(studentsAddScore);
+
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: 'Аякс', score: 37 },
+// ];
+
+// console.table(students);
+
+// const nameUpd = 'Полі';
+
+// const studentsAddScore = students.map(student =>
+//   student.name === nameUpd ? { ...student, score: student.score + 41 } : student
+// );
+
+// console.table(studentsAddScore);
+
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: 'Аякс', score: 37 },
+// ];
+
+// const allNames = students.reduce((acc, { name }) => [...acc, name], []);
+// const statsNames = allNames.reduce((acc, el) => ({ ...acc, [el]: acc[el] ? acc[el] + 1 : 1 }), {});
+// console.table(statsNames);
+
+// const statsNames = students
+//   .reduce((acc, { name }) => [...acc, name], [])
+//   .reduce((acc, el) => ({ ...acc, [el]: acc[el] ? acc[el] + 1 : 1 }), {});
+// console.table(statsNames);
+
+// const statsNames = students
+//   .flatMap(student => student.name)
+//   .reduce((acc, el) => ({ ...acc, [el]: acc[el] ? acc[el] + 1 : 1 }), {});
+// console.table(statsNames);
+
+// повтор
+
+// const students = [
+//   { name: ['Манго', 'Полі', 'Аякс'], score: 83 },
+//   { name: ['Полі', 'Ківі'], score: 59 },
+//   { name: ['Аякс', 'Манго', 'Полі'], score: 37 },
+//   { name: ['Ківі', 'Аякс', 'Манго', 'Полі'], score: 94 },
+//   { name: ['Аякс', 'Ківі', 'Аякс', 'Манго', 'Полі'], score: 37 },
+//   { name: ['Ківі', 'Аякс', 'Полі'], score: 94 },
+//   { name: ['Полі', 'Аякс', 'Манго'], score: 59 },
+//   { name: ['Аякс', 'Полі', 'Ківі'], score: 37 },
+//   { name: ['Ківі', 'Аякс', 'Манго'], score: 94 },
+//   { name: ['Аякс', 'Манго', 'Полі'], score: 37 },
+// ];
+
+// // const statNames = students
+// //   .flatMap(student => student.name)
+// //   .reduce(
+// //     (acc, name) => ({
+// //       ...acc,
+// //       [name]: acc[name] ? acc[name] + 1 : 1,
+// //     }),
+// //     {}
+// //   );
+// // console.table(statNames);
+// const newKey = 'time';
+// const newValue = 0;
+// console.table(students.map(student => ({ ...student, [newKey]: student[newValue] })));
+
+// const test = { name: ['Аякс', 'Манго', 'Полі'], score: 37 };
+// const name1 = 'qqqq';
+// const time = 0;
+// console.log((test[name1] = time));
+// console.table(test);
+
+// const students = [
+//   { name: ['Манго', 'Полі', 'Аякс'], score: 83 },
+//   { name: ['Полі', 'Ківі'], score: 59 },
+//   { name: ['Аякс', 'Манго', 'Полі'], score: 37 },
+//   { name: ['Ківі', 'Аякс', 'Манго', 'Полі'], score: 94 },
+//   { name: ['Аякс', 'Ківі', 'Аякс', 'Манго', 'Полі'], score: 37 },
+//   { name: ['Ківі', 'Аякс', 'Полі'], score: 94 },
+//   { name: ['Полі', 'Аякс', 'Манго'], score: 59 },
+//   { name: ['Аякс', 'Полі', 'Ківі'], score: 37 },
+//   { name: ['Ківі', 'Аякс', 'Манго'], score: 94 },
+//   { name: ['Аякс', 'Манго', 'Полі'], score: 37 },
+// ];
+
+// const stObj = students
+//   .flatMap(student => student.name)
+//   .reduce(
+//     (acc, el) => ({
+//       ...acc,
+//       [el]: acc[el] ? acc[el] + 1 : 1,
+//     }),
+//     {}
+//   );
+
+// console.table(stObj);
 
 const scores = [61, 19, 74, 35, 92, 56];
 const scoresMod = scores.map(score => score * 100);
