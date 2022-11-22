@@ -2138,6 +2138,6 @@
 
 // console.table(stObj);
 
-const scores = [61, 19, 74, 35, 92, 56];
-const scoresMod = scores.map(score => score * 100);
-console.log(scoresMod);
+// const scores = [61, 19, 74, 35, 92, 56];
+// const scoresMod = scores.map(score => score * 100);
+// console.log(scoresMod);
