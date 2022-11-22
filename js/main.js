@@ -2062,7 +2062,7 @@
 //   { name: 'Аякс', score: 37 },
 //   { name: 'Ківі', score: 94 },
 //   { name: 'Аякс', score: 37 },
-];
+// ];
 
 // const allNames = students.reduce((acc, { name }) => [...acc, name], []);
 // const statsNames = allNames.reduce((acc, el) => ({ ...acc, [el]: acc[el] ? acc[el] + 1 : 1 }), {});
@@ -2077,3 +2077,63 @@
 //   .flatMap(student => student.name)
 //   .reduce((acc, el) => ({ ...acc, [el]: acc[el] ? acc[el] + 1 : 1 }), {});
 // console.table(statsNames);
+
+// повтор
+
+// const students = [
+//   { name: ['Манго', 'Полі', 'Аякс'], score: 83 },
+//   { name: ['Полі', 'Ківі'], score: 59 },
+//   { name: ['Аякс', 'Манго', 'Полі'], score: 37 },
+//   { name: ['Ківі', 'Аякс', 'Манго', 'Полі'], score: 94 },
+//   { name: ['Аякс', 'Ківі', 'Аякс', 'Манго', 'Полі'], score: 37 },
+//   { name: ['Ківі', 'Аякс', 'Полі'], score: 94 },
+//   { name: ['Полі', 'Аякс', 'Манго'], score: 59 },
+//   { name: ['Аякс', 'Полі', 'Ківі'], score: 37 },
+//   { name: ['Ківі', 'Аякс', 'Манго'], score: 94 },
+//   { name: ['Аякс', 'Манго', 'Полі'], score: 37 },
+// ];
+
+// // const statNames = students
+// //   .flatMap(student => student.name)
+// //   .reduce(
+// //     (acc, name) => ({
+// //       ...acc,
+// //       [name]: acc[name] ? acc[name] + 1 : 1,
+// //     }),
+// //     {}
+// //   );
+// // console.table(statNames);
+// const newKey = 'time';
+// const newValue = 0;
+// console.table(students.map(student => ({ ...student, [newKey]: student[newValue] })));
+
+// const test = { name: ['Аякс', 'Манго', 'Полі'], score: 37 };
+// const name1 = 'qqqq';
+// const time = 0;
+// console.log((test[name1] = time));
+// console.table(test);
+
+// const students = [
+//   { name: ['Манго', 'Полі', 'Аякс'], score: 83 },
+//   { name: ['Полі', 'Ківі'], score: 59 },
+//   { name: ['Аякс', 'Манго', 'Полі'], score: 37 },
+//   { name: ['Ківі', 'Аякс', 'Манго', 'Полі'], score: 94 },
+//   { name: ['Аякс', 'Ківі', 'Аякс', 'Манго', 'Полі'], score: 37 },
+//   { name: ['Ківі', 'Аякс', 'Полі'], score: 94 },
+//   { name: ['Полі', 'Аякс', 'Манго'], score: 59 },
+//   { name: ['Аякс', 'Полі', 'Ківі'], score: 37 },
+//   { name: ['Ківі', 'Аякс', 'Манго'], score: 94 },
+//   { name: ['Аякс', 'Манго', 'Полі'], score: 37 },
+// ];
+
+// const stObj = students
+//   .flatMap(student => student.name)
+//   .reduce(
+//     (acc, el) => ({
+//       ...acc,
+//       [el]: acc[el] ? acc[el] + 1 : 1,
+//     }),
+//     {}
+//   );
+
+// console.table(stObj);
