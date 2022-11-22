@@ -2062,7 +2062,7 @@
 //   { name: 'Аякс', score: 37 },
 //   { name: 'Ківі', score: 94 },
 //   { name: 'Аякс', score: 37 },
-// ];
+];
 
 // const allNames = students.reduce((acc, { name }) => [...acc, name], []);
 // const statsNames = allNames.reduce((acc, el) => ({ ...acc, [el]: acc[el] ? acc[el] + 1 : 1 }), {});
@@ -2070,5 +2070,10 @@
 
 // const statsNames = students
 //   .reduce((acc, { name }) => [...acc, name], [])
+//   .reduce((acc, el) => ({ ...acc, [el]: acc[el] ? acc[el] + 1 : 1 }), {});
+// console.table(statsNames);
+
+// const statsNames = students
+//   .flatMap(student => student.name)
 //   .reduce((acc, el) => ({ ...acc, [el]: acc[el] ? acc[el] + 1 : 1 }), {});
 // console.table(statsNames);
