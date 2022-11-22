@@ -2004,3 +2004,71 @@
 
 // const studentUpd = students.map(student => ({ ...student, score: student.score + 10 }));
 // console.table(studentUpd);
+
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+// ];
+
+// console.table(students);
+
+// const nameUpd = 'Полі';
+
+// const studentsAddScore = students.map(student => {
+//   if (student.name === nameUpd) {
+//     return {
+//       ...student,
+//       score: student.score + 41,
+//     };
+//   }
+//   return student;
+// });
+
+// console.table(studentsAddScore);
+
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: 'Аякс', score: 37 },
+// ];
+
+// console.table(students);
+
+// const nameUpd = 'Полі';
+
+// const studentsAddScore = students.map(student =>
+//   student.name === nameUpd ? { ...student, score: student.score + 41 } : student
+// );
+
+// console.table(studentsAddScore);
+
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: 'Аякс', score: 37 },
+// ];
+
+// const allNames = students.reduce((acc, { name }) => [...acc, name], []);
+// const statsNames = allNames.reduce((acc, el) => ({ ...acc, [el]: acc[el] ? acc[el] + 1 : 1 }), {});
+// console.table(statsNames);
+
+// const statsNames = students
+//   .reduce((acc, { name }) => [...acc, name], [])
+//   .reduce((acc, el) => ({ ...acc, [el]: acc[el] ? acc[el] + 1 : 1 }), {});
+// console.table(statsNames);
