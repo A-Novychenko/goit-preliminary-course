@@ -1823,3 +1823,12 @@ const cars = [
 
 // const getModels = cars => cars.map(({ model }) => model);
 // console.table(getModels(cars));
+
+// // Example 2 - Метод map Нехай функція makeCarsWithDiscount повертає новий масив об'єктів із змінним
+// // значенням властивості price залежно від переданої знижки.
+
+// const makeCarsWithDiscount = (cars, discount) =>
+//   cars.map(car => ({ ...car, price: car.price - car.price * discount }));
+// console.table(cars);
+// console.table(makeCarsWithDiscount(cars, 0.2));
+// console.table(makeCarsWithDiscount(cars, 0.4));
