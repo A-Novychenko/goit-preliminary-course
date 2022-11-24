@@ -72,12 +72,12 @@ console.table(sortByAscendingAmount(cars)); -->
 
 ////////////////////////////////////////////////////////
 
-Example 8 - Метод sort Нехай функція sortByDescendingPrice повертає новий масив автомобілів
+<!-- Example 8 - Метод sort Нехай функція sortByDescendingPrice повертає новий масив автомобілів
 відсортований за зменшенням значення властивості price.
 
 const sortByDescendingPrice = cars => {};
 
-console.table(sortByDescendingPrice(cars));
+console.table(sortByDescendingPrice(cars)); -->
 
 ////////////////////////////////////////////////////////
 

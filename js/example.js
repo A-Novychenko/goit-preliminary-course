@@ -1869,3 +1869,22 @@ const cars = [
 // const sortByAscendingAmount = cars => [...cars].sort((a, b) => a.amount - b.amount);
 
 // console.table(sortByAscendingAmount(cars));
+
+// // Example 8 - Метод sort Нехай функція sortByDescendingPrice повертає новий масив автомобілів
+// // відсортований за зменшенням значення властивості price.
+
+// const sortByDescendingPrice = cars => [...cars].sort((a, b) => b.price - a.price);
+
+// console.table(sortByDescendingPrice(cars));
+
+// Example 9 - Метод sort Нехай функція sortByModel повертає новий масив автомобілів відсортований за
+// назвою моделі в алфавітному та зворотному алфавітному порядку, в залежності від значення параметра
+// order.
+
+// const sortByModel = (cars, order) =>
+//   [...cars].sort((a, b) =>
+//     order === 'asc' ? a.model.localeCompare(b.model) : b.model.localeCompare(a.model)
+//   );
+
+// console.table(sortByModel(cars, 'asc'));
+// console.table(sortByModel(cars, 'desc'));
