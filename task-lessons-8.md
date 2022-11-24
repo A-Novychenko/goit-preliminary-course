@@ -39,36 +39,36 @@ console.table(filterByPrice(cars, 30000)); console.table(filterByPrice(cars, 250
 
 ////////////////////////////////////////////////////////
 
-Example 4 - Метод filter Нехай функція getCarsWithDiscount повертає масив автомобілів властивість
+<!-- Example 4 - Метод filter Нехай функція getCarsWithDiscount повертає масив автомобілів властивість
 onSale яких true.
 
 const getCarsWithDiscount = cars => {};
 
-console.table(getCarsWithDiscount(cars));
+console.table(getCarsWithDiscount(cars)); -->
 
 ////////////////////////////////////////////////////////
 
-Example 5 - Метод filter Нехай функція getCarsWithType повертає масив автомобілів тип яких
+<!-- Example 5 - Метод filter Нехай функція getCarsWithType повертає масив автомобілів тип яких
 збігається зі значенням параметра type.
 
 const getCarsWithType = (cars, type) => {};
 
-console.table(getCarsWithType(cars, 'suv')); console.table(getCarsWithType(cars, 'sedan'));
+console.table(getCarsWithType(cars, 'suv')); console.table(getCarsWithType(cars, 'sedan')); -->
 
 ////////////////////////////////////////////////////////
 
-Example6 - Метод find const getCarByModel = (cars, model) => {};
+<!-- Example6 - Метод find const getCarByModel = (cars, model) => {};
 
-console.log(getCarByModel(cars, 'F-150')); console.log(getCarByModel(cars, 'CX-9'));
+console.log(getCarByModel(cars, 'F-150')); console.log(getCarByModel(cars, 'CX-9')); -->
 
 ////////////////////////////////////////////////////////
 
-Example 7 - Метод sort Нехай функція sortByAscendingAmount повертає новий масив автомобілів
+<!-- Example 7 - Метод sort Нехай функція sortByAscendingAmount повертає новий масив автомобілів
 відсортований за зростанням значення якості amount.
 
 const sortByAscendingAmount = cars => {};
 
-console.table(sortByAscendingAmount(cars));
+console.table(sortByAscendingAmount(cars)); -->
 
 ////////////////////////////////////////////////////////
 
