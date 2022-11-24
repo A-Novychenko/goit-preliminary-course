@@ -1832,3 +1832,11 @@ const cars = [
 // console.table(cars);
 // console.table(makeCarsWithDiscount(cars, 0.2));
 // console.table(makeCarsWithDiscount(cars, 0.4));
+
+// Example 3 - Метод filter Нехай функція filterByPrice повертає масив автомобілів ціна яких менша ніж
+// значення параметра threshold.
+
+// const filterByPrice = (cars, threshold) => cars.filter(car => car.price < threshold);
+
+// console.table(filterByPrice(cars, 30000));
+// console.table(filterByPrice(cars, 25000));
