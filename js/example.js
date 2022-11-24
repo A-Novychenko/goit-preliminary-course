@@ -1888,3 +1888,26 @@ const cars = [
 
 // console.table(sortByModel(cars, 'asc'));
 // console.table(sortByModel(cars, 'desc'));
+
+// Example 10 - Метод reduce Нехай функція getTotalAmount повертає загальну кількість автомобілів
+// (значення властивостей amount).
+
+// const getTotalAmount = cars => cars.reduce((acc, { amount }) => acc + amount, 0);
+
+// console.log(getTotalAmount(cars));
+
+// Example 11 - Ланцюжки методів Нехай функція getAvailableCarNames повертає масив моделей автомобілів,
+// але тільки тих, які зараз на розпродажі.
+
+// const getModelsOnSale = cars => cars.filter(car => car.onSale).map(({ model }) => model);
+// console.table(cars);
+// console.table(getModelsOnSale(cars));
+
+// Example 12 - Ланцюжки методів Нехай функція getSortedCarsOnSale повертає масив автомобілів на
+// розпродажі (Властивість onSale), відсортованих за зростанням ціни.
+
+// const getSortedCarsOnSale = cars =>
+//   cars.filter(car => car.onSale).sort((a, b) => a.price - b.price);
+
+// console.table(cars);
+// console.table(getSortedCarsOnSale(cars));

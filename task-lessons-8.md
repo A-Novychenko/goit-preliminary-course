@@ -81,40 +81,42 @@ console.table(sortByDescendingPrice(cars)); -->
 
 ////////////////////////////////////////////////////////
 
+<!--
 Example 9 - Метод sort Нехай функція sortByModel повертає новий масив автомобілів відсортований за
 назвою моделі в алфавітному та зворотному алфавітному порядку, в залежності від значення параметра
 order.
 
 const sortByModel = (cars, order) => {};
 
-console.table(sortByModel(cars, 'asc')); console.table(sortByModel(cars, 'desc'));
+console.table(sortByModel(cars, 'asc')); console.table(sortByModel(cars, 'desc')); -->
 
 ////////////////////////////////////////////////////////
 
-Example 10 - Метод reduce Нехай функція getTotalAmount повертає загальну кількість автомобілів
+<!-- Example 10 - Метод reduce Нехай функція getTotalAmount повертає загальну кількість автомобілів
 (значення властивостей amount).
 
 const getTotalAmount = cars => {};
 
-console.log(getTotalAmount(cars));
+console.log(getTotalAmount(cars)); -->
 
 ////////////////////////////////////////////////////////
 
-Example 11 - Ланцюжки методів Нехай функція getAvailableCarNames повертає масив моделей автомобілів,
+<!-- Example 11 - Ланцюжки методів Нехай функція getAvailableCarNames повертає масив моделей автомобілів,
 але тільки тих, які зараз на розпродажі.
 
 const getModelsOnSale = cars => {};
 
-console.table(getModelsOnSale(cars));
+console.table(getModelsOnSale(cars)); -->
 
 ////////////////////////////////////////////////////////
 
+<!--
 Example 12 - Ланцюжки методів Нехай функція getSortedCarsOnSale повертає масив автомобілів на
 розпродажі (Властивість onSale), відсортованих за зростанням ціни.
 
 const getSortedCarsOnSale = cars => {};
 
-console.table(getSortedCarsOnSale(cars));
+console.table(getSortedCarsOnSale(cars)); -->
 
 //444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
 //888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
