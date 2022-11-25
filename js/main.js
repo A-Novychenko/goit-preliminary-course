@@ -2161,40 +2161,40 @@
 // console.log(test2);
 // console.log(test.isPrototypeOf(test2));
 
-class User {
-  #email;
-  // Деструктуризуємо об'єкт
-  constructor({ name, email }) {
-    this.name = name;
-    this.#email = email;
-  }
+// class User {
+//   #email;
+//   // Деструктуризуємо об'єкт
+//   constructor({ name, email }) {
+//     this.name = name;
+//     this.#email = email;
+//   }
 
-  // Метод getEmail
-  getEmail() {
-    return this.#email;
-  }
+//   // Метод getEmail
+//   getEmail() {
+//     return this.#email;
+//   }
 
-  // Метод changeEmail
-  changeEmail(newEmail) {
-    this.#email = newEmail;
-  }
-}
+//   // Метод changeEmail
+//   changeEmail(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
 
-const mango = new User({
-  name: 'Манго',
-  email: 'mango@mail.com',
-});
-console.log(mango); // { name: "Манго", email: "mango@mail.com" }
+// const mango = new User({
+//   name: 'Манго',
+//   email: 'mango@mail.com',
+// });
+// console.log(mango); // { name: "Манго", email: "mango@mail.com" }
 
-const poly = new User({
-  name: 'Поли',
-  email: 'poly@mail.com',
-});
-console.log(poly); // { name: "Поли", email: "poly@mail.com" }
+// const poly = new User({
+//   name: 'Поли',
+//   email: 'poly@mail.com',
+// });
+// console.log(poly); // { name: "Поли", email: "poly@mail.com" }
 
-const kiwi = new User({ name: 'kiwi', email: 'kiwi@mail' });
-console.log(kiwi);
+// const kiwi = new User({ name: 'kiwi', email: 'kiwi@mail' });
+// console.log(kiwi);
 
-console.log(kiwi.getEmail());
-console.log(kiwi.name);
-// console.log(kiwi.#email);// помилка із-за приватного оголошення
+// console.log(kiwi.getEmail());
+// console.log(kiwi.name);
+// // console.log(kiwi.#email);// помилка із-за приватного оголошення
