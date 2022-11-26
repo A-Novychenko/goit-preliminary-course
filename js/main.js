@@ -2231,3 +2231,16 @@
 
 // audi.price = 51000;
 // console.log(audi.price); // 49000
+
+const objMain = {
+  x: 10,
+};
+
+const objCopy1 = Object.create(objMain);
+
+console.log(objCopy1);
+
+console.log(objCopy1.x); //найдёт свойство из прототипа=10
+
+objCopy1.x = 20; //создаст собственное свойство
+console.log(objCopy1.x); //покажет первое найденное свойство, тоесть покажет собственное свойство =20
