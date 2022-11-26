@@ -2232,15 +2232,52 @@
 // audi.price = 51000;
 // console.log(audi.price); // 49000
 
-const objMain = {
-  x: 10,
-};
+// const objMain = {
+//   x: 10,
+// };
 
-const objCopy1 = Object.create(objMain);
+// const objCopy1 = Object.create(objMain);
 
-console.log(objCopy1);
+// console.log(objCopy1);
 
-console.log(objCopy1.x); //найдёт свойство из прототипа=10
+// console.log(objCopy1.x); //найдёт свойство из прототипа=10
 
-objCopy1.x = 20; //создаст собственное свойство
-console.log(objCopy1.x); //покажет первое найденное свойство, тоесть покажет собственное свойство =20
+// objCopy1.x = 20; //создаст собственное свойство
+// console.log(objCopy1.x); //покажет первое найденное свойство, тоесть покажет собственное свойство =20
+
+// const Car = function ({ engine, drive, color, price } = {}) {
+//   this.engine = engine;
+//   this.drive = drive;
+//   this.color = color;
+//   this.price = price;
+//   //   console.log('This construtor funtion');
+//   //   console.log(this);
+// };
+
+// Car.prototype.changePrice = function (newPrice) {
+//   this.price = newPrice;
+// };
+
+// const myCar = new Car({
+//   engine: 'fuel',
+//   drive: 'allWD',
+//   color: 'silver',
+//   price: 63000,
+// });
+
+// const myCar2 = new Car({
+//   engine: 'fuel',
+//   drive: 'fWD',
+//   color: 'red',
+//   price: 33000,
+// });
+
+// myCar.model = 'TOYOTA';
+
+// console.log(myCar);
+
+// myCar.changePrice(55000);
+// console.log('После изменения цены', myCar);
+
+// myCar2.changePrice(33000);
+// console.log('После изменения цены 2', myCar2);
