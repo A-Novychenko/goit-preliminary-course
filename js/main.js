@@ -2398,29 +2398,45 @@
 // console.log(mango.isBlacklisted('mango@mail.com')); // false
 // console.log(mango.isBlacklisted('poly@mail.com')); // true
 
-class Base {
-  #level;
-  constructor({ type = 'НЕ ОПРЕДЕЛЕНО', level = 0 } = {}) {
-    this.userType = type;
-    this.#level = level;
-  }
+// class Base {
+//   #level;
+//   constructor({ type = 'НЕ ОПРЕДЕЛЕНО', level = 0 } = {}) {
+//     this.userType = type;
+//     this.#level = level;
+//   }
 
-  get level() {
-    return this.#level;
-  }
+//   get level() {
+//     return this.#level;
+//   }
 
-  set level(addLevel) {
-    level += addLevel;
-  }
-}
+//   set level(level) {
+//     this.#level += level;
+//   }
+// }
 
-class UserJS extends Base {
-  constructor(config = {}) {
-    super({ progLang, ...restProps });
-    this.progLang = progLang;
-  }
-}
+// class UserJS extends Base {
+//   constructor({ progLang, ...restProps } = {}) {
+//     super({ ...restProps });
+//     this.progLang = progLang;
+//     this.amount = 0;
+//   }
+
+//   addLevel(addAmount) {
+//     this.amount = addAmount;
+//     this.level = this.amount;
+//   }
+// }
 
 // const kiwiJS = new UserJS({
-//     userType:
-// })
+//   type: 'programmer JS',
+//   level: 50,
+//   progLang: 'Java Script',
+// });
+
+// console.log(kiwiJS);
+// console.log(kiwiJS.level);
+
+// kiwiJS.addLevel(500);
+
+// console.log(kiwiJS);
+// console.log(kiwiJS.level);
