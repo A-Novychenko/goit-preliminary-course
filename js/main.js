@@ -2282,64 +2282,91 @@
 // myCar2.changePrice(33000);
 // console.log('После изменения цены 2', myCar2);
 
-class Car {
-  static description = 'Это клас для создания карточки автомобиля';
-  static type = 'Иномарки';
+// class Car {
+//   static description = 'Это клас для создания карточки автомобиля';
+//   static type = 'Иномарки';
 
-  static logClass() {
-    console.log(this);
+//   static logClass() {
+//     console.log(this);
+//   }
+
+//   constructor({ engine, drive, color, price } = {}) {
+//     this.engine = engine;
+//     this.drive = drive;
+//     this.color = color;
+//     this._price = price;
+//   }
+
+//   get price() {
+//     return this._price;
+//   }
+
+//   set price(newPrice) {
+//     this._price = newPrice;
+//   }
+//   //   changePrice(newPrice) {
+//   //     this.price = newPrice;
+//   //   }
+//   //   changeColor(newColor) {
+//   //     this.color = newColor;
+//   //   }
+// }
+// // console.dir(Car);
+
+// const myCar = new Car({
+//   engine: 'fuel',
+//   drive: 'allWD',
+//   color: 'silver',
+//   price: 63000,
+// });
+
+// const myCar1 = new Car({
+//   engine: 'LPG',
+//   drive: 'fWD',
+//   color: 'red',
+//   price: 33000,
+// });
+
+// // myCar.changePrice(555);
+// // myCar.changePrice('orangered');
+
+// console.log(myCar);
+// console.log(myCar1);
+
+// // console.log(myCar.__proto__.changeColor === Car.prototype.changeColor);
+
+// // console.log(Object.getPrototypeOf(myCar));
+
+// // Car.logClass();
+
+// console.log(myCar.price);
+// myCar.price = 555;
+
+// console.log(myCar.price);
+
+class Base {
+  #level;
+  constructor({ type = 'НЕ ОПРЕДЕЛЕНО', level = 0 } = {}) {
+    this.userType = type;
+    this.#level = level;
   }
 
-  constructor({ engine, drive, color, price } = {}) {
-    this.engine = engine;
-    this.drive = drive;
-    this.color = color;
-    this._price = price;
+  get level() {
+    return this.#level;
   }
 
-  get price() {
-    return this._price;
+  set level(addLevel) {
+    level += addLevel;
   }
-
-  set price(newPrice) {
-    this._price = newPrice;
-  }
-  //   changePrice(newPrice) {
-  //     this.price = newPrice;
-  //   }
-  //   changeColor(newColor) {
-  //     this.color = newColor;
-  //   }
 }
-// console.dir(Car);
 
-const myCar = new Car({
-  engine: 'fuel',
-  drive: 'allWD',
-  color: 'silver',
-  price: 63000,
-});
+class UserJS extends Base {
+  constructor(config = {}) {
+    super({ progLang, ...restProps });
+    this.progLang = progLang;
+  }
+}
 
-const myCar1 = new Car({
-  engine: 'LPG',
-  drive: 'fWD',
-  color: 'red',
-  price: 33000,
-});
-
-// myCar.changePrice(555);
-// myCar.changePrice('orangered');
-
-console.log(myCar);
-console.log(myCar1);
-
-// console.log(myCar.__proto__.changeColor === Car.prototype.changeColor);
-
-// console.log(Object.getPrototypeOf(myCar));
-
-// Car.logClass();
-
-console.log(myCar.price);
-myCar.price = 555;
-
-console.log(myCar.price);
+// const kiwiJS = new UserJS({
+//     userType:
+// })
