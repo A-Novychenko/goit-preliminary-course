@@ -2232,6 +2232,118 @@
 // audi.price = 51000;
 // console.log(audi.price); // 49000
 
+// const objMain = {
+//   x: 10,
+// };
+
+// const objCopy1 = Object.create(objMain);
+
+// console.log(objCopy1);
+
+// console.log(objCopy1.x); //найдёт свойство из прототипа=10
+
+// objCopy1.x = 20; //создаст собственное свойство
+// console.log(objCopy1.x); //покажет первое найденное свойство, тоесть покажет собственное свойство =20
+
+// const Car = function ({ engine, drive, color, price } = {}) {
+//   this.engine = engine;
+//   this.drive = drive;
+//   this.color = color;
+//   this.price = price;
+//   //   console.log('This construtor funtion');
+//   //   console.log(this);
+// };
+
+// Car.prototype.changePrice = function (newPrice) {
+//   this.price = newPrice;
+// };
+
+// const myCar = new Car({
+//   engine: 'fuel',
+//   drive: 'allWD',
+//   color: 'silver',
+//   price: 63000,
+// });
+
+// const myCar2 = new Car({
+//   engine: 'fuel',
+//   drive: 'fWD',
+//   color: 'red',
+//   price: 33000,
+// });
+
+// myCar.model = 'TOYOTA';
+
+// console.log(myCar);
+
+// myCar.changePrice(55000);
+// console.log('После изменения цены', myCar);
+
+// myCar2.changePrice(33000);
+// console.log('После изменения цены 2', myCar2);
+
+class Car {
+  static description = 'Это клас для создания карточки автомобиля';
+  static type = 'Иномарки';
+
+  static logClass() {
+    console.log(this);
+  }
+
+  constructor({ engine, drive, color, price } = {}) {
+    this.engine = engine;
+    this.drive = drive;
+    this.color = color;
+    this._price = price;
+  }
+
+  get price() {
+    return this._price;
+  }
+
+  set price(newPrice) {
+    this._price = newPrice;
+  }
+  //   changePrice(newPrice) {
+  //     this.price = newPrice;
+  //   }
+  //   changeColor(newColor) {
+  //     this.color = newColor;
+  //   }
+}
+// console.dir(Car);
+
+const myCar = new Car({
+  engine: 'fuel',
+  drive: 'allWD',
+  color: 'silver',
+  price: 63000,
+});
+
+const myCar1 = new Car({
+  engine: 'LPG',
+  drive: 'fWD',
+  color: 'red',
+  price: 33000,
+});
+
+// myCar.changePrice(555);
+// myCar.changePrice('orangered');
+
+console.log(myCar);
+console.log(myCar1);
+
+// console.log(myCar.__proto__.changeColor === Car.prototype.changeColor);
+
+// console.log(Object.getPrototypeOf(myCar));
+
+// Car.logClass();
+
+console.log(myCar.price);
+myCar.price = 555;
+
+console.log(myCar.price);
+
 class User {
   email;
 
