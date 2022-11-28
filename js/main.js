@@ -2441,7 +2441,75 @@
 // console.log(kiwiJS);
 // console.log(kiwiJS.level);
 
-let x = 2;
-x = -1;
-x = -(x + 1);
-console.log(!!x);
+// let x = 2;
+// x = -1;
+// x = -(x + 1);
+// console.log(!!x);
+
+// const customer = {
+//   firstName: 'Jacob',
+//   lastName: 'Mercer',
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+// function makeMessage(callback) {
+//   // callback() - це виклик методу getFullName без об'єкта
+//   console.log(`Обробляємо заявку від ${callback()}.`);
+// }
+// makeMessage(customer.getFullName); // Буде помилка у виклику функції
+
+// const test = {
+//   fName: 'kiwi',
+//   lName: 'mango',
+
+//   getFullName() {
+//     console.log(`${this.fName} ${this.lName}`);
+//   },
+// };
+
+// const makeName = function (callback) {
+//   callback();
+// };
+
+// makeName(test.getFullName.bind(test));
+
+// class User {
+//   #email;
+//   constructor(email) {
+//     this.#email = email;
+//   }
+//   get email() {
+//     return this.#email;
+//   }
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+// class ContentEditor extends User {
+//   // Тіло класу ContentEditor
+// }
+// class ContentEditor1 extends ContentEditor {
+//   // Тіло класу ContentEditor
+// }
+// class ContentEditor2 extends ContentEditor1 {
+//   // Тіло класу ContentEditor
+// }
+// class ContentEditor3 extends ContentEditor2 {
+//   // Тіло класу ContentEditor
+// }
+// const editor = new ContentEditor3('mango@mail.com');
+// console.dir(User);
+// console.dir(ContentEditor);
+// console.log(editor); // { email: "mango@mail.com" }
+// // console.log(editor.email); // "mango@mail.com"
+
+// console.log(User === ContentEditor.__proto__);
+// console.log(User.prototype === ContentEditor.prototype.__proto__);
+// // console.log(ContentEditor.prototype === editor.__proto__);
+// // console.log(User.prototype === editor.__proto__.__proto__);
+// console.log(User.prototype === editor.__proto__.__proto__.__proto__.__proto__.__proto__);
+// console.log(ContentEditor2.prototype === editor.__proto__.__proto__);
+// console.log(ContentEditor1.prototype === editor.__proto__.__proto__.__proto__);
+// console.log(ContentEditor3.prototype === editor.__proto__);
+// console.log(ContentEditor2.prototype === ContentEditor3.prototype.__proto__);
