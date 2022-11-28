@@ -2440,3 +2440,8 @@
 
 // console.log(kiwiJS);
 // console.log(kiwiJS.level);
+
+let x = 2;
+x = -1;
+x = -(x + 1);
+console.log(!!x);
