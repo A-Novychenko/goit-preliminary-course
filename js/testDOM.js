@@ -38,5 +38,17 @@
 // testInputRef.removeAttribute('type');
 // console.log(testInputRef);
 
-const actions = document.querySelectorAll('.js-action button');
-console.log(actions[2].dataset.action);
+// const actions = document.querySelectorAll('.js-action button');
+// console.log(actions[2].dataset.action);
+
+// const actionTest = document.querySelectorAll('.js-action button');
+
+// console.log(actionTest[0].dataset.action);
+
+const magic = document.querySelector('.js-magic-btn');
+
+magic.addEventListener('click', () => {
+  const titleRef = document.querySelector('.site__title');
+  titleRef.classList.add('title-style'); // добавит клас
+  titleRef.classList.remove('title-style'); //удалит клас
+});
