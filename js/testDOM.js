@@ -62,4 +62,18 @@
 // const currentElRef = document.querySelector(`.site__link[href='${currentPageUrl}']`);
 // currentElRef.classList.add('current');
 
-const navDOMMetodtestRef = document.querySelector();
+// const navDOMMetodtestRef = document.querySelector('.site__list');
+// console.log(navDOMMetodtestRef);
+// console.log(navDOMMetodtestRef.parentNode); //вибере батька - site-nav
+// console.log(navDOMMetodtestRef.childNodes); //вибере всі дочірні елементи(тест перед лі, лі, тест після лі і тд), поверне масив
+// console.log(navDOMMetodtestRef.children); //вибере всі дочірній елементи лі, поверне масив
+// console.log(navDOMMetodtestRef.firstChild); //вибере перший дочірній елемент(тест перед лі)
+// console.log(navDOMMetodtestRef.firstElementChild); //вибере перший дочірній елемент лі
+// console.log(navDOMMetodtestRef.lastChild); //вибере останній дочірній елемент(тест після лі)
+// console.log(navDOMMetodtestRef.lastElementChild); //вибере останній дочірній елемент лі
+
+// const navDOMMetodtestcontinueRef = document.querySelector('.site__item_center');
+// console.log(navDOMMetodtestcontinueRef.previousSibling); // поверне сусіда зліва(текст зліва)
+// console.log(navDOMMetodtestcontinueRef.previousElementSibling); // вибере вузол-елемент «зліва» від elem (його попереднього сусіда).
+// // elem.nextSibling - вибере елемент «праворуч» від elem (його наступного сусіда)
+// // elem.nextElementSibling - вибере вузол-елемент «праворуч» від elem (його наступного сусіда).
