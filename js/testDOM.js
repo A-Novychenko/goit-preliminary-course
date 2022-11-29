@@ -45,10 +45,21 @@
 
 // console.log(actionTest[0].dataset.action);
 
-const magic = document.querySelector('.js-magic-btn');
+// const magic = document.querySelector('.js-magic-btn');
 
-magic.addEventListener('click', () => {
-  const titleRef = document.querySelector('.site__title');
-  titleRef.classList.add('title-style'); // добавит клас
-  titleRef.classList.remove('title-style'); //удалит клас
-});
+// magic.addEventListener('click', () => {
+//   const titleRef = document.querySelector('.site__title');
+//   //   titleRef.classList.add('title-style'); // добавит клас
+//   //   titleRef.classList.remove('title-style'); //удалит клас
+//   //   titleRef.classList.replace('title-style', newclass); //заменяет старый клас(1-й арг) на новый (2-й арг)
+//   //   titleRef.classList.contains('title-style'); // проверяет есть ли этот клас, возвращает true/false
+//   titleRef.classList.toggle('current'); //если нету добавляет, если есть удаляет
+// });
+
+// const currentPageUrl = '/main';
+// // const currentPageUrl = '/portfolio';
+// // const currentPageUrl = '/about';
+// const currentElRef = document.querySelector(`.site__link[href='${currentPageUrl}']`);
+// currentElRef.classList.add('current');
+
+const navDOMMetodtestRef = document.querySelector();
