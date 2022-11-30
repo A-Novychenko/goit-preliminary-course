@@ -148,13 +148,30 @@
 //
 //
 // создаем колекцию. Создание разноцветных кнопок
-const options = [
-  { label: 'green', color: '#008000' },
-  { label: 'red', color: '#ff0000' },
-  { label: 'yellow', color: '#ffff00' },
-  { label: 'blue', color: '#0000ff' },
-  { label: 'grey', color: '#808080' },
-  { label: 'brown', color: '#a52a2a' },
-];
+// const options = [
+//   { label: 'green', color: '#008000' },
+//   { label: 'red', color: '#ff0000' },
+//   { label: 'yellow', color: '#ffff00' },
+//   { label: 'blue', color: '#0000ff' },
+//   { label: 'grey', color: '#808080' },
+//   { label: 'brown', color: '#a52a2a' },
+// ];
 
-const btnColorsRef = document.querySelector('.btn__colors');
+// const btnColorsContainerRef = document.querySelector('.js-colors-btn');
+
+// const makeColorsBTN = options => {
+//   return options.map(option => {
+//     const btnColorsRef = document.createElement('button');
+
+//     btnColorsRef.style.backgroundColor = option.color;
+//     btnColorsRef.type = 'button';
+//     btnColorsRef.textContent = option.label;
+//     btnColorsRef.classList.add('btn-colors');
+
+//     return btnColorsRef;
+//   });
+// };
+
+// const btnEL = makeColorsBTN(options);
+
+// btnColorsContainerRef.append(...btnEL);
