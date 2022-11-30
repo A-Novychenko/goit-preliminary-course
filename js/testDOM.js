@@ -78,34 +78,34 @@
 // // elem.nextSibling - вибере елемент «праворуч» від elem (його наступного сусіда)
 // // elem.nextElementSibling - вибере вузол-елемент «праворуч» від elem (його наступного сусіда).
 
-const wrapMagicBTNRef = document.querySelector('.wrap__magic-BTN');
+// const wrapMagicBTNRef = document.querySelector('.wrap__magic-BTN');
 
-const descrRef = document.createElement('p');
-descrRef.classList.add('site__descr');
-descrRef.textContent = 'MAGIC кнопка делает магию =)';
+// const descrRef = document.createElement('p');
+// descrRef.classList.add('site__descr');
+// descrRef.textContent = 'MAGIC кнопка делает магию =)';
 
-wrapMagicBTNRef.appendChild(descrRef);
+// wrapMagicBTNRef.appendChild(descrRef);
 
-const imgCrRef = document.createElement('img');
-imgCrRef.src = './img/pexels-allan-carvalho-12878426.jpg';
-imgCrRef.alt = 'Nature';
-imgCrRef.width = 480;
+// const imgCrRef = document.createElement('img');
+// imgCrRef.src = './img/pexels-allan-carvalho-12878426.jpg';
+// imgCrRef.alt = 'Nature';
+// imgCrRef.width = 480;
 
-console.log(imgCrRef);
+// console.log(imgCrRef);
 
-document.body.appendChild(imgCrRef);
+// document.body.appendChild(imgCrRef);
 
-//
+// //
 
-const myCabItemRef = document.createElement('li');
-myCabItemRef.classList.add('site__item');
+// const myCabItemRef = document.createElement('li');
+// myCabItemRef.classList.add('site__item');
 
-const myCabLinkRef = document.createElement('a');
-myCabLinkRef.classList.add('site__link');
-myCabLinkRef.href = '/my-cabinet';
-myCabLinkRef.textContent = 'Личный кабинет';
+// const myCabLinkRef = document.createElement('a');
+// myCabLinkRef.classList.add('site__link');
+// myCabLinkRef.href = '/my-cabinet';
+// myCabLinkRef.textContent = 'Личный кабинет';
 
-myCabItemRef.appendChild(myCabLinkRef);
+// myCabItemRef.appendChild(myCabLinkRef);
 
 // const portfolioLinkRef = document.querySelector('.site__item .site__link[href="/portfolio"]');
 // console.log(portfolioLinkRef);
@@ -113,27 +113,48 @@ myCabItemRef.appendChild(myCabLinkRef);
 
 //                                  -  или
 
-const ulRef = document.querySelector('.site__list');
+// const ulRef = document.querySelector('.site__list');
 
-// ulRef.insertBefore(myCabItemRef, ulRef.firstElementChild); //добавит первым
+// // ulRef.insertBefore(myCabItemRef, ulRef.firstElementChild); //добавит первым
 
-ulRef.insertBefore(myCabItemRef, ulRef.children[1]);
+// ulRef.insertBefore(myCabItemRef, ulRef.children[1]);
 
+// //
+// //
+// //
+
+// // добавление нескольких элементов подрад в одну операцию
+
+// const heroRef = document.querySelector('.hero');
+
+// const heroTitleRef = document.createElement('h2');
+// heroTitleRef.classList.add('hero__title');
+// heroTitleRef.textContent = 'Заголовок секции ГЕРОЙ';
+
+// const imgHeroRef = document.createElement('img');
+// imgHeroRef.src = './img/pexels-mariya-14594188.jpg';
+// imgHeroRef.alt = 'Новогодние шарики';
+// imgHeroRef.width = 600;
+
+// heroRef.append(heroTitleRef, imgHeroRef); // append - перед //  prepend - после
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+// создаем колекцию. Создание разноцветных кнопок
+const options = [
+  { label: 'green', color: '#008000' },
+  { label: 'red', color: '#ff0000' },
+  { label: 'yellow', color: '#ffff00' },
+  { label: 'blue', color: '#0000ff' },
+  { label: 'grey', color: '#808080' },
+  { label: 'brown', color: '#a52a2a' },
+];
 
-// добавление нескольких элементов подрад в одну операцию
-
-const heroRef = document.querySelector('.hero');
-
-const heroTitleRef = document.createElement('h2');
-heroTitleRef.classList.add('hero__title');
-heroTitleRef.textContent = 'Заголовок секции ГЕРОЙ';
-
-const imgHeroRef = document.createElement('img');
-imgHeroRef.src = './img/pexels-mariya-14594188.jpg';
-imgHeroRef.alt = 'Новогодние шарики';
-imgHeroRef.width = 600;
-
-heroRef.append(heroTitleRef, imgHeroRef);
+const btnColorsRef = document.querySelector('.btn__colors');
