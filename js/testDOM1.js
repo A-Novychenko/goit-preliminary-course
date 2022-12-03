@@ -46,27 +46,27 @@ import products from './data/proucts.js';
 // const prodCardRef = document.querySelector('.js-prod-card');
 // prodCardRef.append(...arrprodCard);
 
-const makeProdCard = ({ name, description, price }) => {
-  const cardSectionRef = document.createElement('article');
-  cardSectionRef.classList.add('product__name');
+// const makeProdCard = ({ name, description, price }) => {
+//   const cardSectionRef = document.createElement('article');
+//   cardSectionRef.classList.add('product__name');
 
-  const cardTitleRef = document.createElement('h2');
-  cardTitleRef.classList.add('product__name');
-  cardTitleRef.textContent = name;
+//   const cardTitleRef = document.createElement('h2');
+//   cardTitleRef.classList.add('product__name');
+//   cardTitleRef.textContent = name;
 
-  const cardDescrRef = document.createElement('p');
-  cardDescrRef.classList.add('product__descr');
-  cardDescrRef.textContent = description;
+//   const cardDescrRef = document.createElement('p');
+//   cardDescrRef.classList.add('product__descr');
+//   cardDescrRef.textContent = description;
 
-  const cardPriseRef = document.createElement('p');
-  cardPriseRef.classList.add('product__pridct');
-  cardPriseRef.textContent = `Цена: ${price} кредитов`;
+//   const cardPriseRef = document.createElement('p');
+//   cardPriseRef.classList.add('product__pridct');
+//   cardPriseRef.textContent = `Цена: ${price} кредитов`;
 
-  cardSectionRef.append(cardTitleRef, cardDescrRef, cardPriseRef);
-  return cardSectionRef;
-};
+//   cardSectionRef.append(cardTitleRef, cardDescrRef, cardPriseRef);
+//   return cardSectionRef;
+// };
 
-const arrprodCard = products.map(makeProdCard);
+// const arrprodCard = products.map(makeProdCard);
 
-const prodCardRef = document.querySelector('.js-prod-card');
-prodCardRef.append(...arrprodCard);
+// const prodCardRef = document.querySelector('.js-prod-card');
+// prodCardRef.append(...arrprodCard);
