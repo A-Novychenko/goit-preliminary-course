@@ -175,3 +175,9 @@
 // const btnEL = makeColorsBTN(options);
 
 // btnColorsContainerRef.append(...btnEL);
+
+// document.addEventListener('keydown', handler);
+
+// function handler(event) {
+//   console.log(event.ctrlKey && event.code === 'KeyF');
+// }
