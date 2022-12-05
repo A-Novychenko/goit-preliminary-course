@@ -181,3 +181,21 @@
 // function handler(event) {
 //   console.log(event.ctrlKey && event.code === 'KeyF');
 // }
+
+const container = document.querySelector('.js-buttons');
+
+container.addEventListener('click', onClickBtn);
+
+function onClickBtn(e) {
+  if (e.target.nodeName !== 'BUTTON') {
+    return;
+  }
+
+  const activeBtn = document.querySelector('.active_btn');
+
+  if (activeBtn) {
+    activeBtn.classList.remove('active_btn');
+  }
+
+  e.target.classList.add('active_btn');
+}
