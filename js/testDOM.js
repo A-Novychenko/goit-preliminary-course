@@ -193,9 +193,10 @@ function onClickBtn(e) {
 
   const activeBtn = document.querySelector('.active_btn');
 
-  if (activeBtn) {
-    activeBtn.classList.remove('active_btn');
-  }
+  //   if (activeBtn) {
+  //     activeBtn.classList.remove('active_btn');
+  //   }  аналог ниже:
+  activeBtn?.classList.remove('active_btn');
 
   e.target.classList.add('active_btn');
 }
