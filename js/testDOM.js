@@ -182,7 +182,39 @@
 //   console.log(event.ctrlKey && event.code === 'KeyF');
 // }
 
+// const container = document.querySelector('.js-buttons');
+// let selectedSAE = null;
+
+// container.addEventListener('click', onClickBtn);
+
+// function onClickBtn(e) {
+//   if (e.target.nodeName !== 'BUTTON') {
+//     return;
+//   }
+
+//   const activeBtn = document.querySelector('.active_btn');
+//   const isActive = e.target.classList.contains('active_btn');
+
+//   //   if (activeBtn) {
+//   //     activeBtn.classList.remove('active_btn');
+//   //   }  аналог ниже:
+//   activeBtn?.classList.remove('active_btn');
+
+//   e.target.classList.add('active_btn');
+
+//   selectedSAE = e.target.dataset.value;
+
+//   if (!isActive) {
+//     alert(`Вы выбрали ${selectedSAE}`);
+//   }
+
+//   if (isActive) {
+//     activeBtn.classList.remove('active_btn');
+//   }
+// }
+
 const container = document.querySelector('.js-buttons');
+let selectedSAE = new Set();
 
 container.addEventListener('click', onClickBtn);
 
@@ -191,12 +223,17 @@ function onClickBtn(e) {
     return;
   }
 
-  const activeBtn = document.querySelector('.active_btn');
+  const btn = e.target;
+  const isActive = btn.classList.contains('active_btn');
+  const btnValue = btn.dataset.value;
 
-  //   if (activeBtn) {
-  //     activeBtn.classList.remove('active_btn');
-  //   }  аналог ниже:
-  activeBtn?.classList.remove('active_btn');
+  if (isActive) {
+    selectedSAE.delete(btnValue);
+  } else {
+    selectedSAE.add(btnValue);
+  }
 
-  e.target.classList.add('active_btn');
+  btn.classList.toggle('active_btn');
+
+  console.log(selectedSAE);
 }
