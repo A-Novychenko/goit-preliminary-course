@@ -2513,3 +2513,42 @@
 // console.log(ContentEditor1.prototype === editor.__proto__.__proto__.__proto__);
 // console.log(ContentEditor3.prototype === editor.__proto__);
 // console.log(ContentEditor2.prototype === ContentEditor3.prototype.__proto__);
+
+// console.log(_.add(6, 4));
+
+// document.addEventListener('scroll', _.throttle(onAnimationScroll, 500));
+// let q = 0;
+// function onAnimationScroll(e) {
+//   q += 1;
+
+//   console.log(q);
+// }
+
+// // document.addEventListener(
+// //   'scroll',
+// //   _.throttle(() => {
+// //     console.log('Scroll handler call every 300ms');
+// //   }, 300)
+// // );
+
+// document.addEventListener('scroll', _.throttle(onScroll, 200));
+// let x = 0;
+// function onScroll(e) {
+//   x += 1;
+//   console.log(x);
+// }
+
+document.addEventListener(
+  'scroll',
+  _.debounce(onStartScroll, 2000, { leading: true, trailing: false })
+);
+
+function onStartScroll(e) {
+  console.log('Сработал обработчик события=опция laeding!');
+}
+
+document.addEventListener('scroll', _.debounce(onStopScroll, 2000));
+
+function onStopScroll(e) {
+  console.log('Сработал обработчик события=опция trailing!');
+}

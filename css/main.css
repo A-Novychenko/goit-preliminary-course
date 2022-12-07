@@ -17,6 +17,9 @@ ul {
     padding: 0;
 }
 
+img {
+    display: block;
+}
 
 .container__btn {
     display: flex;

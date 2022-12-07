@@ -213,27 +213,27 @@
 //   }
 // }
 
-const container = document.querySelector('.js-buttons');
-let selectedSAE = new Set();
+// const container = document.querySelector('.js-buttons');
+// let selectedSAE = new Set();
 
-container.addEventListener('click', onClickBtn);
+// container.addEventListener('click', onClickBtn);
 
-function onClickBtn(e) {
-  if (e.target.nodeName !== 'BUTTON') {
-    return;
-  }
+// function onClickBtn(e) {
+//   if (e.target.nodeName !== 'BUTTON') {
+//     return;
+//   }
 
-  const btn = e.target;
-  const isActive = btn.classList.contains('active_btn');
-  const btnValue = btn.dataset.value;
+//   const btn = e.target;
+//   const isActive = btn.classList.contains('active_btn');
+//   const btnValue = btn.dataset.value;
 
-  if (isActive) {
-    selectedSAE.delete(btnValue);
-  } else {
-    selectedSAE.add(btnValue);
-  }
+//   if (isActive) {
+//     selectedSAE.delete(btnValue);
+//   } else {
+//     selectedSAE.add(btnValue);
+//   }
 
-  btn.classList.toggle('active_btn');
+//   btn.classList.toggle('active_btn');
 
-  console.log(selectedSAE);
-}
+//   console.log(selectedSAE);
+// }
