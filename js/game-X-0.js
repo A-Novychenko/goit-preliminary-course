@@ -119,13 +119,15 @@ function onItemClick(e) {
 
   const freeElements = document.querySelectorAll('.js-X-0-item');
   const freeElemArr = [...freeElements].filter(el => el.textContent === '');
-
+  console.log('freeElemArr', freeElemArr);
   const freeElQty = freeElemArr.length;
   const rendom = Math.floor(Math.random() * freeElQty);
+  console.log('rendom', rendom);
 
-  freeElemArr[rendom].textContent = 0;
-
-  step0.push(Number(freeElemArr[rendom].dataset.id));
+  if (freeElemArr.length) {
+    freeElemArr[rendom].textContent = 0;
+    step0.push(Number(freeElemArr[rendom].dataset.id));
+  }
 
   const isWin = checkWinner(step0);
 
@@ -133,6 +135,12 @@ function onItemClick(e) {
     alert(`0 is Winner!`);
     reset();
 
+    return;
+  }
+
+  if (stepX.length === 5) {
+    alert(`=========`);
+    reset();
     return;
   }
 }
