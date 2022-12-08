@@ -21,6 +21,19 @@ img {
     display: block;
 }
 
+.container {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main-title {
+    font-size: 40px;
+    text-align: center;
+}
+
 .container__btn {
     display: flex;
     flex-wrap: wrap;
@@ -50,4 +63,56 @@ img {
     border: 2px solid red;
     font-weight: 700;
     font-size: 22px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 20px;
+
+}
+
+.nav-link {
+    display: block;
+    padding: 20px;
+
+    border: 1px solid blue;
+    background-color: #a1bae0;
+
+    text-align: center;
+    text-decoration: none;
+    color: #0000ff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* GAME X-0 */
+.game__content {
+    width: 156px;
+    border: 1px solid blue;
+    margin: 0 auto;
+}
+
+.game__item {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid blue;
+    cursor: pointer;
+    transition: background 1000;
+
+}
+
+.game__item:hover {
+    background-color: green;
 }
