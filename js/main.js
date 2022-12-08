@@ -2538,17 +2538,17 @@
 //   console.log(x);
 // }
 
-document.addEventListener(
-  'scroll',
-  _.debounce(onStartScroll, 2000, { leading: true, trailing: false })
-);
+// document.addEventListener(
+//   'scroll',
+//   _.debounce(onStartScroll, 2000, { leading: true, trailing: false })
+// );
 
-function onStartScroll(e) {
-  console.log('Сработал обработчик события=опция laeding!');
-}
+// function onStartScroll(e) {
+//   console.log('Сработал обработчик события=опция laeding!');
+// }
 
-document.addEventListener('scroll', _.debounce(onStopScroll, 2000));
+// document.addEventListener('scroll', _.debounce(onStopScroll, 2000));
 
-function onStopScroll(e) {
-  console.log('Сработал обработчик события=опция trailing!');
-}
+// function onStopScroll(e) {
+//   console.log('Сработал обработчик события=опция trailing!');
+// }
