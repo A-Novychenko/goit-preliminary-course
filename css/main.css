@@ -111,18 +111,18 @@ img {
 
 /* GAME X-0 */
 .game__content {
-    width: 156px;
+    width: 306px;
     border: 1px solid blue;
     margin: 0 auto;
 }
 
 .game__item {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
 
-    font-size: 25px;
-    line-height: 50px;
+    font-size: 70px;
+    line-height: 80px;
     text-align: center;
     vertical-align: middle;
     border: 1px solid blue;
