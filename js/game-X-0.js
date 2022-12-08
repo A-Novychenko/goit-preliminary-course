@@ -119,10 +119,8 @@ function onItemClick(e) {
 
   const freeElements = document.querySelectorAll('.js-X-0-item');
   const freeElemArr = [...freeElements].filter(el => el.textContent === '');
-  console.log('freeElemArr', freeElemArr);
   const freeElQty = freeElemArr.length;
   const rendom = Math.floor(Math.random() * freeElQty);
-  console.log('rendom', rendom);
 
   if (freeElemArr.length) {
     freeElemArr[rendom].textContent = 0;
@@ -139,7 +137,7 @@ function onItemClick(e) {
   }
 
   if (stepX.length === 5) {
-    alert(`=========`);
+    alert(`=== draw ===`);
     reset();
     return;
   }
