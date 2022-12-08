@@ -36,6 +36,7 @@ function onItemClick(e) {
   if (player === 'X') {
     stepX.push(id);
     const isWin = checkWinner(stepX);
+
     if (isWin) {
       alert(`${player} is Winner!`);
       reset();
@@ -45,6 +46,7 @@ function onItemClick(e) {
   } else {
     step0.push(id);
     const isWin = checkWinner(step0);
+
     if (isWin) {
       alert(`${player} is Winner!`);
       reset();
@@ -64,5 +66,5 @@ function reset() {
   content.innerHTML = markup;
   player = 'X';
   stepX = [];
-  stepX = [];
+  step0 = [];
 }
