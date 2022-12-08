@@ -72,6 +72,8 @@
 ////////////////////////////////////////////////////////////////////////
 
 const content = document.querySelector('.game__content');
+const modal = document.querySelector('[data-modal]');
+const modalClose = document.querySelector('[data-modal-close]');
 
 let markup = '';
 let player = 'X';
@@ -137,7 +139,9 @@ function onItemClick(e) {
   }
 
   if (stepX.length === 5) {
-    alert(`=== draw ===`);
+    // alert(`=== draw ===`);
+    modal.classList.toggle('is-hidden');
+
     reset();
     return;
   }
@@ -152,4 +156,10 @@ function reset() {
   player = 'X';
   stepX = [];
   step0 = [];
+}
+
+//close modal
+modalClose.addEventListener('click', onModalClose);
+function onModalClose(e) {
+  e.currentTarget.classList.toggle('is-hidden');
 }
