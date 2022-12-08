@@ -3,8 +3,8 @@ const content = document.querySelector('.game__content');
 let markup = '';
 let player = 'X';
 
-const stepX = [];
-const step0 = [];
+let stepX = [];
+let step0 = [];
 const win = [
   [1, 2, 3],
   [4, 5, 6],
@@ -35,14 +35,22 @@ function onItemClick(e) {
 
   if (player === 'X') {
     stepX.push(id);
-    iskWinner(stepX, player);
+    const isWin = checkWinner(stepX);
+    if (isWin) {
+      alert(`${player} is Winner!`);
+      reset();
 
-    return;
+      return;
+    }
   } else {
     step0.push(id);
-    iskWinner(step0, player);
+    const isWin = checkWinner(step0);
+    if (isWin) {
+      alert(`${player} is Winner!`);
+      reset();
 
-    return;
+      return;
+    }
   }
 
   player = player === 'X' ? '0' : 'X';
@@ -52,16 +60,9 @@ function checkWinner(arr) {
   return win.some(el => el.every(el => arr.includes(el)));
 }
 
-function iskWinner(step, player) {
-  const isWin = checkWinner(step);
-  if (isWin) {
-    alert(`${player} is Winner!`);
-    reset();
-  }
-}
-
 function reset() {
   content.innerHTML = markup;
+  player = 'X';
   stepX = [];
   stepX = [];
 }
