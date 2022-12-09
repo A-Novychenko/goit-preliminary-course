@@ -1,3 +1,7 @@
+body {
+    box-sizing: border-box;
+}
+
 ul {
     list-style: none;
     margin: 0;
@@ -59,14 +63,17 @@ img {
     display: flex;
     align-items: flex-start;
 
-    width: 300px;
+    /* width: 300px;
     padding: 20px;
-    border: 1px solid gray;
-    text-decoration: none;
+    border: 1px solid gray; */
+
 
 }
 
 .card__link {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid gray;
     text-decoration: none;
     color: black;
 
@@ -106,5 +113,14 @@ img {
 }
 
 .card__descr {
-    height: 150px;
+
+    min-height: 75px;
+}
+
+.cart__list {
+    margin-top: 15px;
+}
+
+.cart__list .card {
+    background-color: dimgrey;
 }

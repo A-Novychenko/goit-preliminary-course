@@ -24,18 +24,24 @@ const instruments = [
   },
 ];
 
+const dataCart = [];
+const dataFavorit = [];
+
+const cart = document.querySelector('.js-cart');
+const favorit = document.querySelector('.js-favorit');
+const cartList = document.querySelector('.js-cart-list');
 const cardList = document.querySelector('.cards');
 const cardMarkup = instruments.reduce(
   (acc, { id, img, name, price, descr }) => {
-    acc += `<li class="card" data-id="#">
-                <a class="card__link" href="">
-                    <p class="card__name">${name}</p>
-                    <img class="card_img" src="${img}" alt="${name}" width="250">
-                    <p class="">${descr}</p>
-                    <p class="card__price">${price}кредитів</p>
-                    <p class="card__id">Код товара:${id}</p>
-                    <button class="card__add-to-cart" type="button">КУПИТИ</button>
-                    <button class="card__add-to-favorite" type="button">ЗАПАМЯТАТИ</button>
+    acc += `<li class="card js-product" data-product-id="${id}">
+                <a class="card__link js-cardLink" href="./online-store-card.html">
+                    <h2 class="card__name js-cardLink">${name}</h2>
+                    <img class="card_img js-cardLink" src="${img}" alt="${name}" width="250">
+                    <p class="card__descr js-cardLink">${descr}</p>
+                    <p class="card__id js-cardLink">Код товара: ${id}</p>
+                    <p class="card__price js-cardLink">${price} кредитів</p>
+                    <button class="card__add-to-cart js-addToCart" type="button">КУПИТИ</button>
+                    <button class="card__add-to-favorite js-addToFavorit" type="button">ЗАПАМЯТАТИ</button>
                 </a>
             </li>`;
     return acc;
@@ -43,5 +49,69 @@ const cardMarkup = instruments.reduce(
 
   ''
 );
-
 cardList.insertAdjacentHTML('beforeend', cardMarkup);
+
+cardList.addEventListener('click', onBtnClick);
+
+function onBtnClick(e) {
+  if (e.target.classList.contains('js-addToCart')) {
+    e.preventDefault();
+    pushCurrentProduct(e, dataCart);
+
+    if (dataCart.length) {
+      cart.textContent = `У кошику ${dataCart.length} товарів`;
+    }
+  } else if (e.target.classList.contains('js-addToFavorit')) {
+    e.preventDefault();
+    pushCurrentProduct(e, dataFavorit);
+
+    if (dataFavorit.length) {
+      favorit.textContent = `В обраних ${dataFavorit.length} товарів`;
+    }
+  } else if (e.target.classList.contains('js-cardLink')) {
+    console.log('click on link');
+
+    console.log(e.defaultPrevented);
+  }
+  createCart();
+}
+
+function pushCurrentProduct(e, data) {
+  const currentProduct = e.target.closest('.js-product');
+  const currentProductId = Number(currentProduct.dataset.productId);
+  const currentProductArr = [...instruments].filter(el => el.id === currentProductId);
+  const currentProductObj = { ...currentProductArr[0] };
+  currentProductObj.qty = 1;
+
+  const haveProduct = data.find(el => el.id === currentProductId);
+
+  if (haveProduct) {
+    haveProduct.qty += 1;
+  } else {
+    data.push(currentProductObj);
+  }
+}
+
+function createCart() {
+  const cartMarkup = dataCart.reduce(
+    (acc, { id, img, name, price, descr, qty }) => {
+      acc += `<li class="card js-product" data-product-id="${id}">
+                <a class="card__link js-cardLink" href="./online-store-card.html">
+                    <h2 class="card__name js-cardLink">${name}</h2>
+                    <img class="card_img js-cardLink" src="${img}" alt="${name}" width="250">
+                    <p class="card__descr js-cardLink">${descr}</p>
+                    <p class="card__id js-cardLink">Код товара: ${id}</p>
+                    <p class="card__qty js-cardLink">Кількість: ${qty}</p>
+                    <p class="card__price js-cardLink">${price} кредитів</p>
+                    <button class="card__add-to-cart js-addToCart" type="button">Видалити</button>
+                    <button class="card__add-to-favorite js-addToFavorit" type="button">ЗАПАМЯТАТИ</button>
+                </a>
+            </li>`;
+      return acc;
+    },
+
+    ''
+  );
+
+  cartList.innerHTML = cartMarkup;
+}
