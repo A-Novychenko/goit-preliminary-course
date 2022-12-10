@@ -24,8 +24,10 @@ const instruments = [
   },
 ];
 
+///////       DATA      //////////
 const dataCart = [];
 const dataFavorit = [];
+///////       /DATA      //////////
 
 const cart = document.querySelector('.js-cart');
 const favorit = document.querySelector('.js-favorit');
@@ -89,6 +91,7 @@ function pushCurrentProduct(e, data) {
   }
 }
 
+///////       CART(this will be a new page or modal)      //////////
 function createCart() {
   const cartMarkup = dataCart.reduce(
     (acc, { id, img, name, price, descr, qty }) => {
@@ -112,3 +115,5 @@ function createCart() {
 
   cartList.innerHTML = cartMarkup;
 }
+
+///////       /CART(this will be a new page or modal)      //////////
