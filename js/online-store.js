@@ -79,16 +79,13 @@ function onBtnClick(e) {
 function pushCurrentProduct(e, data) {
   const currentProduct = e.target.closest('.js-product');
   const currentProductId = Number(currentProduct.dataset.productId);
-  const currentProductArr = [...instruments].filter(el => el.id === currentProductId);
-  const currentProductObj = { ...currentProductArr[0] };
-  currentProductObj.qty = 1;
-
+  const addedProduct = { ...instruments.find(el => el.id === currentProductId), qty: 1 };
   const haveProduct = data.find(el => el.id === currentProductId);
 
   if (haveProduct) {
     haveProduct.qty += 1;
   } else {
-    data.push(currentProductObj);
+    data.push(addedProduct);
   }
 }
 
