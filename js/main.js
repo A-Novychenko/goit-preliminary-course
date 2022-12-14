@@ -2552,3 +2552,51 @@
 // function onStopScroll(e) {
 //   console.log('Сработал обработчик события=опция trailing!');
 // }
+
+// const x = 5;
+// const str = 'hello';
+// const arr = [1, 2, 3];
+// const bul = true;
+// const n = null;
+// const obj = {
+//   x: 5,
+//   str: 'hello',
+//   arr: [1, 2, 3],
+// };
+
+// const xj = JSON.stringify(x);
+// const strj = JSON.stringify(str);
+// const arrj = JSON.stringify(arr);
+// const bulj = JSON.stringify(bul);
+// const nJ = JSON.stringify(n);
+// const objJ = JSON.stringify(obj);
+// console.log(xj);
+// console.log(strj);
+// console.log(arrj);
+// console.log(bulj);
+// console.log(nJ);
+// console.log(objJ);
+
+// const f = () => {
+//   'hello';
+// };
+// const fj = JSON.stringify(f);
+// console.log(fj);
+// const foo = function () {
+//   'hello';
+// };
+// const fooj = JSON.stringify(foo);
+// console.log(fooj);
+
+// const xJP = JSON.parse(xj);
+// const strJP = JSON.parse(strj);
+// const arrJP = JSON.parse(arrj);
+// const bulJP = JSON.parse(bulj);
+// const nJP = JSON.parse(nJ);
+// const objJP = JSON.parse(objJ);
+// console.log(xJP);
+// console.log(strJP);
+// console.log(arrJP);
+// console.log(bulJP);
+// console.log(nJP);
+// console.log(objJP);

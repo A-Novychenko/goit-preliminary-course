@@ -27,6 +27,7 @@ const instruments = [
 ///////       DATA      //////////
 const dataCart = [];
 const dataFavorit = [];
+
 ///////       /DATA      //////////
 
 const cart = document.querySelector('.js-cart');
@@ -76,6 +77,13 @@ function onBtnClick(e) {
     console.log(e.defaultPrevented);
   }
   createCart();
+  //
+  const localDataCart = JSON.stringify(dataCart);
+  console.log(localDataCart);
+  localStorage.setItem('cartItem', localDataCart);
+  const testData = localStorage.getItem('cartItem');
+  console.log(testData);
+  //
 }
 
 function pushCurrentProduct(e, data) {
