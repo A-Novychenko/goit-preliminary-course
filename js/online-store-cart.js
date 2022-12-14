@@ -1,18 +1,13 @@
-// const localDataCart = JSON.stringify(dataCart);
 const localDataCart = localStorage.getItem('cartItem');
 const dataCart = JSON.parse(localDataCart);
 console.log(dataCart);
-//
-///////       /DATA      //////////
 
-const cart = document.querySelector('.js-cart');
-const favorit = document.querySelector('.js-favorit');
 const cartList = document.querySelector('.js-cart-list');
-const cardList = document.querySelector('.cards');
 
-const cartMarkup = dataCart.reduce(
-  (acc, { id, img, name, price, descr, qty }) => {
-    acc += `<li class="card js-product" data-product-id="${id}">
+if (localDataCart) {
+  const cartMarkup = dataCart.reduce(
+    (acc, { id, img, name, price, descr, qty }) => {
+      acc += `<li class="card js-product" data-product-id="${id}">
                 <a class="card__link js-cardLink" href="./online-store-card.html">
                     <h2 class="card__name js-cardLink">${name}</h2>
                     <img class="card_img js-cardLink" src="${img}" alt="${name}" width="250">
@@ -24,10 +19,21 @@ const cartMarkup = dataCart.reduce(
                     <button class="card__add-to-favorite js-addToFavorit" type="button">ЗАПАМЯТАТИ</button>
                 </a>
             </li>`;
-    return acc;
-  },
+      return acc;
+    },
 
-  ''
-);
+    ''
+  );
 
-cartList.innerHTML = cartMarkup;
+  cartList.innerHTML =
+    cartMarkup + '<button type="button" class="js-clean"> Очмстити кошик</button>';
+
+  const btnClean = document.querySelector('.js-clean');
+  btnClean.addEventListener('click', onBtnClick);
+
+  function onBtnClick() {
+    localStorage.removeItem('cartItem');
+    console.log(localStorage.getItem('cartItem'));
+    cartList.innerHTML = '';
+  }
+}
