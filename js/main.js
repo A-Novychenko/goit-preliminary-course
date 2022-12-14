@@ -2600,3 +2600,38 @@
 // console.log(bulJP);
 // console.log(nJP);
 // console.log(objJP);
+
+const save = (key, value) => {
+  try {
+    const serializedState = JSON.stringify(value);
+    localStorage.setItem(key, serializedState);
+  } catch (error) {
+    console.error('Set state error: ', error.message);
+  }
+};
+
+const load = key => {
+  try {
+    const serializedState = localStorage.getItem(key);
+
+    return serializedState === null ? undefined : JSON.parse(serializedState);
+  } catch (error) {
+    console.error('Get state error: ', error.message);
+  }
+};
+const remove = key => {
+  try {
+    const serializedState = localStorage.removeItem(key);
+  } catch (error) {
+    console.error('Get state error: ', error.message);
+  }
+};
+save('ttt', 'jjj');
+console.log(load('ttt'));
+remove('ttt');
+console.log(load('ttt'));
+
+export default {
+  save,
+  load,
+};
