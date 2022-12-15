@@ -2552,3 +2552,86 @@
 // function onStopScroll(e) {
 //   console.log('Сработал обработчик события=опция trailing!');
 // }
+
+// const x = 5;
+// const str = 'hello';
+// const arr = [1, 2, 3];
+// const bul = true;
+// const n = null;
+// const obj = {
+//   x: 5,
+//   str: 'hello',
+//   arr: [1, 2, 3],
+// };
+
+// const xj = JSON.stringify(x);
+// const strj = JSON.stringify(str);
+// const arrj = JSON.stringify(arr);
+// const bulj = JSON.stringify(bul);
+// const nJ = JSON.stringify(n);
+// const objJ = JSON.stringify(obj);
+// console.log(xj);
+// console.log(strj);
+// console.log(arrj);
+// console.log(bulj);
+// console.log(nJ);
+// console.log(objJ);
+
+// const f = () => {
+//   'hello';
+// };
+// const fj = JSON.stringify(f);
+// console.log(fj);
+// const foo = function () {
+//   'hello';
+// };
+// const fooj = JSON.stringify(foo);
+// console.log(fooj);
+
+// const xJP = JSON.parse(xj);
+// const strJP = JSON.parse(strj);
+// const arrJP = JSON.parse(arrj);
+// const bulJP = JSON.parse(bulj);
+// const nJP = JSON.parse(nJ);
+// const objJP = JSON.parse(objJ);
+// console.log(xJP);
+// console.log(strJP);
+// console.log(arrJP);
+// console.log(bulJP);
+// console.log(nJP);
+// console.log(objJP);
+
+const save = (key, value) => {
+  try {
+    const serializedState = JSON.stringify(value);
+    localStorage.setItem(key, serializedState);
+  } catch (error) {
+    console.error('Set state error: ', error.message);
+  }
+};
+
+const load = key => {
+  try {
+    const serializedState = localStorage.getItem(key);
+
+    return serializedState === null ? undefined : JSON.parse(serializedState);
+  } catch (error) {
+    console.error('Get state error: ', error.message);
+  }
+};
+const remove = key => {
+  try {
+    const serializedState = localStorage.removeItem(key);
+  } catch (error) {
+    console.error('Get state error: ', error.message);
+  }
+};
+save('ttt', 'jjj');
+console.log(load('ttt'));
+remove('ttt');
+console.log(load('ttt'));
+
+export default {
+  save,
+  load,
+};
