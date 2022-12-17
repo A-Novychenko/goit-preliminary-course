@@ -2601,37 +2601,58 @@
 // console.log(nJP);
 // console.log(objJP);
 
-const save = (key, value) => {
-  try {
-    const serializedState = JSON.stringify(value);
-    localStorage.setItem(key, serializedState);
-  } catch (error) {
-    console.error('Set state error: ', error.message);
-  }
-};
+// const save = (key, value) => {
+//   try {
+//     const serializedState = JSON.stringify(value);
+//     localStorage.setItem(key, serializedState);
+//   } catch (error) {
+//     console.error('Set state error: ', error.message);
+//   }
+// };
 
-const load = key => {
-  try {
-    const serializedState = localStorage.getItem(key);
+// const load = key => {
+//   try {
+//     const serializedState = localStorage.getItem(key);
 
-    return serializedState === null ? undefined : JSON.parse(serializedState);
-  } catch (error) {
-    console.error('Get state error: ', error.message);
-  }
-};
-const remove = key => {
-  try {
-    const serializedState = localStorage.removeItem(key);
-  } catch (error) {
-    console.error('Get state error: ', error.message);
-  }
-};
-save('ttt', 'jjj');
-console.log(load('ttt'));
-remove('ttt');
-console.log(load('ttt'));
+//     return serializedState === null ? undefined : JSON.parse(serializedState);
+//   } catch (error) {
+//     console.error('Get state error: ', error.message);
+//   }
+// };
+// const remove = key => {
+//   try {
+//     const serializedState = localStorage.removeItem(key);
+//   } catch (error) {
+//     console.error('Get state error: ', error.message);
+//   }
+// };
+// save('ttt', 'jjj');
+// console.log(load('ttt'));
+// remove('ttt');
+// console.log(load('ttt'));
 
-export default {
-  save,
-  load,
-};
+// export default {
+//   save,
+//   load,
+// };
+
+console.log('first log');
+
+console.log(
+  setTimeout(() => {
+    console.log('second log');
+  }, 30000)
+);
+
+console.log('third log');
+
+// // Will run first
+// console.log("First log");
+
+// setTimeout(() => {
+//   // Will run last, after 2000 milliseconds
+//   console.log("Second log");
+// }, 2000);
+
+// // Will run second
+// console.log("Third log");
