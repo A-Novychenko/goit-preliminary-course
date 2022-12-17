@@ -244,3 +244,32 @@ img {
 }
 
 /* /feedback */
+
+
+/* timer */
+.time {
+    text-align: center;
+    font-size: 100px;
+    font-weight: 900;
+    color: #6666f5;
+}
+
+.time-btn {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.time-btn button {
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #6666f5;
+    color: white;
+}
+
+/* /timer */

@@ -2636,15 +2636,15 @@
 //   load,
 // };
 
-console.log('first log');
+// console.log('first log');
 
-console.log(
-  setTimeout(() => {
-    console.log('second log');
-  }, 30000)
-);
+// console.log(
+//   setTimeout(() => {
+//     console.log('second log');
+//   }, 30000)
+// );
 
-console.log('third log');
+// console.log('third log');
 
 // // Will run first
 // console.log("First log");
@@ -2656,3 +2656,35 @@ console.log('third log');
 
 // // Will run second
 // console.log("Third log");
+
+// const addition = (a, b) => a + b;
+
+// let counter = 1;
+// const timerId = setTimeout(addition, 5000, 1, 2);
+
+// console.log('timer: ', timerId);
+// console.log('counter: ', counter);
+
+// function addition(a, b) {
+//   counter = a + b;
+//   console.log('counter in function: ', counter);
+// }
+
+// if (!counter) {
+//   clearTimeout(timerId);
+// }
+// console.log('counter after function: ', counter);
+// const startTime = 0;
+// const endTime = 10000;
+// let currentTime = 0;
+
+// console.log('timer for one minute');
+
+// const timerId = setInterval(() => {
+//   currentTime += 1;
+//   console.log(`Current time: ${currentTime}`);
+// }, 1000);
+
+// if (currentTime === endTime) {
+//   clearInterval(timerId);
+// }
