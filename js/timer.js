@@ -35,50 +35,48 @@ function stop() {
 function refresh() {
   clearInterval(timerId);
 }
-///
-///
 
-// btn.addEventListener('click', onBtnClik);
+btn.addEventListener('click', onBtnClik);
 
-// function onBtnClik(e) {
-//   if (e.target.classList.contains('js-start')) {
-//     startBtn.setAttribute('disabled', 'enabled');
-//     startBtn.classList.toggle('timer-start-disabled');
+function onBtnClik(e) {
+  if (e.target.classList.contains('js-start')) {
+    startBtn.setAttribute('disabled', 'enabled');
+    startBtn.classList.toggle('timer-start-disabled');
 
-//     stopBtn.removeAttribute('disabled');
-//     stopBtn.classList.toggle('timer-start-disabled');
+    stopBtn.removeAttribute('disabled');
+    stopBtn.classList.toggle('timer-start-disabled');
 
-//     start();
-//     return;
-//   }
+    start();
+    return;
+  }
 
-//   if (e.target.classList.contains('js-stop')) {
-//     startBtn.removeAttribute('disabled');
-//     startBtn.classList.toggle('timer-start-disabled');
-//     startBtn.textContent = 'Continue';
+  if (e.target.classList.contains('js-stop')) {
+    startBtn.removeAttribute('disabled');
+    startBtn.classList.toggle('timer-start-disabled');
+    startBtn.textContent = 'Continue';
 
-//     stopBtn.setAttribute('disabled', 'enabled');
-//     stopBtn.classList.toggle('timer-start-disabled');
+    stopBtn.setAttribute('disabled', 'enabled');
+    stopBtn.classList.toggle('timer-start-disabled');
 
-//     stop();
-//     return;
-//   }
+    stop();
+    return;
+  }
 
-//   if (e.target.classList.contains('js-refresh')) {
-//     const isRunning = startBtn.classList.contains('timer-start-disabled');
+  if (e.target.classList.contains('js-refresh')) {
+    const isRunning = startBtn.classList.contains('timer-start-disabled');
 
-//     if (isRunning) {
-//       startBtn.classList.toggle('timer-start-disabled');
-//       startBtn.removeAttribute('disabled');
+    if (isRunning) {
+      startBtn.classList.toggle('timer-start-disabled');
+      startBtn.removeAttribute('disabled');
 
-//       stopBtn.classList.toggle('timer-start-disabled');
-//       stopBtn.setAttribute('disabled', 'enabled');
-//     }
+      stopBtn.classList.toggle('timer-start-disabled');
+      stopBtn.setAttribute('disabled', 'enabled');
+    }
 
-//     currentTime = 0;
-//     timeValue.textContent = 0;
-//     startBtn.textContent = 'Start';
-//     refresh();
-//     return;
-//   }
-// }
+    currentTime = 0;
+    timeValue.textContent = 0;
+    startBtn.textContent = 'Start';
+    refresh();
+    return;
+  }
+}
