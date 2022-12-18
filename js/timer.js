@@ -2,9 +2,10 @@ const timeValue = document.querySelector('.js-time-value');
 const btn = document.querySelector('.time-btn');
 const continueBtn = document.querySelector('.js-continue');
 const stopBtn = document.querySelector('.js-stop');
-const form = document.querySelector('.js-form-time');
-const beginBtn = document.querySelector('.js-begin');
 const refreshBtn = document.querySelector('.js-refresh');
+const form = document.querySelector('.js-form-time');
+const inputForm = document.querySelector('.js-input-time');
+const beginBtn = document.querySelector('.js-begin');
 
 let startTime = 1;
 let timerId = null;
@@ -17,6 +18,7 @@ function onFormSubmit(e) {
   start();
   e.currentTarget.reset();
   beginBtn.setAttribute('disabled', 'disabled');
+  inputForm.setAttribute('disabled', 'disabled');
   stopBtn.removeAttribute('disabled');
   stopBtn.classList.toggle('timer-start-disabled');
   refreshBtn.removeAttribute('disabled');
@@ -73,6 +75,7 @@ function onBtnClik(e) {
     refreshBtn.setAttribute('disabled', 'disabled');
     refreshBtn.classList.toggle('timer-start-disabled');
     beginBtn.removeAttribute('disabled');
+    inputForm.removeAttribute('disabled');
 
     if (isRunning) {
       stopBtn.classList.toggle('timer-start-disabled');
