@@ -1,12 +1,12 @@
 const timeValue = document.querySelector('.js-time-value');
 const btn = document.querySelector('.time-btn');
-const startBtn = document.querySelector('.js-start');
+const continueBtn = document.querySelector('.js-continue');
 const stopBtn = document.querySelector('.js-stop');
 const form = document.querySelector('.js-form-time');
+const beginBtn = document.querySelector('.js-begin');
+const refreshBtn = document.querySelector('.js-refresh');
 
 let startTime = 1;
-
-let currentTime = 0;
 let timerId = null;
 
 form.addEventListener('submit', onFormSubmit);
@@ -16,6 +16,11 @@ function onFormSubmit(e) {
   startTime = Number(e.target.elements.startTime.value);
   start();
   e.currentTarget.reset();
+  beginBtn.setAttribute('disabled', 'disabled');
+  stopBtn.removeAttribute('disabled');
+  stopBtn.classList.toggle('timer-start-disabled');
+  refreshBtn.removeAttribute('disabled');
+  refreshBtn.classList.toggle('timer-start-disabled');
 }
 
 function start() {
@@ -24,6 +29,7 @@ function start() {
     timeValue.textContent = startTime;
     if (!startTime) {
       stop();
+      beginBtn.removeAttribute('disabled');
     }
   }, 1000);
 }
@@ -39,9 +45,9 @@ function refresh() {
 btn.addEventListener('click', onBtnClik);
 
 function onBtnClik(e) {
-  if (e.target.classList.contains('js-start')) {
-    startBtn.setAttribute('disabled', 'enabled');
-    startBtn.classList.toggle('timer-start-disabled');
+  if (e.target.classList.contains('js-continue')) {
+    continueBtn.setAttribute('disabled', 'enabled');
+    continueBtn.classList.toggle('timer-start-disabled');
 
     stopBtn.removeAttribute('disabled');
     stopBtn.classList.toggle('timer-start-disabled');
@@ -51,9 +57,8 @@ function onBtnClik(e) {
   }
 
   if (e.target.classList.contains('js-stop')) {
-    startBtn.removeAttribute('disabled');
-    startBtn.classList.toggle('timer-start-disabled');
-    startBtn.textContent = 'Continue';
+    continueBtn.removeAttribute('disabled');
+    continueBtn.classList.toggle('timer-start-disabled');
 
     stopBtn.setAttribute('disabled', 'enabled');
     stopBtn.classList.toggle('timer-start-disabled');
@@ -63,19 +68,21 @@ function onBtnClik(e) {
   }
 
   if (e.target.classList.contains('js-refresh')) {
-    const isRunning = startBtn.classList.contains('timer-start-disabled');
+    const isRunning = continueBtn.classList.contains('timer-start-disabled');
+
+    refreshBtn.setAttribute('disabled', 'disabled');
+    refreshBtn.classList.toggle('timer-start-disabled');
+    beginBtn.removeAttribute('disabled');
 
     if (isRunning) {
-      startBtn.classList.toggle('timer-start-disabled');
-      startBtn.removeAttribute('disabled');
-
       stopBtn.classList.toggle('timer-start-disabled');
       stopBtn.setAttribute('disabled', 'enabled');
+    } else {
+      continueBtn.classList.toggle('timer-start-disabled');
+      continueBtn.setAttribute('disabled', 'enabled');
     }
 
-    currentTime = 0;
     timeValue.textContent = 0;
-    startBtn.textContent = 'Start';
     refresh();
     return;
   }

@@ -28,8 +28,8 @@
 
 <section class="container">
     <form class="js-form-time">
-        <input name="startTime" class="js-input-time" type="text" placeholder="Введіть час для відліку">
-        <button class="js-input-time" type="submit">Почати</button>
+        <input name="startTime" class="js-input-time" type="number" placeholder="Введіть час для відліку" min="1">
+        <button class="js-begin" type="submit">Почати</button>
     </form>
 
     <div class="timer">
@@ -37,9 +37,9 @@
     </div>
 
     <div class="time-btn">
-        <button class="start js-start" type="button">Start</button>
+        <button class="continue timer-start-disabled js-continue" type="button">Continue</button>
         <button class="stop timer-start-disabled js-stop" type="button" disabled>Stop</button>
-        <button class="refresh js-refresh" type="button">Refresh</button>
+        <button class="refresh timer-start-disabled js-refresh " type="button" disabled>Refresh</button>
     </div>
 </section>
 
