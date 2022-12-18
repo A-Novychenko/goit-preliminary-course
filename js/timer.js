@@ -59,7 +59,7 @@ function start() {
 
     timeValue.textContent = startTime;
     if (!startTime) {
-      // alert('Час вийшов!!!');
+      alert('Час вийшов!!! (Замість alert буде модальне вікно)');
       stop();
       refresh();
     }
@@ -104,6 +104,4 @@ function refresh() {
     continueBtn.classList.toggle('timer-start-disabled');
     continueBtn.setAttribute('disabled', 'enabled');
   }
-
-  // timeValue.textContent = 0;
 }
