@@ -2688,3 +2688,15 @@
 // if (currentTime === endTime) {
 //   clearInterval(timerId);
 // }
+
+// const timerId = setTimeout(callback, 1000)
+// const timerId2 = setInterval(callback, 1000)
+// clearTimeout(timerId);
+// clearInterval(timerId2);
+
+// const timerId2 = setInterval(() => console.log('hello'), 1000);
+// const timerId = setTimeout(callback, 10000);
+
+// function callback() {
+//   clearInterval(timerId2);
+// }
