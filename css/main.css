@@ -294,6 +294,10 @@ img {
     background-color: #0b0bf5;
 }
 
+.time-btn button.timer-start-disabled:hover {
+    background-color: #858585;
+}
+
 .timer-start-disabled {
     background-color: #858585;
     color: #3b3939;
