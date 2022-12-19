@@ -2688,3 +2688,59 @@
 // if (currentTime === endTime) {
 //   clearInterval(timerId);
 // }
+
+// console.log('log1');
+// console.log(setTimeout(callback, 1000));
+// console.log('log3');
+
+// function callback() {
+//   console.log('log2');
+// }
+
+// const foo = () => console.log('log INTERVAL');
+// const timerID = setInterval(foo, 1000);
+
+// console.log('log3');
+
+// console.log(
+//   'log1',
+//   setTimeout(() => clearInterval(timerID), 10000)
+// );
+
+// const date = new Date();
+// console.log(date);
+// console.log(date.toString());
+
+// const startDateNumber = new Date(0);
+// console.log(startDateNumber);
+// const inputDate = new Date(1671050216160);
+// console.log(inputDate);
+
+// const startDate = new Date();
+// const currentDate = startDate.getTime();
+// console.log(currentDate);
+
+// const newYearDate = new Date('January 1, 2023');
+// console.log(newYearDate);
+
+// console.log(new Date('2030-03-16'));
+// console.log(new Date('2030-03'));
+// console.log(new Date('2018'));
+// console.log(new Date('03/16/2030'));
+// console.log(new Date('2030/03/16'));
+// console.log(new Date('2030/3/16'));
+// console.log(new Date('March 16, 2030'));
+// console.log(new Date('March 16, 2030 14:25:00'));
+// console.log(new Date('2030-03-16 14:25:00'));
+// console.log(new Date('2030-03-16T14:25:00'));
+// console.log(new Date('16 March 2030'));
+
+const d = new Date('2022-12-03 20:12:00');
+
+console.log(d);
+
+const nYD = new Date(2023, 0, 1, 0, 0, 0);
+console.log(nYD);
+
+const curD = new Date();
+console.log(curD.getTime());
