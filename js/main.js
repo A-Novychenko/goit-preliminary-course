@@ -2735,6 +2735,17 @@
 // console.log(new Date('2030-03-16T14:25:00'));
 // console.log(new Date('16 March 2030'));
 
+// const timerId = setTimeout(callback, 1000)
+// const timerId2 = setInterval(callback, 1000)
+// clearTimeout(timerId);
+// clearInterval(timerId2);
+
+// const timerId2 = setInterval(() => console.log('hello'), 1000);
+// const timerId = setTimeout(callback, 10000);
+
+// function callback() {
+//   clearInterval(timerId2);
+// }
 const d = new Date('2022-12-03 20:12:00');
 
 console.log(d);

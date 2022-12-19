@@ -17,30 +17,24 @@
             <li class="nav-item">
                 <a class="nav-link" href="./index.html">HOME</a>
             </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="./timer.html">Оновити сторінку</a>
-            </li> -->
-            <!-- <li class="nav-item"></li> -->
         </ul>
     </nav>
 
 </header>
 
 <section class="container">
-    <form class="js-form-time">
-        <input name="startTime" class="js-input-time" type="number" placeholder="Введіть час для відліку" min="1">
-        <button class="js-begin" type="submit">Почати</button>
+    <form class="form js-form-time">
+        <label class="label-time js-start-time-label" for="start-time">Enter the countdown time in seconds</label>
+        <input id="start-time" name="startTime" class="input-time js-input-time" type="number" min="1">
+        <p class="input-time time-timer btn-hidden js-time-value">0</p>
+
+        <div class="time-btn">
+            <button class="begin js-begin" type="submit">Start</button>
+            <button class="continue btn-hidden timer-start-disabled js-continue" type="button">Continue</button>
+            <button class="stop timer-start-disabled js-stop" type="button" disabled>Stop</button>
+            <button class="refresh timer-start-disabled js-refresh " type="button" disabled>Refresh</button>
+        </div>
     </form>
-
-    <div class="timer">
-        <p class="time js-time-value">0</p>
-    </div>
-
-    <div class="time-btn">
-        <button class="continue timer-start-disabled js-continue" type="button">Continue</button>
-        <button class="stop timer-start-disabled js-stop" type="button" disabled>Stop</button>
-        <button class="refresh timer-start-disabled js-refresh " type="button" disabled>Refresh</button>
-    </div>
 </section>
 
 <script src="./js/timer.js" type="module"></script>

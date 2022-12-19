@@ -1,65 +1,46 @@
-const STORAGE_KEY = 'saveFormData';
+const form = document.querySelector('.feedback-form');
+const inputMail = document.querySelector('.feedback-form input');
+const inputText = document.querySelector('.feedback-form textarea');
 
-const formData = {};
+const STORAGE_KEY = 'feedback-form-state';
+let formData = {};
 
-const refs = {
-  form: document.querySelector('.js-feedback-form'),
-  input: document.querySelector('.js-input-name'),
-  textarea: document.querySelector('.js-feedback-form-textarea'),
-};
+const isThereDataInStorage = localStorage.getItem(STORAGE_KEY);
+let localData = JSON.parse(isThereDataInStorage) || {};
 
-refs.form.addEventListener('click', onFormSubmit);
-// refs.textarea.addEventListener('input', _.throttle(onTextareaInput, 1000));
-refs.form.addEventListener('input', onFormInput);
+form.addEventListener('input', _.throttle(onFormInput, 500));
+form.addEventListener('submit', onFormSubmit);
 
-populate();
-
-function onFormSubmit(e) {
-  if (e.target.classList.contains('js-btn-submit')) {
-    e.preventDefault();
-    e.currentTarget.reset();
-    localStorage.removeItem(STORAGE_KEY);
+if (isThereDataInStorage) {
+  if (localData.email) {
+    inputMail.value = localData.email;
+  }
+  if (localData.message) {
+    inputText.value = localData.message;
   }
 }
-
-// function onTextareaInput(e) {
-//   // const message = e.target.value;
-//   // localStorage.setItem(STORAGE_KEY, message);
-// }
 
 function onFormInput(e) {
   formData[e.target.name] = e.target.value;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...localData, ...formData }));
 }
 
-// function populateInput() {
-//   const savedName = localStorage.getItem(STORAGE_KEY);
-//   const nameObj = JSON.parse(savedName);
-//   if (nameObj) {
-//     refs.input.value = nameObj.name;
-//   }
-// }
-function populate() {
-  const savedData = localStorage.getItem(STORAGE_KEY);
-  console.log('savedData', savedData);
-  const dataObj = JSON.parse(savedData);
-  console.log('dataObj', dataObj);
-  console.log(dataObj);
-
-  // {name: 'adsfvwfvrtdbstredafbvwredav', message: 'wefvwrevwdavwrvervwt'}
-  // {message: 'wefvwrevwdavwrvervwt'}
-  // {name: 'adsfvwfvrtdbstredafbvwredav'}
-  // {}
-
-  if (dataObj) {
-    if (dataObj.name) {
-      refs.input.value = dataObj.name;
-    }
+function onFormSubmit(e) {
+  e.preventDefault();
+  if (inputMail.value === '' || inputText.value === '') {
+    alert('Заповніть всі поля!');
+    return;
   }
 
-  if (dataObj) {
-    if (dataObj.message) {
-      refs.textarea.value = dataObj.message;
-    }
-  }
+  const { email, message } = e.currentTarget.elements;
+  console.log({
+    email: email.value,
+    message: message.value,
+  });
+
+  localStorage.removeItem(STORAGE_KEY);
+  localData = {};
+  formData = {};
+  e.currentTarget.reset();
 }
