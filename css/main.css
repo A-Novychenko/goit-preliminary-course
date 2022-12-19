@@ -266,6 +266,23 @@ img {
     padding: 15px;
 }
 
+.timer {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+    font-weight: 900;
+    color: #6666f5;
+
+
+    font-size: 100px;
+    padding: 15px;
+}
+
+.time-stopwatch {
+    text-align: center;
+}
+
 .time-btn {
     display: flex;
     justify-content: center;

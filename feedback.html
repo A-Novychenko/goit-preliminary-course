@@ -7,25 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <title>form feedback</title>
+    <link rel="stylesheet" href="css/03-feedback.css" />
 </head>
 
 <body>
+    <header class="container">
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">HOME</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
     <main>
         <section class="feedback">
-            <form class="feedback-form js-feedback-form">
+            <form class="feedback-form" autocomplete="off">
                 <label>
-                    <b>Имя</b>
-                    <input class="js-input-name" type="text" name="name" placeholder="Введите ваше имя"
-                        value="Анонимус" />
+                    Email
+                    <input type="email" name="email" autofocus />
                 </label>
                 <label>
-                    <b>Сообщение</b>
-                    <textarea class="js-feedback-form-textarea" name="message" rows="6"></textarea>
+                    Message
+                    <textarea name="message" rows="8"></textarea>
                 </label>
-                <button class="js-btn-submit" type="submit">Оставить отзыв</button>
+                <button type="submit">Submit</button>
             </form>
         </section>
     </main>
+
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="./js/feedback.js" type="module"></script>
 </body>
