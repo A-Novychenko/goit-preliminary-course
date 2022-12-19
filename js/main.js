@@ -2746,12 +2746,74 @@
 // function callback() {
 //   clearInterval(timerId2);
 // }
-const d = new Date('2022-12-03 20:12:00');
+// const d = new Date('2022-12-03 20:12:00');
 
-console.log(d);
+// console.log(d);
 
-const nYD = new Date(2023, 0, 1, 0, 0, 0);
-console.log(nYD);
+// const nYD = new Date(2023, 0, 1, 0, 0, 0);
+// console.log(nYD);
 
-const curD = new Date();
-console.log(curD.getTime());
+// const curD = new Date();
+// console.log(curD.getTime());
+// console.log(new Date(0));
+// "Thu Jan 01 1970 03:00:00 GMT+0300 (Eastern European Standard Time)"
+
+// const g = new Date('2012-12-12 12:12:12');
+// "Thu Jan 01 1970 03:00:15 GMT+0300 (Eastern European Standard Time)"
+// console.log(g.getTime());
+
+// const date = new Date();
+// console.log('Date: ', date);
+
+// // Повертає день місяця від 1 до 31
+// console.log('getDate(): ', date.getDate());
+
+// // Повертає день тижня від 0 до 6
+// console.log('getDay(): ', date.getDay());
+
+// // Повертає місяць від 0 до 11
+// console.log('getMonth(): ', date.getMonth());
+
+// // Повертає рік з 4 цифр
+// console.log('getFullYear(): ', date.getFullYear());
+
+// // Повертає години
+// console.log('getHours(): ', date.getHours());
+
+// // Повертає хвилини
+// console.log('getMinutes(): ', date.getMinutes());
+
+// // Повертає секунди
+// console.log('getSeconds(): ', date.getSeconds());
+
+// // Повертає мілісекунди
+// console.log('getMilliseconds(): ', date.getMilliseconds());
+
+// console.log('UTC');
+
+// const dateUTC = new Date();
+// console.log('Date: ', dateUTC);
+
+// // Повертає день місяця від 1 до 31
+// console.log('getUTCDate(): ', dateUTC.getUTCDate());
+
+// // Повертає день тижня від 0 до 6
+// console.log('getUTCDay(): ', dateUTC.getUTCDay());
+
+// // Повертає місяць від 0 до 11
+// console.log('getUTCMonth(): ', dateUTC.getUTCMonth());
+
+// // Повертає рік з 4 цифр
+// console.log('getUTCFullYear(): ', dateUTC.getUTCFullYear());
+
+// // Повертає години
+// console.log('getUTCHours(): ', dateUTC.getUTCHours());
+
+// // Повертає хвилини
+// console.log('getUTCMinutes(): ', dateUTC.getUTCMinutes());
+
+// // Повертає секунди
+// console.log('getUTCSeconds(): ', dateUTC.getUTCSeconds());
+
+// // Повертає мілісекунди
+// console.log('getUTCMilliseconds(): ', dateUTC.getUTCMilliseconds());
