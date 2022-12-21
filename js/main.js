@@ -2755,65 +2755,53 @@
 
 // const curD = new Date();
 // console.log(curD.getTime());
-// console.log(new Date(0));
-// "Thu Jan 01 1970 03:00:00 GMT+0300 (Eastern European Standard Time)"
 
-// const g = new Date('2012-12-12 12:12:12');
-// "Thu Jan 01 1970 03:00:15 GMT+0300 (Eastern European Standard Time)"
-// console.log(g.getTime());
+// const promise = new Promise((resolve, reject) => {
+//   // asyncFunk
+// });
+// Change value of isSuccess variable to call resolve or reject
+// const isSuccess = false;
 
-// const date = new Date();
-// console.log('Date: ', date);
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     if (isSuccess) {
+//       resolve('Success! Value passed to resolve function');
+//     } else {
+//       reject('Error! Error passed to reject function');
+//     }
+//   }, 2000);
+// });
 
-// // Повертає день місяця від 1 до 31
-// console.log('getDate(): ', date.getDate());
+// // Will run first
+// console.log('Before promise.then()');
 
-// // Повертає день тижня від 0 до 6
-// console.log('getDay(): ', date.getDay());
+// // Registering promise callbacks
+// promise.then(
+//   // onResolve will run third or not at all
+//   value => {
+//     console.log('onResolve call inside promise.then()');
+//     console.log(value); // "Success! Value passed to resolve function"
+//   },
+//   // onReject will run third or not at all
+//   error => {
+//     console.log('onReject call inside promise.then()');
+//     console.log(error); // "Error! Error passed to reject function"
+//   }
+// );
 
-// // Повертає місяць від 0 до 11
-// console.log('getMonth(): ', date.getMonth());
+// // Will run second
+// console.log('After promise.then()');
 
-// // Повертає рік з 4 цифр
-// console.log('getFullYear(): ', date.getFullYear());
+const isSuccess = true;
 
-// // Повертає години
-// console.log('getHours(): ', date.getHours());
+const promise = new Promise((resolve, reject) => {
+  if (isSuccess) {
+    resolve("ok let's move on");
+  }
+  reject('Stop! ERROR!');
+});
 
-// // Повертає хвилини
-// console.log('getMinutes(): ', date.getMinutes());
-
-// // Повертає секунди
-// console.log('getSeconds(): ', date.getSeconds());
-
-// // Повертає мілісекунди
-// console.log('getMilliseconds(): ', date.getMilliseconds());
-
-// console.log('UTC');
-
-// const dateUTC = new Date();
-// console.log('Date: ', dateUTC);
-
-// // Повертає день місяця від 1 до 31
-// console.log('getUTCDate(): ', dateUTC.getUTCDate());
-
-// // Повертає день тижня від 0 до 6
-// console.log('getUTCDay(): ', dateUTC.getUTCDay());
-
-// // Повертає місяць від 0 до 11
-// console.log('getUTCMonth(): ', dateUTC.getUTCMonth());
-
-// // Повертає рік з 4 цифр
-// console.log('getUTCFullYear(): ', dateUTC.getUTCFullYear());
-
-// // Повертає години
-// console.log('getUTCHours(): ', dateUTC.getUTCHours());
-
-// // Повертає хвилини
-// console.log('getUTCMinutes(): ', dateUTC.getUTCMinutes());
-
-// // Повертає секунди
-// console.log('getUTCSeconds(): ', dateUTC.getUTCSeconds());
-
-// // Повертає мілісекунди
-// console.log('getUTCMilliseconds(): ', dateUTC.getUTCMilliseconds());
+promise.then(
+  value => console.log(value),
+  error => console.log(error)
+);
