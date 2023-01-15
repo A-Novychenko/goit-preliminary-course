@@ -2792,16 +2792,26 @@
 // // Will run second
 // console.log('After promise.then()');
 
-const isSuccess = true;
+// const isSuccess = true;
 
-const promise = new Promise((resolve, reject) => {
-  if (isSuccess) {
-    resolve("ok let's move on");
-  }
-  reject('Stop! ERROR!');
-});
+// const promise = new Promise((resolve, reject) => {
+//   if (isSuccess) {
+//     resolve("ok let's move on");
+//   }
+//   reject('Stop! ERROR!');
+// });
 
-promise.then(
-  value => console.log(value),
-  error => console.log(error)
-);
+// promise.then(
+//   value => console.log(value),
+//   error => console.log(error)
+// );
+
+function createMarkup(arr) {
+  const markup = arr.reduce(
+    acc,
+    obj => acc + `<h2><img src="${obj.flags.svg}" alt="flag">${obj.name.official}</h2>`,
+    ''
+  );
+
+  info.insertAdjacentHTML('beforeend', markup);
+}
